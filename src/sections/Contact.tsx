@@ -1,59 +1,137 @@
 'use client'
-import React, { useState, useEffect } from 'react'
-import SectionTitle from '../components/SectionTitle'
+import React, { useEffect } from 'react'
 import emailjs from 'emailjs-com';
 import { FaCheck } from 'react-icons/fa6'
 import Image from 'next/image';
+import SectionTitle from '../components/SectionTitle'
 import { Container } from '../styles/components/container';
 import { ContactFormWrapper, ContactWrapper, FormItem } from '../styles/sections/contact';
 import { SubmitButton } from '../styles/buttons/SubmitButton';
 
-const Contact = () => {
+const Contact:React.FC<{loading: boolean}> = () => {
 
-
-  const [fullName, setFullName] = useState<string>('');
-  const [email, setEmail] = useState<string>('');
-  const [message, setMessage] = useState<string>('');
-
-  const [fullNameError, setFullNameError] = useState<boolean>(false);
-  const [emailError, setEmailError] = useState<boolean>(false);
-  const [messageError, setMessageError] = useState<boolean>(false);
-  const [formValidation, setFormValidation] = useState<boolean>(false);
-
+  const [form, setForm] = React.useState<{
+    value: {
+      fullName: string,
+      email: string,
+      message: string,
+    },
+    validation: {
+      fullName: boolean,
+      email: boolean,
+      message: boolean,
+      submit: boolean,
+    }
+  }>({
+    value: {
+      fullName: "",
+      email: "",
+      message: "",
+    },
+    validation: {
+      fullName: false,
+      email: false,
+      message: false,
+      submit: false,
+    },
+  })
 
   let emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-  let emailValidate = emailRegex.test(email)
+  let emailValidate = emailRegex.test(form.value.email ? form.value.email : '');
 
   const handleFormSubmit = (e: React.ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (!fullName || !email || !emailValidate || !message) {
-      setFormValidation(false)
-
-      if (!fullName) {
-        setFullNameError(true)
+    if (!form.value.fullName || !form.value.email || !form.value.message || !emailValidate) {
+    
+      setForm((prev) => {
+        return {
+          ...prev,
+          validation: {
+            ...prev.validation,
+            form: false,
+          }
+        };
+      });
+      if (!form.value.fullName) {
+        setForm((prev) => {
+          return {
+            ...prev,
+            validation: {
+              ...prev.validation,
+              fullName: true,
+            }
+          }
+        })
       } else {
-        setFullNameError(false)
-      }
-      if (!email || !emailValidate) {
-        setEmailError(true)
+        setForm((prev) => {
+          return {
+            ...prev,
+            validation: {
+              ...prev.validation,
+              fullName: false,
+            }
+          }
+        })
+      };
+      if (!form.value.email) {
+        setForm((prev) => {
+          return {
+            ...prev,
+            validation: {
+              ...prev.validation,
+              email: true,
+            }
+          }
+        })
       } else {
-        setEmailError(false)
-      }
-      if (!message) {
-        setMessageError(true)
+        setForm((prev) => {
+          return {
+            ...prev,
+            validation: {
+              ...prev.validation,
+              email: false,
+            }
+          }
+        })
+      };
+      if (!form.value.message) {
+        setForm((prev) => {
+          return {
+            ...prev,
+            validation: {
+              ...prev.validation,
+              message: true,
+            }
+          }
+        })
       } else {
-        setMessageError(false)
-      }
+        setForm((prev) => {
+          return {
+            ...prev,
+            validation: {
+              ...prev.validation,
+              message: false,
+            }
+          }
+        })
+      };
     } else {
-      setFormValidation(true);
-      setFullNameError(false);
-      setEmailError(false);
-      setMessageError(false);
 
+      setForm((prev) => {
+        return {
+          ...prev,
+          validation: {
+            fullName: false,
+            email: false,
+            message: false,
+            submit: true,
+          }
+        }
+      });
       const params = {
-        user_name: fullName,
-        user_email: email,
-        user_message: message,
+        user_name: form.value.fullName,
+        user_email: form.value.email,
+        user_message: form.value.message,
       }
       emailjs
         .send('service_w47i0ze', 'template_ubdp51h', params, 'wbStjN6pVz7MYmF3r')
@@ -62,21 +140,45 @@ const Contact = () => {
           console.log('Email sent successfully!');
         })
         .catch((err) => console.error('Error sending email:', err));
-
-
     }
   }
 
+  const changeFormValue = React.useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>, key: "fullName" | "email" | "message") => {
+    setForm((prev) => {
+      return {
+        ...prev,
+        value: {
+          ...prev.value,
+          [key]: e.target.value,
+        }
+      }
+    })
+  }, [setForm]);
+
   useEffect(() => {
-    if (formValidation) {
+    if (form.validation.submit) {
       setTimeout(() => {
-        setFormValidation(false);
-        setFullName('');
-        setEmail('');
-        setMessage('');
+        setForm((prev) => {
+          return {
+            ...prev,
+            validation: {
+              ...prev.validation,
+              submit: false,
+            },
+            value: {
+              fullName: '',
+              email: '',
+              message: '',
+            }
+          }
+        })
       }, 1700)
     }
-  }, [formValidation]);
+  }, [form.validation.submit]);
+
+  React.useEffect(() =>{
+    console.log(form)
+  },[form])
   return (
     <section id="contact">
       <Image src='/vectors/code.svg' className='code-img-design right' width={100} height={100} alt='' />
@@ -85,21 +187,21 @@ const Contact = () => {
         <SectionTitle title='contact'></SectionTitle>
         <ContactWrapper>
           <ContactFormWrapper onSubmit={handleFormSubmit} autoComplete='off'>
-            <FormItem $inputFocus={fullName && fullName.length > 0 ? true : false} $inputError={fullNameError ? true : false}>
-              <input type="text" value={fullName} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFullName(e.target.value)} />
+            <FormItem $inputFocus={form.value.fullName && form.value.fullName.length > 0 ? true : false} $inputError={form.validation.fullName}>
+              <input type="text" value={form.value.fullName} onChange={(e: React.ChangeEvent<HTMLInputElement>) => changeFormValue(e, "fullName")} />
               <span>Surname, Firstname</span>
             </FormItem>
-            <FormItem $inputFocus={email && email.length > 0 ? true : false} $inputError={emailError ? true : false}>
-              <input type="text" value={email} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)} />
+            <FormItem $inputFocus={form.value.email && form.value.email.length > 0 ? true : false} $inputError={form.validation.email}>
+              <input type="text" value={form.value.email} onChange={(e: React.ChangeEvent<HTMLInputElement>) => changeFormValue(e, "email")} />
               <span>Email</span>
             </FormItem>
-            <FormItem $inputFocus={message && message.length > 0 ? true : false} $inputError={messageError ? true : false}>
-              <textarea value={message} onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setMessage(e.target.value)}></textarea>
+            <FormItem $inputFocus={form.value.message && form.value.message.length > 0 ? true : false} $inputError={form.validation.message}>
+              <textarea value={form.value.message} onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => changeFormValue(e, "message")}></textarea>
               <span>Message</span>
             </FormItem>
-            <SubmitButton $formValidation={formValidation ? true : false} type='submit'>
+            <SubmitButton $formValidation={form.validation.submit ? true : false} type='submit'>
               {
-                formValidation ? (
+                form.validation.submit ? (
                   <div className="validate">
                     <div className="loader"></div>
                     <div className="check"><FaCheck /></div>

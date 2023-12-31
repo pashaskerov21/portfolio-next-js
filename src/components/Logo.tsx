@@ -7,12 +7,13 @@ type Props = {
     firstName: string,
     lastName: string,
     color: string,
+    infinite?: boolean,
 }
 
-const Logo: React.FC<Props> = ({ firstName, lastName, color }) => {
+const Logo: React.FC<Props> = ({ firstName, lastName, color, infinite }) => {
     const animationDelay = 0.08;
     return (
-        <LogoWrapper color={color}>
+        <LogoWrapper $color={color} $infinite={infinite}>
             <div>
                 {firstName.split('').map((letter, index) => (
                     <span key={index} style={{animationDelay: `${index*animationDelay}s`}}>{letter}</span>

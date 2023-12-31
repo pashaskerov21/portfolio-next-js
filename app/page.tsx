@@ -8,6 +8,7 @@ import Contact from '@/src/sections/Contact';
 import { MenuDataType, PersonalInformationDataType, ProjectDataType, SkillDataType } from '@/src/types';
 import { fetchInformationData, fetchMenuData, fetchProjectData, fetchSkillData } from '@/src/utils/fetch';
 import React from 'react';
+import HomeLayout from '@/src/layout/HomeLayout';
 
 const fetchData = async (): Promise<{
   menuData: MenuDataType[],
@@ -47,15 +48,11 @@ const PortfolioApp = async () => {
   try {
     if (menuData && personalInformationData && projectData && skillData) {
       return (
-        <React.Fragment>
-          <Home personalInformationData={personalInformationData} />
-          <About personalInformationData={personalInformationData} />
-          <Skills skillData={skillData} />
-          <Projects projectData={projectData} skillData={skillData} />
-          <Experience personalInformationData={personalInformationData} />
-          <Education personalInformationData={personalInformationData} />
-          <Contact />
-        </React.Fragment>
+        <HomeLayout
+          personalInformationData={personalInformationData}
+          projectData={projectData}
+          skillData={skillData}
+        />
       )
     } else {
       <React.Fragment>

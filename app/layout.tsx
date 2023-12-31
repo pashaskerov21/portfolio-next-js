@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import StyledComponentsRegistry from '@/lib/registry';
-import SiteLayout from '@/src/components/SiteLayout';
+import SiteLayout from '@/src/layout/SiteLayout';
 import { MenuDataType, PersonalInformationDataType } from '@/src/types';
 import { fetchInformationData, fetchMenuData } from '@/src/utils/fetch';
 

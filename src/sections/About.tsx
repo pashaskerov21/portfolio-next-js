@@ -9,7 +9,7 @@ import { PersonalInformationDataType } from '../types'
 import { Container } from '../styles/components/container'
 import { AboutContact, AboutContent, AboutImage, AboutSocialWrapper, AboutText, AboutWrapper, ResumeButton } from '../styles/sections/about'
 
-const About: React.FC<{personalInformationData: PersonalInformationDataType}> = ({personalInformationData}) => {
+const About: React.FC<{ loading: boolean, personalInformationData: PersonalInformationDataType }> = ({ personalInformationData }) => {
     return (
         <section id="about">
             <Container>

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { row_center } from "../mixin";
 import { preloaderAnimation } from "../animation";
+import Logo from "@/src/components/Logo";
 
 export const PreloaderWrapper = styled.div`
     position: fixed;

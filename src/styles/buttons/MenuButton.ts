@@ -11,16 +11,17 @@ export const MenuButton = styled.button<MenuButtonProps>`
     width: 30px;
     height: 30px;
     cursor: pointer;
+    gap: 7px;
     span{
         display: inline-block;
         width: 100%;
-        height: 4px;
+        height: 3px;
         background-color: ${props => props.theme.text};
         border-radius: 10px;
-        margin-bottom: 7px;
+        
         transition: all 0.3s;
         &:nth-child(1){
-            transform: ${props => props.$active && 'translateY(11px) rotate(45deg)'}
+            transform: ${props => props.$active && 'translateY(9px) rotate(45deg)'}
         }
         &:nth-child(2){
             margin-left: ${props => props.$active ? '0' : '-6px'};

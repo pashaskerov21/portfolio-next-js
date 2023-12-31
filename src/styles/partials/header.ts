@@ -48,10 +48,10 @@ export const NavLinksWrapper = styled.div`
         cursor: pointer;
         position: relative;
         transition: all 0.3s;
-        font-family: 'Kalam', cursive;
-        font-size: 18px;
+        /* font-family: 'Kalam', cursive; */
+        font-size: 16px;
         @media (min-width: 1400px){
-            font-size: 22px;
+            font-size: 18px;
         }
         &::after,
         &::before {
@@ -88,7 +88,8 @@ export const NavLinksWrapper = styled.div`
 
 
 export const ButtonsWrapper = styled.div`
-    ${row_justify_end}
+    ${row_justify_end};
+    gap: 15px;
 `;
 
 
@@ -128,7 +129,7 @@ export const LinksWrapper = styled.div<MenuProps>`
         position: relative;
         cursor: pointer;
         transition: all 0.3s;
-        font-family: 'Kalam', cursive;
+        color: #fff;
         ${props => props.$menuStatus && css`
             opacity: 0;
             transform: translateY(-15px);

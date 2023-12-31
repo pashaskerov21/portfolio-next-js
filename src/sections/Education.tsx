@@ -7,7 +7,7 @@ import { PersonalInformationDataType } from '../types'
 import { Container } from '../styles/components/container'
 import { EducationCard, EducationWrapper } from '../styles/sections/education'
 
-const Education: React.FC<{ personalInformationData: PersonalInformationDataType }> = ({ personalInformationData }) => {
+const Education: React.FC<{ loading: boolean, personalInformationData: PersonalInformationDataType }> = ({ personalInformationData }) => {
     return (
         <section id="education">
             <Image src='/vectors/code.svg' className='code-img-design left' width={100} height={100} alt='' />

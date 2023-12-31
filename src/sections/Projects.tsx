@@ -9,7 +9,7 @@ import { ProjectDataType, SkillDataType } from '../types'
 import { Container } from '../styles/components/container'
 import { ProjectCard, ProjectContent, ProjectsWrapper } from '../styles/sections/projects'
 
-const Projects: React.FC<{ projectData: ProjectDataType[], skillData: SkillDataType[] }> = ({ projectData, skillData }) => {
+const Projects: React.FC<{ loading: boolean, projectData: ProjectDataType[], skillData: SkillDataType[] }> = ({ projectData, skillData }) => {
 
     return (
         <section id="projects">

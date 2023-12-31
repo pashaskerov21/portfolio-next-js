@@ -10,6 +10,7 @@ type HeaderIconProps = {
 export const HeaderSocialIcons = styled.div<HeaderIconProps>`
     ${row_center}
     margin-top: 15px;
+    color: #fff;
     @media (min-width: 1200px){
         display: none;
     }

@@ -2,28 +2,29 @@
 import React, { useEffect, useState } from 'react'
 import Logo from '../components/Logo'
 import { FaSun } from 'react-icons/fa'
-import { BsMoonStarsFill, BsWhatsapp } from 'react-icons/bs'
+import { BsFillSunFill, BsMoonStarsFill, BsWhatsapp } from 'react-icons/bs'
 import { FiGithub } from 'react-icons/fi'
 import { BiLogoLinkedin, BiLogoGmail } from 'react-icons/bi'
 import { Link } from 'react-scroll'
 import { MenuDataType, PersonalInformationDataType } from '../types'
 import { ButtonsWrapper, GeneralNav, HeaderContainer, HeaderMenu, LinksWrapper, NavLinksWrapper } from '../styles/partials/header'
 import { Container } from '../styles/components/container'
-import { ThemeButton } from '../styles/buttons/ThemeButton'
 import { MenuButton } from '../styles/buttons/MenuButton'
 import { HeaderSocialIcons } from '../styles/components/socialicons'
+import { ThemeButtonStyle } from '../styles/buttons/ThemeButton'
 
 
 type HeaderProps = {
   loading: boolean,
   theme: string,
-  toggleTheme: () => void,
+  disableTheme: () => void,
+  enableTheme: () => void,
   menuData: MenuDataType[],
   personalInformationData: PersonalInformationDataType,
 }
 
 
-const Header: React.FC<HeaderProps> = ({ loading, theme, toggleTheme, menuData, personalInformationData }) => {
+const Header: React.FC<HeaderProps> = ({ loading, theme, disableTheme, enableTheme, menuData, personalInformationData }) => {
   const [showMenu, setShowMenu] = useState(false);
   const toggleMenu = () => setShowMenu(!showMenu);
   const [fixedTop, setFixedTop] = useState(false);
@@ -57,11 +58,14 @@ const Header: React.FC<HeaderProps> = ({ loading, theme, toggleTheme, menuData, 
               }
             </NavLinksWrapper>
             <ButtonsWrapper>
-              <ThemeButton $themestatus={theme} onClick={() => toggleTheme()}>
-                {
-                  theme === 'dark' ? <FaSun /> : <BsMoonStarsFill />
-                }
-              </ThemeButton>
+              <ThemeButtonStyle>
+                <div className={`btn ${theme === 'light' ? 'active' : ''}`} onClick={disableTheme}>
+                  <BsFillSunFill />
+                </div>
+                <div className={`btn ${theme === 'dark' ? 'active' : ''}`} onClick={enableTheme}>
+                  <BsMoonStarsFill />
+                </div>
+              </ThemeButtonStyle>
               <MenuButton $active={showMenu} onClick={() => toggleMenu()}>
                 <span></span>
                 <span></span>

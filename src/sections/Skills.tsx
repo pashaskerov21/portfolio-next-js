@@ -6,7 +6,7 @@ import { SkillDataType } from '../types'
 import { Container } from '../styles/components/container'
 import { SkillCard, SkillsWrapper } from '../styles/sections/skills'
 
-const Skills:React.FC<{skillData: SkillDataType[]}> = ({skillData}) => {
+const Skills: React.FC<{ loading: boolean, skillData: SkillDataType[] }> = ({ skillData }) => {
     return (
         <section id="skills">
             <Container>

@@ -70,9 +70,6 @@ export const AnimationTitle = styled.h2<AnimationProps>`
     @media (min-width: 1200px){
         font-size: 40px;
     }
-    @media (min-width: 1400px){
-        font-size: 50px;
-    }
     &::after{
         content: '${props => props.title}';
         position: absolute;
@@ -97,9 +94,9 @@ export const HomeTextWrapper = styled.div`
     line-height: 32px;
     font-weight: 500;
     margin-top: 20px;
-    @media (min-width: 768px){
+    /* @media (min-width: 768px){
         font-size: 18px
-    }
+    } */
     @media (min-width: 992px){
         margin-top: 40px;
         font-size: 22px;

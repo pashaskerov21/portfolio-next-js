@@ -10,7 +10,8 @@ import { GlobalStyles } from '../styles/global';
 import { ScrollButton } from '../styles/buttons/ScrollButton';
 import Header from '../partials/Header';
 import Footer from '../partials/Footer';
-import MainSocialMedia from './MainSocialMedia';
+import MainSocialMedia from '../components/MainSocialMedia';
+import Preloader from '../components/Preloader';
 
 type SiteLayoutProps = {
     children: React.ReactNode,
@@ -21,15 +22,16 @@ type SiteLayoutProps = {
 const SiteLayout: React.FC<SiteLayoutProps> = ({ children, menuData, personalInformationData }) => {
 
     const themes = ['dark','light']
-    const { isDarkMode, toggle } = useDarkMode(false);
+    const { isDarkMode, toggle, disable, enable, } = useDarkMode(false);
     const activeTheme = isDarkMode ? darkTheme : lightTheme;
     const activeThemeValue = isDarkMode ? themes[0] : themes[1]; 
 
     const [loading, setLoading] = React.useState(true);
     React.useEffect(() => {
-        setLoading(false);
-        console.log(isDarkMode)
-    }, [isDarkMode]);
+        setTimeout(() =>{
+            setLoading(false);
+        },2000);
+    }, []);
 
     const [mounted, setMounted] = React.useState(false);
     React.useEffect(() => {
@@ -43,6 +45,7 @@ const SiteLayout: React.FC<SiteLayoutProps> = ({ children, menuData, personalInf
     return (
         <>
             <ThemeProvider theme={activeTheme}>
+                {loading && <Preloader/>}
                 <GlobalStyles />
                 <MainSocialMedia personalInformationData={personalInformationData} />
                 <ScrollButton onClick={() => window.scrollTo(0, 0)}>
@@ -51,7 +54,8 @@ const SiteLayout: React.FC<SiteLayoutProps> = ({ children, menuData, personalInf
                 <Header
                     loading={loading}
                     theme={activeThemeValue}
-                    toggleTheme={toggle}
+                    disableTheme={disable}
+                    enableTheme={enable}
                     menuData={menuData}
                     personalInformationData={personalInformationData}
                 />

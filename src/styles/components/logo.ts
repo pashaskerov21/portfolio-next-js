@@ -1,10 +1,11 @@
-import styled, { keyframes } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 import { row_center } from "../mixin";
 import { logoSpanAnimation } from "../animation";
 
 
 type LogoProps = {
-    color: string,
+    $color: string,
+    $infinite?: boolean,
 }
 
 export const LogoWrapper = styled.div<LogoProps>`
@@ -15,7 +16,7 @@ export const LogoWrapper = styled.div<LogoProps>`
     flex-wrap: wrap;
     user-select: none;
     cursor: default;
-    color: ${props => props.color === 'primary' ? props.theme.primaryColor : props.color};
+    color: ${props => props.$color === 'primary' ? props.theme.primaryColor : props.$color};
     position: relative;
     transition: all 0.2s;
     min-width: 100px;
@@ -23,6 +24,7 @@ export const LogoWrapper = styled.div<LogoProps>`
     @media (min-width: 330px){
         min-width: 160px;
         max-width: 250px;
+        font-size: 24px;
     }
     @media (min-width: 576px){
         min-width: 200px;
@@ -89,7 +91,13 @@ export const LogoWrapper = styled.div<LogoProps>`
             transform: translateY(0) skew(-15deg);
         }
     }
-
+    ${
+        props => props.$infinite && css`
+        span{
+            animation: ${logoSpanAnimation} 0.4s ease infinite;
+        }
+        `
+    }
     div{
         ${row_center}
         @media (min-width: 330px){

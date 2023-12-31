@@ -1,7 +1,7 @@
 import { ProjectDataType } from "@/src/types";
 
 
-const ProjectData:ProjectDataType[] = [
+const ProjectData: ProjectDataType[] = [
     {
         id: 1,
         title: "Portfolio",
@@ -11,7 +11,7 @@ const ProjectData:ProjectDataType[] = [
         home: true,
         previewLink: "https://alipashaskerov.netlify.app/",
         githubLink: "https://github.com/pashaskerov21/portfolio-nextjs",
-        skills: ['React JS', 'Next JS', 'TypeScript', 'Styled Components']
+        skills: ['React JS', 'Next JS', 'TypeScript', 'Formik', 'Styled Components']
     },
     {
         id: 2,

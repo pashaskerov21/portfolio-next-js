@@ -6,10 +6,16 @@ export const ContactWrapper = styled.div`
     ${column_center};
 `;
 
-export const ContactFormWrapper = styled.form`
+export const ContactFormWrapper = styled.div`
     width: 100%;
     max-width: 800px;
     ${column_center};
+    form{
+        width: 100%;
+        ${column_center};
+        gap: 30px;
+    }
+
 `;
 
 type FormItemProps = {
@@ -19,7 +25,6 @@ type FormItemProps = {
 
 export const FormItem = styled.div<FormItemProps>`
     width: 100%;
-    margin-bottom: 30px;
     position: relative;
     textarea{
         resize: none;
@@ -39,6 +44,7 @@ export const FormItem = styled.div<FormItemProps>`
         box-shadow: 0 0 10px ${props => props.theme.primaryColor};
         border: 1px solid ${props => props.theme.primaryColor};
         transition: all 0.3s;
+        font-family: 'Montserrat', sans-serif;
         ${
             props => props.$inputError && css`
                 border: 1px solid #dc3545;

@@ -34,7 +34,7 @@ const SkillData: SkillDataType[] = [
     {
         id: 6,
         title: 'Next JS',
-        img: '/skills/next-js.svg',
+        img: '/skills/next-js-2.svg',
         color: '#fff'
     },
     {

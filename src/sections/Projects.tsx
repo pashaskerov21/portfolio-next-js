@@ -7,17 +7,23 @@ import { FiGithub } from 'react-icons/fi'
 import { BsFillEyeFill } from 'react-icons/bs'
 import { ProjectDataType, SkillDataType } from '../types'
 import { Container } from '../styles/components/container'
-import { ProjectCard, ProjectContent, ProjectsWrapper } from '../styles/sections/projects'
+import { AllProjectButton, ProjectCard, ProjectContent, ProjectsWrapper } from '../styles/sections/projects'
 
-const Projects: React.FC<{ loading: boolean, projectData: ProjectDataType[], skillData: SkillDataType[] }> = ({ projectData, skillData }) => {
-
+const ProjectSection: React.FC<{ projectData: ProjectDataType[], skillData: SkillDataType[] }> = ({ projectData, skillData }) => {
+    const [projects, setProjects] = React.useState<ProjectDataType[]>(projectData.filter((data) => data.home));
+    const [status, setStatus] = React.useState<boolean>(false)
+    React.useEffect(() => {
+        if(status){
+            setProjects(projectData);
+        }
+    },[status]);
     return (
         <section id="projects">
             <Container>
                 <SectionTitle title='projects' />
                 <ProjectsWrapper>
                     {
-                        projectData.map((project) => (
+                        projects.map((project) => (
                             <ProjectCard key={project.id}>
                                 <Image className='project-img' src={project.image} width={400} height={200} alt='' />
                                 <ProjectContent>
@@ -38,9 +44,10 @@ const Projects: React.FC<{ loading: boolean, projectData: ProjectDataType[], ski
                         ))
                     }
                 </ProjectsWrapper>
+                {!status && <AllProjectButton onClick={() => setStatus(true)}>See all projects</AllProjectButton>}
             </Container>
         </section>
     )
 }
 
-export default Projects
+export default ProjectSection

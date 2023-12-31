@@ -138,3 +138,44 @@ export const ProjectSkillsWrapper = styled.div`
         margin-right: 7px;
     }
 `;
+
+export const AllProjectButton = styled.div`
+width: 100%;
+max-width: 400px;
+    margin: 40px auto;
+    ${row_center};
+    padding: 20px 30px;
+    position: relative;
+    font-size: 22px;
+    min-width: 220px;
+    border-radius: 10px;
+    font-weight: 600;
+    text-transform: capitalize;
+    box-shadow: 0 0 10px ${props => props.theme.primaryColor};
+    text-indent: 99;
+    color: ${props => props.theme.primaryColor} !important;
+    transition: all 0.2s;
+    cursor: pointer;
+    &:after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        transition: all 0.5s;
+        border-radius: 10px;
+        background-color: ${props => props.theme.primaryColor};
+        border: 1px solid ${props => props.theme.primaryColor};
+        z-index: -1;
+        opacity: 0;
+    }
+    &:hover{
+        box-shadow: 0 0 50px ${props => props.theme.primaryColor};
+        color: ${props => props.theme.text} !important;
+        &::after{
+            opacity: 1;
+            width: 100%;
+        }
+    }
+`

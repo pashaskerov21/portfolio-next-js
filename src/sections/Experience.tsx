@@ -8,7 +8,7 @@ import { PersonalInformationDataType } from '../types'
 import { Container } from '../styles/components/container'
 import { ExperienceCard, ExperienceWrapper } from '../styles/sections/experience'
 
-const Experience: React.FC<{ loading: boolean, personalInformationData: PersonalInformationDataType }> = ({ personalInformationData }) => {
+const ExperienceSection: React.FC<{ personalInformationData: PersonalInformationDataType }> = ({ personalInformationData }) => {
     return (
         <section id="experience">
             <Image src='/vectors/code.svg' className='code-img-design right' width={100} height={100} alt='' />
@@ -41,4 +41,4 @@ const Experience: React.FC<{ loading: boolean, personalInformationData: Personal
     )
 }
 
-export default Experience
+export default ExperienceSection

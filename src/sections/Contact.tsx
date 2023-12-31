@@ -8,7 +8,7 @@ import { Container } from '../styles/components/container';
 import { ContactFormWrapper, ContactWrapper, FormItem } from '../styles/sections/contact';
 import { SubmitButton } from '../styles/buttons/SubmitButton';
 
-const Contact:React.FC<{loading: boolean}> = () => {
+const ContactSection:React.FC= () => {
 
   const [form, setForm] = React.useState<{
     value: {
@@ -218,4 +218,4 @@ const Contact:React.FC<{loading: boolean}> = () => {
   )
 }
 
-export default Contact
+export default ContactSection

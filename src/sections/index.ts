@@ -1,17 +1,17 @@
-import About from "./About";
-import Contact from "./Contact";
-import Education from "./Education";
-import Experience from "./Experience";
-import Home from "./Home";
-import Projects from "./Projects";
-import Skills from "./Skills";
+import AboutSection from "./About";
+import ContactSection from "./Contact";
+import EducationSection from "./Education";
+import ExperienceSection from "./Experience";
+import HomeSection from "./Home";
+import ProjectSection from "./Projects";
+import SkillSection from "./Skills";
 
 export {
-    About,
-    Contact,
-    Education,
-    Experience,
-    Home,
-    Projects,
-    Skills
+    AboutSection,
+    ContactSection,
+    EducationSection,
+    ExperienceSection,
+    HomeSection,
+    ProjectSection,
+    SkillSection,
 }

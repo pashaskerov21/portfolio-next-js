@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { PersonalInformationDataType, ProjectDataType, SkillDataType } from '../types'
-import { About, Contact, Education, Experience, Home, Projects, Skills } from '../sections'
+import { AboutSection, ContactSection, EducationSection, ExperienceSection, HomeSection, ProjectSection, SkillSection } from '../sections'
 
 type HomeLayoutProps = {
     personalInformationData: PersonalInformationDataType,
@@ -18,13 +18,13 @@ const HomeLayout: React.FC<HomeLayoutProps> = ({ personalInformationData, projec
     }, []);
     return (
         <React.Fragment>
-            <Home loading={loading} personalInformationData={personalInformationData} />
-            <About loading={loading} personalInformationData={personalInformationData} />
-            <Skills loading={loading} skillData={skillData} />
-            <Projects loading={loading} projectData={projectData} skillData={skillData} />
-            <Experience loading={loading} personalInformationData={personalInformationData} />
-            <Education loading={loading} personalInformationData={personalInformationData} />
-            <Contact loading={loading} />
+            <HomeSection personalInformationData={personalInformationData} />
+            <AboutSection personalInformationData={personalInformationData} />
+            <SkillSection skillData={skillData} />
+            <ProjectSection projectData={projectData} skillData={skillData} />
+            <ExperienceSection personalInformationData={personalInformationData} />
+            <EducationSection personalInformationData={personalInformationData} />
+            <ContactSection />
         </React.Fragment>
     )
 }

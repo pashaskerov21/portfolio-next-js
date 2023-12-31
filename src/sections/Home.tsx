@@ -4,9 +4,8 @@ import React from 'react'
 import { Container } from '../styles/components/container'
 import { PersonalInformationDataType } from '../types'
 import { AnimationTitle, HomeContentWrapper, HomeTextWrapper, HomeTitle } from '../styles/sections/home'
-import Skeleton from '../components/skeleton/Skeleton'
 
-const Home: React.FC<{ loading: boolean, personalInformationData: PersonalInformationDataType }> = ({ personalInformationData }) => {
+const HomeSection: React.FC<{ personalInformationData: PersonalInformationDataType }> = ({ personalInformationData }) => {
   return (
     <section id='home'>
       <Container>
@@ -25,4 +24,4 @@ const Home: React.FC<{ loading: boolean, personalInformationData: PersonalInform
   )
 }
 
-export default Home
+export default HomeSection

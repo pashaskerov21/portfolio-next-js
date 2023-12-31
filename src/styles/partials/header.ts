@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { column_align_start, column_center, column_justify_start, row_between, row_center, row_justify_end } from "../mixin";
+import { column_align_end, column_center, column_justify_start, row_between, row_center, row_justify_end } from "../mixin";
 import { fixHeaderAnimation, headerLinkAnimation } from "../animation";
 
 
@@ -19,9 +19,10 @@ export const GeneralNav = styled.nav<HeaderProps>`
     .inner{
         width: 100%;
         padding: 10px 0;
-        ${column_align_start};
+        ${row_between};
+        align-items: flex-start;
         @media (min-width: 340px){
-            ${row_between};
+            align-items: center;
         }
     }
     ${props => props.$fixStatus === true && css`
@@ -91,8 +92,12 @@ export const NavLinksWrapper = styled.div`
 
 
 export const ButtonsWrapper = styled.div`
-    ${row_justify_end};
+    ${column_align_end};
+    flex-direction: column-reverse;
     gap: 15px;
+    @media (min-width: 340px){
+        ${row_justify_end};
+    }
 `;
 
 

@@ -1,10 +1,3 @@
-import About from '@/src/sections/About';
-import Home from '@/src/sections/Home';
-import Projects from '@/src/sections/Projects';
-import Skills from '@/src/sections/Skills';
-import Experience from '@/src/sections/Experience';
-import Education from '@/src/sections/Education';
-import Contact from '@/src/sections/Contact';
 import { MenuDataType, PersonalInformationDataType, ProjectDataType, SkillDataType } from '@/src/types';
 import { fetchInformationData, fetchMenuData, fetchProjectData, fetchSkillData } from '@/src/utils/fetch';
 import React from 'react';

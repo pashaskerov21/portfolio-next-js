@@ -41,7 +41,7 @@ export type ProjectDataType = {
     image: string,
     previewStatus: boolean,
     githubStatus: boolean,
-    order: number,
+    home: boolean,
     previewLink: string,
     githubLink: string,
     skills: string[],

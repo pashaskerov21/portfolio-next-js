@@ -15,13 +15,13 @@ export const MenuButton = styled.button<MenuButtonProps>`
     span{
         display: inline-block;
         width: 100%;
-        height: 3px;
+        height: 2px;
         background-color: ${props => props.theme.text};
         border-radius: 10px;
         
         transition: all 0.3s;
         &:nth-child(1){
-            transform: ${props => props.$active && 'translateY(9px) rotate(45deg)'}
+            transform: ${props => props.$active && 'translateY(10px) rotate(45deg)'}
         }
         &:nth-child(2){
             margin-left: ${props => props.$active ? '0' : '-6px'};
@@ -31,7 +31,7 @@ export const MenuButton = styled.button<MenuButtonProps>`
         &:nth-child(3){
             margin-left: ${props => props.$active ? '0' : '-12px'};
             margin-bottom: 0;
-            transform: ${props => props.$active && 'translateY(-11px) rotate(-45deg)'}
+            transform: ${props => props.$active && 'translateY(-8px) rotate(-45deg)'}
         }
         
     }

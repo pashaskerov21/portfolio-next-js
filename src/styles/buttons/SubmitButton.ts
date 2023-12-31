@@ -20,6 +20,7 @@ export const SubmitButton = styled.button<ButtonProps>`
     border: 2px solid transparent;
     transition: all 0.2s;
     min-height: 65px;
+    color: #fff;
     &::after{
         content: '';
         pointer-events: none;
@@ -39,6 +40,7 @@ export const SubmitButton = styled.button<ButtonProps>`
     }
     &:hover{
         background-color: transparent;
+        color: ${props => props.theme.primaryColor};
         &::after{
             opacity: 1;
             transform: scale(1);

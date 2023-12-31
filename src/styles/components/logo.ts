@@ -10,7 +10,7 @@ type LogoProps = {
 
 export const LogoWrapper = styled.div<LogoProps>`
     font-family: 'Kalam', cursive;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 600;
     ${row_center};
     flex-wrap: wrap;
@@ -19,32 +19,34 @@ export const LogoWrapper = styled.div<LogoProps>`
     color: ${props => props.$color === 'primary' ? props.theme.primaryColor : props.$color};
     position: relative;
     transition: all 0.2s;
-    min-width: 100px;
-    max-width: 100px;
+    gap: 10px;
+    /* min-width: 100px;
+    max-width: 100px; */
     @media (min-width: 330px){
-        min-width: 160px;
-        max-width: 250px;
+        /* min-width: 160px;
+        max-width: 250px; */
         font-size: 24px;
     }
     @media (min-width: 576px){
-        min-width: 200px;
+        /* min-width: 200px;
+        max-width: 300px; */
         font-size: 24px;
-        max-width: 300px
+        gap: 15px;
     }
     @media (min-width: 768px){
-        min-width: 225px;
+        /* min-width: 225px;
+        max-width: 100%; */
         font-size: 28px;
-        max-width: 100%
     }
     @media (min-width: 992px){
-        min-width: 255px;
+        /* min-width: 255px; */
         font-size: 32px;
     }
     @media (min-width: 1200px){
-        min-width: 310px;
+        /* min-width: 310px; */
         font-size: 40px;
     }
-    &::before, 
+    /* &::before, 
     &::after{
         content: '';
         position: absolute;
@@ -62,9 +64,9 @@ export const LogoWrapper = styled.div<LogoProps>`
         left: 0;
         top: 0;
         transform: translateY(10px) skew(-15deg);
-    }
+    } */
     &:hover{
-        min-width: 120px;
+        /* min-width: 120px;
         max-width: 120px;
         @media (min-width: 330px){
             min-width: 190px;
@@ -81,7 +83,7 @@ export const LogoWrapper = styled.div<LogoProps>`
         }
         @media (min-width: 1200px){
             min-width: 340px;
-        }
+        } */
         span{
             animation: ${logoSpanAnimation} 0.4s ease forwards;
         }
@@ -100,7 +102,7 @@ export const LogoWrapper = styled.div<LogoProps>`
     }
     div{
         ${row_center}
-        @media (min-width: 330px){
+        /* @media (min-width: 330px){
             &:first-child{
                 margin-right: 10px;
             }
@@ -109,7 +111,7 @@ export const LogoWrapper = styled.div<LogoProps>`
             &:first-child{
                 margin-right: 12px;
             }
-        }
+        } */
         
     }
     span{

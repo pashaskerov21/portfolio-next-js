@@ -104,12 +104,12 @@ export const ResumeButton = styled.a`
     }
 `;
 export const AboutSocialWrapper = styled.div`
-    ${row_center}
+    ${row_center};
+    gap: 15px;
     a{
         font-size: 20px;
         width: 45px;
         height: 45px;
-        margin-right: 10px;
         ${row_center};
         box-shadow: 0 0 10px ${props => props.theme.primaryColor};
         border-radius: 50%;
@@ -127,9 +127,6 @@ export const AboutSocialWrapper = styled.div`
             box-shadow: 0 0 20px ${props => props.theme.primaryColor};
             background-color: ${props => props.theme.primaryColor};
             color: ${props => props.theme.text};
-        }
-        &:last-child{
-            margin-right: 0;
         }
         
     }

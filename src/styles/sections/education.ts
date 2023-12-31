@@ -63,6 +63,7 @@ export const EducationCard = styled.div`
                 border-radius: 15px;
                 font-weight: 600;
                 margin-bottom: 20px;
+                color: #fff;
                 @media (min-width: 576px){
                     margin-bottom: 0;
                 }
@@ -72,7 +73,9 @@ export const EducationCard = styled.div`
                 white-space: nowrap;
                 font-size: 12px;
                 padding: 10px;
-                border: 1px solid ${props => props.theme.text};
+                background-color: ${props => props.theme.primaryColor};
+                border: 1px solid ${props => props.theme.primaryColor};
+                color: #fff;
                 border-radius: 5px;
             }
         }

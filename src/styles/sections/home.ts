@@ -40,7 +40,8 @@ export const HomeTitle = styled.h1`
     margin-bottom: 15px;
     user-select: none;
     font-size: 30px;
-    text-shadow: 0 0 40px ${props => props.theme.text};    
+    color: ${props => props.theme.textMute};
+    /* text-shadow: 0 0 40px ${props => props.theme.text};     */
     @media (min-width: 768px){
         font-size: 40px;
     }

@@ -9,9 +9,9 @@ export const SectionTitleWrapper = styled.div`
     position: relative;
     h1{
         text-transform: capitalize;
-        font-family: 'Kalam', cursive;
+        /* font-family: 'Kalam', cursive; */
         font-size: 28px;
-        text-shadow: 0 0 30px ${props => props.theme.text};
+        /* text-shadow: 0 0 30px ${props => props.theme.text}; */
         user-select: none;
         @media (min-width: 768px){
             font-size: 32px

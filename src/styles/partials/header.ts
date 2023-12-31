@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { column_center, column_justify_start, row_between, row_center, row_justify_end } from "../mixin";
+import { column_align_start, column_center, column_justify_start, row_between, row_center, row_justify_end } from "../mixin";
 import { fixHeaderAnimation, headerLinkAnimation } from "../animation";
 
 
@@ -19,7 +19,10 @@ export const GeneralNav = styled.nav<HeaderProps>`
     .inner{
         width: 100%;
         padding: 10px 0;
-        ${row_between};
+        ${column_align_start};
+        @media (min-width: 340px){
+            ${row_between};
+        }
     }
     ${props => props.$fixStatus === true && css`
             position: fixed;
@@ -49,10 +52,10 @@ export const NavLinksWrapper = styled.div`
         position: relative;
         transition: all 0.3s;
         /* font-family: 'Kalam', cursive; */
-        font-size: 16px;
-        @media (min-width: 1400px){
-            font-size: 18px;
-        }
+        font-size: 18px;
+        /* @media (min-width: 1400px){
+            font-size: 22px;
+        } */
         &::after,
         &::before {
             content: '';
@@ -129,7 +132,7 @@ export const LinksWrapper = styled.div<MenuProps>`
         position: relative;
         cursor: pointer;
         transition: all 0.3s;
-        color: #fff;
+        font-family: 'Kalam', cursive;
         ${props => props.$menuStatus && css`
             opacity: 0;
             transform: translateY(-15px);

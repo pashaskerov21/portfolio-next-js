@@ -92,50 +92,6 @@ const ProjectData: ProjectDataType[] = [
     },
     {
         id: 9,
-        title: "ICX ID",
-        image: "/projects/icx.webp",
-        previewStatus: true,
-        githubStatus: false,
-        home: false,
-        previewLink: "https://icx-id.com/",
-        githubLink: "",
-        skills: ['Laravel', 'HTML', 'SCSS', 'JavaScript', 'jQuery']
-    },
-    {
-        id: 10,
-        title: "AKC Conference",
-        image: "/projects/akc-conference.webp",
-        previewStatus: true,
-        githubStatus: false,
-        home: false,
-        previewLink: "http://conference.akc.az/",
-        githubLink: "",
-        skills: ['Laravel', 'HTML', 'SCSS', 'JavaScript', 'jQuery']
-    },
-    {
-        id: 11,
-        title: "Geoengineer",
-        image: "/projects/geoeng.webp",
-        previewStatus: false,
-        githubStatus: true,
-        home: false,
-        previewLink: "",
-        githubLink: "https://github.com/pashaskerov21/geoenginerring",
-        skills: ['Laravel', 'HTML', 'SCSS', 'JavaScript', 'jQuery']
-    },
-    {
-        id: 12,
-        title: "Geoengineer 2",
-        image: "/projects/geoeng-2.webp",
-        previewStatus: true,
-        githubStatus: false,
-        home: false,
-        previewLink: "https://geoengineer.proton.az/",
-        githubLink: "",
-        skills: ['Laravel', 'HTML', 'SCSS', 'JavaScript', 'jQuery',]
-    },
-    {
-        id: 13,
         title: "Toba",
         image: "/projects/toba.webp",
         previewStatus: true,
@@ -146,7 +102,62 @@ const ProjectData: ProjectDataType[] = [
         skills: ['HTML', 'SCSS', 'JavaScript', 'jQuery'],
     },
     {
+        id: 10,
+        title: "Agrowest",
+        image: "/projects/agrowest.webp",
+        previewStatus: true,
+        githubStatus: false,
+        home: false,
+        previewLink: "https://agrowest.vercel.app/",
+        githubLink: "",
+        skills: ['HTML', 'SCSS', 'JavaScript', 'jQuery'],
+    },
+    {
+        id: 11,
+        title: "ICX ID",
+        image: "/projects/icx.webp",
+        previewStatus: true,
+        githubStatus: false,
+        home: false,
+        previewLink: "https://icx-id.com/",
+        githubLink: "",
+        skills: ['Laravel', 'HTML', 'SCSS', 'JavaScript', 'jQuery']
+    },
+    {
+        id: 12,
+        title: "AKC Conference",
+        image: "/projects/akc-conference.webp",
+        previewStatus: true,
+        githubStatus: false,
+        home: false,
+        previewLink: "http://conference.akc.az/",
+        githubLink: "",
+        skills: ['Laravel', 'HTML', 'SCSS', 'JavaScript', 'jQuery']
+    },
+    {
+        id: 13,
+        title: "Geoengineer",
+        image: "/projects/geoeng.webp",
+        previewStatus: false,
+        githubStatus: true,
+        home: false,
+        previewLink: "",
+        githubLink: "https://github.com/pashaskerov21/geoenginerring",
+        skills: ['Laravel', 'HTML', 'SCSS', 'JavaScript', 'jQuery']
+    },
+    {
         id: 14,
+        title: "Geoengineer 2",
+        image: "/projects/geoeng-2.webp",
+        previewStatus: true,
+        githubStatus: false,
+        home: false,
+        previewLink: "https://geoengineer.proton.az/",
+        githubLink: "",
+        skills: ['Laravel', 'HTML', 'SCSS', 'JavaScript', 'jQuery',]
+    },
+    {
+        id: 15,
         title: "Mebello",
         image: "/projects/mebello.webp",
         previewStatus: true,
@@ -157,7 +168,7 @@ const ProjectData: ProjectDataType[] = [
         skills: ['HTML', 'SCSS', 'JavaScript', 'Bootstrap'],
     },
     {
-        id: 15,
+        id: 16,
         title: "Viona",
         image: "/projects/viona.webp",
         previewStatus: true,
@@ -168,7 +179,7 @@ const ProjectData: ProjectDataType[] = [
         skills: ['HTML', 'SCSS', 'JavaScript', 'Bootstrap'],
     },
     {
-        id: 16,
+        id: 17,
         title: "Livementors",
         image: "/projects/livementor.webp",
         previewStatus: true,
@@ -179,7 +190,7 @@ const ProjectData: ProjectDataType[] = [
         skills: ['HTML', 'SCSS', 'JavaScript', 'Bootstrap'],
     },
     {
-        id: 17,
+        id: 18,
         title: "Aurum",
         image: "/projects/aurum.webp",
         previewStatus: true,
@@ -190,7 +201,7 @@ const ProjectData: ProjectDataType[] = [
         skills: ['HTML', 'SCSS', 'JavaScript', 'Bootstrap'],
     },
     {
-        id: 18,
+        id: 19,
         title: "FutureArt",
         image: "/projects/futureart.webp",
         previewStatus: true,
@@ -201,7 +212,7 @@ const ProjectData: ProjectDataType[] = [
         skills: ['HTML', 'SCSS', 'JavaScript', 'Bootstrap'],
     },
     {
-        id: 19,
+        id: 20,
         title: "Supertoys",
         image: "/projects/supertoys.webp",
         previewStatus: true,
@@ -212,7 +223,7 @@ const ProjectData: ProjectDataType[] = [
         skills: ['HTML', 'SCSS', 'JavaScript', 'Bootstrap'],
     },
     {
-        id: 20,
+        id: 21,
         title: "Inaye",
         image: "/projects/inaye.webp",
         previewStatus: true,
@@ -223,7 +234,7 @@ const ProjectData: ProjectDataType[] = [
         skills: ['HTML', 'SCSS', 'JavaScript', 'Bootstrap'],
     },
     {
-        id: 21,
+        id: 22,
         title: "RBE Company",
         image: "/projects/rbecompany.webp",
         previewStatus: true,
@@ -234,7 +245,7 @@ const ProjectData: ProjectDataType[] = [
         skills: ['HTML', 'SCSS', 'JavaScript', 'Bootstrap'],
     },
     {
-        id: 22,
+        id: 23,
         title: "BrandColors",
         image: "/projects/brandcolor.webp",
         previewStatus: true,
@@ -245,7 +256,7 @@ const ProjectData: ProjectDataType[] = [
         skills: ['JavaScript', 'React JS', 'SCSS',],
     },
     {
-        id: 23,
+        id: 24,
         title: "Quiz app",
         image: "/projects/quiz-app.webp",
         previewStatus: true,
@@ -256,7 +267,7 @@ const ProjectData: ProjectDataType[] = [
         skills: ['React JS', 'TypeScript', 'Styled Components'],
     },
     {
-        id: 24,
+        id: 25,
         title: "Travel",
         image: "/projects/travel.webp",
         previewStatus: true,
@@ -267,7 +278,7 @@ const ProjectData: ProjectDataType[] = [
         skills: ['React JS', 'React Router', 'SCSS'],
     },
     {
-        id: 25,
+        id: 26,
         title: "Gym",
         image: "/projects/gym-app.webp",
         previewStatus: true,
@@ -278,7 +289,7 @@ const ProjectData: ProjectDataType[] = [
         skills: ['React JS', 'SCSS', 'Bootstrap'],
     },
     {
-        id: 26,
+        id: 27,
         title: "Pixabay Gallery",
         image: "/projects/pixabay-gallery.webp",
         previewStatus: true,
@@ -289,7 +300,7 @@ const ProjectData: ProjectDataType[] = [
         skills: ['React JS', 'SCSS', 'Bootstrap'],
     },
     {
-        id: 27,
+        id: 28,
         title: "Game Portal",
         image: "/projects/game-portal.webp",
         previewStatus: true,

@@ -49,6 +49,7 @@ export type ProjectDataType = {
 export type SkillDataType = {
     id: number,
     title: string,
-    img: string,
+    logo: string,
+    logo_dark: string,
     color: string,
 };

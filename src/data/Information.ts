@@ -13,7 +13,7 @@ const PersonalInformationData:PersonalInformationDataType = {
         text: "I am developing myself in the field of programming and Front-End development. I have excellent knowledge and professional experience in this field and I continue to learn new technologies"
     },
     aboutText: "I have been developing myself in the field of Frontend Developer for 3 years now and I have experience with many technologies, I am improving myself in this field. Currently, I am working in the field of Frontend Development. I am experienced in developing powerful websites that meet client goals. Able to identify needs, create plans, and work with clients to optimize design usability and performance. I can work effectively without supervision and learn new skills quickly. I develop web pages that are responsive to all devices in a form according to the wishes of the clients. I have a great passion for programming and am constantly improving my knowledge in this field.",
-    cv: "/personal/AskerovAlipashaCV.pdf",
+    cv: "/personal/AlipashaAskerovCV.docx",
     image: "/personal/image-2.png",
     experience: [
         {

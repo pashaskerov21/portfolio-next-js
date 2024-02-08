@@ -15,6 +15,17 @@ const ProjectData: ProjectDataType[] = [
     },
     {
         id: 2,
+        title: "Sobsan",
+        image: "/projects/sobsan-next.webp",
+        previewStatus: true,
+        githubStatus: true,
+        home: true,
+        previewLink: "https://sobsan-nextjs.vercel.app/",
+        githubLink: "https://github.com/pashaskerov21/sobsan-nextjs",
+        skills: ['React JS', 'Next JS', 'TypeScript', 'Formik','Redux', 'Styled Components','SCSS']
+    },
+    {
+        id: 3,
         title: "BMI",
         image: "/projects/bmi.webp",
         previewStatus: true,
@@ -22,18 +33,7 @@ const ProjectData: ProjectDataType[] = [
         home: true,
         previewLink: "https://bmi-nextjs-app.vercel.app",
         githubLink: "https://github.com/pashaskerov21/bmi-nextjs",
-        skills: ['React JS', 'Next JS', 'TypeScript', 'Formik', 'Styled Components']
-    },
-    {
-        id: 3,
-        title: "Sobsan",
-        image: "/projects/sobsan.webp",
-        previewStatus: true,
-        githubStatus: true,
-        home: true,
-        previewLink: "https://sobsan-app.netlify.app/",
-        githubLink: "https://github.com/pashaskerov21/sobsan-paint-app",
-        skills: ['React JS', 'Redux', 'React Router', 'SCSS', 'Bootstrap'],
+        skills: ['React JS', 'Next JS', 'TypeScript', 'Formik','Redux', 'Styled Components']
     },
     {
         id: 4,

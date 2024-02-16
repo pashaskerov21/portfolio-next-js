@@ -152,7 +152,7 @@ const ProjectData: ProjectDataType[] = [
         previewStatus: true,
         githubStatus: false,
         home: false,
-        previewLink: "https://geoengineer.proton.az/",
+        previewLink: "https://www.geoenjenerik.com.tr/",
         githubLink: "",
         skills: ['Laravel', 'HTML', 'SCSS', 'JavaScript', 'jQuery',]
     },

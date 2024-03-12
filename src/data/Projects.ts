@@ -15,6 +15,17 @@ const ProjectData: ProjectDataType[] = [
     },
     {
         id: 2,
+        title: "Geo Energy Pro",
+        image: "/projects/geoenergypro.webp",
+        previewStatus: true,
+        githubStatus: true,
+        home: true,
+        previewLink: "https://geoenergypro.vercel.app",
+        githubLink: "https://github.com/pashaskerov21/geoenergypro",
+        skills: ['Next JS', 'TypeScript', 'Laravel', 'React JS', 'Axios', 'Formik', 'Redux', 'SCSS']
+    },
+    {
+        id: 3,
         title: "Sobsan",
         image: "/projects/sobsan-next.webp",
         previewStatus: true,
@@ -22,10 +33,10 @@ const ProjectData: ProjectDataType[] = [
         home: true,
         previewLink: "https://sobsan-nextjs.vercel.app/",
         githubLink: "https://github.com/pashaskerov21/sobsan-nextjs",
-        skills: ['React JS', 'Next JS', 'TypeScript', 'Formik','Redux', 'Styled Components','SCSS']
+        skills: ['React JS', 'Next JS', 'TypeScript', 'Formik', 'Redux', 'Styled Components', 'SCSS']
     },
     {
-        id: 3,
+        id: 4,
         title: "BMI",
         image: "/projects/bmi.webp",
         previewStatus: true,
@@ -33,10 +44,10 @@ const ProjectData: ProjectDataType[] = [
         home: true,
         previewLink: "https://bmi-nextjs-app.vercel.app",
         githubLink: "https://github.com/pashaskerov21/bmi-nextjs",
-        skills: ['React JS', 'Next JS', 'TypeScript', 'Formik','Redux', 'Styled Components']
+        skills: ['React JS', 'Next JS', 'TypeScript', 'Formik', 'Redux', 'Styled Components']
     },
     {
-        id: 4,
+        id: 5,
         title: "Lucky",
         image: "/projects/lucky.webp",
         previewStatus: true,
@@ -47,7 +58,7 @@ const ProjectData: ProjectDataType[] = [
         skills: ['React JS', 'Redux', 'React Router', 'SCSS', 'Bootstrap'],
     },
     {
-        id: 5,
+        id: 6,
         title: "Bashkent",
         image: "/projects/bashkent.webp",
         previewStatus: true,
@@ -58,18 +69,18 @@ const ProjectData: ProjectDataType[] = [
         skills: ['React JS', 'Redux', 'React Router', 'SCSS', 'Bootstrap'],
     },
     {
-        id: 6,
+        id: 7,
         title: "Meladora",
         image: "/projects/meladora.webp",
         previewStatus: true,
         githubStatus: true,
-        home: true,
+        home: false,
         previewLink: "https://meladora-app.netlify.app/",
         githubLink: "https://github.com/pashaskerov21/meladora-app",
         skills: ['React JS', 'React Router', 'SCSS', 'Bootstrap'],
     },
     {
-        id: 7,
+        id: 8,
         title: "Triablo",
         image: "/projects/triablo.webp",
         previewStatus: true,
@@ -80,7 +91,7 @@ const ProjectData: ProjectDataType[] = [
         skills: ['React JS', 'React Router', 'SCSS', 'Bootstrap'],
     },
     {
-        id: 8,
+        id: 9,
         title: "Dayaq",
         image: "/projects/dayaq.webp",
         previewStatus: true,
@@ -91,7 +102,7 @@ const ProjectData: ProjectDataType[] = [
         skills: ['React JS', 'SCSS', 'Bootstrap'],
     },
     {
-        id: 9,
+        id: 10,
         title: "Toba",
         image: "/projects/toba.webp",
         previewStatus: true,
@@ -102,7 +113,7 @@ const ProjectData: ProjectDataType[] = [
         skills: ['HTML', 'SCSS', 'JavaScript', 'jQuery'],
     },
     {
-        id: 10,
+        id: 11,
         title: "Agrowest",
         image: "/projects/agrowest.webp",
         previewStatus: true,
@@ -113,7 +124,7 @@ const ProjectData: ProjectDataType[] = [
         skills: ['HTML', 'SCSS', 'JavaScript', 'jQuery'],
     },
     {
-        id: 11,
+        id: 12,
         title: "ICX ID",
         image: "/projects/icx.webp",
         previewStatus: true,
@@ -124,7 +135,7 @@ const ProjectData: ProjectDataType[] = [
         skills: ['Laravel', 'HTML', 'SCSS', 'JavaScript', 'jQuery']
     },
     {
-        id: 12,
+        id: 13,
         title: "AKC Conference",
         image: "/projects/akc-conference.webp",
         previewStatus: true,
@@ -135,7 +146,7 @@ const ProjectData: ProjectDataType[] = [
         skills: ['Laravel', 'HTML', 'SCSS', 'JavaScript', 'jQuery']
     },
     {
-        id: 13,
+        id: 14,
         title: "Geoengineer",
         image: "/projects/geoeng.webp",
         previewStatus: false,
@@ -146,7 +157,7 @@ const ProjectData: ProjectDataType[] = [
         skills: ['Laravel', 'HTML', 'SCSS', 'JavaScript', 'jQuery']
     },
     {
-        id: 14,
+        id: 15,
         title: "Geoengineer 2",
         image: "/projects/geoeng-2.webp",
         previewStatus: true,
@@ -157,7 +168,7 @@ const ProjectData: ProjectDataType[] = [
         skills: ['Laravel', 'HTML', 'SCSS', 'JavaScript', 'jQuery',]
     },
     {
-        id: 15,
+        id: 16,
         title: "Mebello",
         image: "/projects/mebello.webp",
         previewStatus: true,
@@ -168,7 +179,7 @@ const ProjectData: ProjectDataType[] = [
         skills: ['HTML', 'SCSS', 'JavaScript', 'Bootstrap'],
     },
     {
-        id: 16,
+        id: 17,
         title: "Viona",
         image: "/projects/viona.webp",
         previewStatus: true,
@@ -179,7 +190,7 @@ const ProjectData: ProjectDataType[] = [
         skills: ['HTML', 'SCSS', 'JavaScript', 'Bootstrap'],
     },
     {
-        id: 17,
+        id: 18,
         title: "Livementors",
         image: "/projects/livementor.webp",
         previewStatus: true,
@@ -190,7 +201,7 @@ const ProjectData: ProjectDataType[] = [
         skills: ['HTML', 'SCSS', 'JavaScript', 'Bootstrap'],
     },
     {
-        id: 18,
+        id: 19,
         title: "Aurum",
         image: "/projects/aurum.webp",
         previewStatus: true,
@@ -201,7 +212,7 @@ const ProjectData: ProjectDataType[] = [
         skills: ['HTML', 'SCSS', 'JavaScript', 'Bootstrap'],
     },
     {
-        id: 19,
+        id: 20,
         title: "FutureArt",
         image: "/projects/futureart.webp",
         previewStatus: true,
@@ -212,7 +223,7 @@ const ProjectData: ProjectDataType[] = [
         skills: ['HTML', 'SCSS', 'JavaScript', 'Bootstrap'],
     },
     {
-        id: 20,
+        id: 21,
         title: "Supertoys",
         image: "/projects/supertoys.webp",
         previewStatus: true,
@@ -223,7 +234,7 @@ const ProjectData: ProjectDataType[] = [
         skills: ['HTML', 'SCSS', 'JavaScript', 'Bootstrap'],
     },
     {
-        id: 21,
+        id: 22,
         title: "Inaye",
         image: "/projects/inaye.webp",
         previewStatus: true,
@@ -234,7 +245,7 @@ const ProjectData: ProjectDataType[] = [
         skills: ['HTML', 'SCSS', 'JavaScript', 'Bootstrap'],
     },
     {
-        id: 22,
+        id: 23,
         title: "RBE Company",
         image: "/projects/rbecompany.webp",
         previewStatus: true,
@@ -245,7 +256,7 @@ const ProjectData: ProjectDataType[] = [
         skills: ['HTML', 'SCSS', 'JavaScript', 'Bootstrap'],
     },
     {
-        id: 23,
+        id: 24,
         title: "BrandColors",
         image: "/projects/brandcolor.webp",
         previewStatus: true,
@@ -256,7 +267,7 @@ const ProjectData: ProjectDataType[] = [
         skills: ['JavaScript', 'React JS', 'SCSS',],
     },
     {
-        id: 24,
+        id: 25,
         title: "Quiz app",
         image: "/projects/quiz-app.webp",
         previewStatus: true,
@@ -267,7 +278,7 @@ const ProjectData: ProjectDataType[] = [
         skills: ['React JS', 'TypeScript', 'Styled Components'],
     },
     {
-        id: 25,
+        id: 26,
         title: "Travel",
         image: "/projects/travel.webp",
         previewStatus: true,
@@ -278,7 +289,7 @@ const ProjectData: ProjectDataType[] = [
         skills: ['React JS', 'React Router', 'SCSS'],
     },
     {
-        id: 26,
+        id: 27,
         title: "Gym",
         image: "/projects/gym-app.webp",
         previewStatus: true,
@@ -289,7 +300,7 @@ const ProjectData: ProjectDataType[] = [
         skills: ['React JS', 'SCSS', 'Bootstrap'],
     },
     {
-        id: 27,
+        id: 28,
         title: "Pixabay Gallery",
         image: "/projects/pixabay-gallery.webp",
         previewStatus: true,
@@ -300,7 +311,7 @@ const ProjectData: ProjectDataType[] = [
         skills: ['React JS', 'SCSS', 'Bootstrap'],
     },
     {
-        id: 28,
+        id: 29,
         title: "Game Portal",
         image: "/projects/game-portal.webp",
         previewStatus: true,

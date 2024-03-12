@@ -59,69 +59,76 @@ const SkillData: SkillDataType[] = [
     },
     {
         id: 9,
+        title: 'Axios',
+        logo: '/skills/axios.png',
+        logo_dark: '/skills/axios.png',
+        color: '#3A6BE2'
+    },
+    {
+        id: 10,
         title: 'Redux',
         logo: '/skills/redux.svg',
         logo_dark: '/skills/redux.svg',
         color: '#7649BB'
     },
     {
-        id: 10,
+        id: 11,
         title: 'Formik',
         logo: '/skills/formik.png',
         logo_dark: '/skills/formik.png',
         color: '#0051CD'
     },
     {
-        id: 11,
+        id: 12,
         title: 'React Router',
         logo: '/skills/react-router.svg',
         logo_dark: '/skills/react-router.svg',
         color: '#D0021B'
     },
     {
-        id: 12,
+        id: 13,
         title: 'jQuery',
         logo: '/skills/jquery.png',
         logo_dark: '/skills/jquery.png',
         color: '#1169AE'
     },
     {
-        id: 13,
+        id: 14,
         title: 'Angular',
         logo: '/skills/angular.png',
         logo_dark: '/skills/angular.png',
         color: '#DE002D'
     },
     {
-        id: 14,
+        id: 15,
         title: 'Bootstrap',
         logo: '/skills/bootstrap-2.png',
         logo_dark: '/skills/bootstrap-2.png',
         color: '#8512FB'
     },
     {
-        id: 15,
+        id: 16,
         title: 'Tailwind CSS',
         logo: '/skills/tailwindcss.svg',
         logo_dark: '/skills/tailwindcss.svg',
         color: '#38BDF8'
     },
     {
-        id: 16,
+        id: 17,
         title: 'Styled Components',
         logo: '/skills/styled-components.svg',
         logo_dark: '/skills/styled-components.svg',
         color: '#9F70B8'
     },
     {
-        id: 17,
+        id: 18,
         title: 'Material UI',
         logo: '/skills/material-ui.svg',
         logo_dark: '/skills/material-ui.svg',
         color: '#007fff'
     },
     {
-        id: 18,
+        id: 19,
         title: 'GIT',
         logo: '/skills/git.svg',
         logo_dark: '/skills/git.svg',

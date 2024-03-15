@@ -9,7 +9,7 @@ const ProjectData: ProjectDataType[] = [
         previewStatus: true,
         githubStatus: true,
         home: true,
-        previewLink: "https://alipashaskerov.netlify.app/",
+        previewLink: "https://alipashaskerov.vercel.app/",
         githubLink: "https://github.com/pashaskerov21/portfolio-nextjs",
         skills: ['React JS', 'Next JS', 'TypeScript', 'Formik', 'Styled Components']
     },

@@ -1,4 +1,8 @@
 export type PersonalInformationDataType = {
+    title: string,
+    keywords: string,
+    author_name: string,
+    author_url: string,
     social: {
         github: string,
         linkedin: string,

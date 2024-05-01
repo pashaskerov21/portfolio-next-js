@@ -5,7 +5,8 @@ export const AboutWrapper = styled.div`
     width: 100%;
     ${column_center};
     @media (min-width: 1200px){
-        ${row_between}
+        ${row_between};
+        align-items: flex-start;
     }
 `;
 export const AboutImage = styled.div`
@@ -43,11 +44,14 @@ export const AboutText = styled.div`
     width: 100%;
     max-width: 600px;
     line-height: 30px;
-    font-size: 16px;
+    font-size: 14px;
     text-align: center;
     font-weight: 500;
+    p{
+        margin-bottom: 10px;
+    }
     @media (min-width: 992px){
-        font-size: 18px;
+        font-size: 16px;
     }
     @media (min-width: 1200px){
         text-align: start; 

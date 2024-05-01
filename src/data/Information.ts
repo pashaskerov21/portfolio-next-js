@@ -1,6 +1,10 @@
 import { PersonalInformationDataType } from "@/src/types"
 
 const PersonalInformationData:PersonalInformationDataType = {
+    title: "Alipasha Askerov | Portfolio",
+    keywords: 'Alipasha, Askerov, Alipasha Askerov, Askerov Alipasha, Əlipaşa, Əskərov, Əskərov Əlipaşa, Əlipaşa Əskərov, Developer, Frontend, Frontend Developer, Backend, Backend Developer, Fullstack, Fullstack developer, Web Developer, Web Development, React JS, Javascript, Next JS, PHP, Laravel, Typescript, Responsive Web Design, Next JS Developer, React JS Developer',
+    author_name: 'Alipasha Askerov',
+    author_url: 'https://alipashaskerov.vercel.app',
     social: {
         github: "https://github.com/pashaskerov21",
         linkedin: "https://www.linkedin.com/in/alipasha-askerov-868213246/",
@@ -9,10 +13,10 @@ const PersonalInformationData:PersonalInformationDataType = {
     },
     home: {
         title: "Hi, I'm Alipasha Askerov",
-        animationTitle: "frontend developer",
-        text: "I am developing myself in the field of programming and Front-End development. I have excellent knowledge and professional experience in this field and I continue to learn new technologies"
+        animationTitle: "fullstack developer",
+        text: "I am developing myself in the field of programming and Web Development. I have excellent knowledge and professional experience in this field and I continue to learn new technologies"
     },
-    aboutText: "I have been developing myself in the field of Frontend Developer for 3 years now and I have experience with many technologies, I am improving myself in this field. Currently, I am working in the field of Frontend Development. I am experienced in developing powerful websites that meet client goals. Able to identify needs, create plans, and work with clients to optimize design usability and performance. I can work effectively without supervision and learn new skills quickly. I develop web pages that are responsive to all devices in a form according to the wishes of the clients. I have a great passion for programming and am constantly improving my knowledge in this field.",
+    aboutText: "Hello! I'm Alipasha, a full-stack developer specializing in both frontend and backend development. Creating interactive and user-oriented web applications has become not just a job but also a passion for me. I especially prefer TypeScript with modern JavaScript libraries and frameworks such as Next.js and React.js. By using these technologies, I aim to create powerful and scalable backend systems that prioritize user experience. I also work with a robust and flexible backend framework like Laravel, so I can build both sides of my projects on a solid foundation. While doing my work, I always stick to the latest technologies and best practices, while also being a stickler for clean code writing and maintainable architectures. I am passionate about bringing a unique perspective and creative solutions to each project. Doing business with me means not only delivering a project but also developing a long-term business partnership. I strive to understand my customers' needs and meet them in the best way, and I am committed to delivering my projects on time and within budget. I look forward to helping you succeed in your projects. I am always open to communicate, so feel free to contact me.",
     cv: "/personal/AlipashaAskerovCV.docx",
     image: "/personal/image-2.png",
     experience: [

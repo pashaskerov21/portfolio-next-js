@@ -13,7 +13,7 @@ const HomeSection: React.FC<{ personalInformationData: PersonalInformationDataTy
           <div className="content">
             <HomeTitle>{personalInformationData.home.title}</HomeTitle>
             <AnimationTitle title={personalInformationData.home.animationTitle}>{personalInformationData.home.animationTitle}</AnimationTitle>
-            <HomeTextWrapper>{personalInformationData.home.text}</HomeTextWrapper>
+            {/* <HomeTextWrapper>{personalInformationData.home.text}</HomeTextWrapper> */}
           </div>
           <div className="image">
             <Image src='/design/img-2.svg' width={500} height={500} alt='design' />

@@ -140,8 +140,8 @@ export const ProjectSkillsWrapper = styled.div`
 `;
 
 export const AllProjectButton = styled.div`
-width: 100%;
-max-width: 400px;
+    width: 100%;
+    max-width: 400px;
     margin: 40px auto;
     ${row_center};
     padding: 20px 30px;
@@ -179,3 +179,30 @@ max-width: 400px;
         }
     }
 `
+
+export const ProjectCategoriesWrapper = styled.div`
+    width: 100%;
+    ${row_center};
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 60px;
+    button{
+        cursor: pointer;
+        padding: 10px 20px;
+        ${row_center};
+        border: 2px solid ${props => props.theme.primaryColor};
+        border-radius: 10px;
+        font-size: 18px;
+        font-weight: 600;
+        color: ${props => props.theme.primaryColor};
+        box-shadow: 0 0 10px ${props => props.theme.primaryColor};
+        &.active{
+            background-color: ${props => props.theme.primaryColor};
+            color: #fff;
+        }
+        @media (min-width: 768px){
+            font-size: 22px;
+            padding: 15px 30px;
+        }
+    }
+`;

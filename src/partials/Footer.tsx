@@ -2,11 +2,14 @@
 import React from 'react'
 import Logo from '../components/Logo'
 import { FooterContainer } from '../styles/partials/footer'
+import { Link } from 'react-scroll'
 
 const Footer = () => {
   return (
     <FooterContainer>
-        <Logo firstName='Alipasha' lastName='Askerov' color='#000000'/>
+      <Link to='home'>
+        <Logo firstName='Alipasha' lastName='Askerov' color='#000000' />
+      </Link>
     </FooterContainer>
   )
 }

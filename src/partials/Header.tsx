@@ -49,7 +49,9 @@ const Header: React.FC<HeaderProps> = ({ loading, theme, disableTheme, enableThe
       <GeneralNav $fixStatus={fixedTop}>
         <Container>
           <div className="inner">
-            <Logo firstName='Alipasha' lastName='Askerov' color='primary' />
+            <Link to='home'>
+              <Logo firstName='Alipasha' lastName='Askerov' color='primary' />
+            </Link>
             <NavLinksWrapper>
               {
                 menuData.map((link, index) => (

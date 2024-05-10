@@ -40,12 +40,12 @@ export type MenuDataType = {
     name: string,
 };
 export type ProjectDataType = {
-    id: number,
     title: string,
     image: string,
     previewStatus: boolean,
     githubStatus: boolean,
     home: boolean,
+    category: number,
     previewLink: string,
     githubLink: string,
     skills: string[],

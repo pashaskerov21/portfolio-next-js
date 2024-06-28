@@ -14,8 +14,8 @@ export const ScrollButton = styled.button`
     font-size: 20px;
     transition: all 0.2s;
     z-index: 999;
+    box-shadow: 0 0 10px ${props => props.theme.text};
     &:hover{
-        box-shadow: 0 0 10px ${props => props.theme.text};
         transform: scale(1.1);
     }
 `;

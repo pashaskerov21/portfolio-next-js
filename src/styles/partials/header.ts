@@ -133,11 +133,11 @@ export const LinksWrapper = styled.div<MenuProps>`
         font-weight: 600;
         margin-bottom: 20px;
         font-size: 20px;
-        cursor: pointer;
         position: relative;
         cursor: pointer;
         transition: all 0.3s;
         font-family: 'Kalam', cursive;
+        color: #fff;
         ${props => props.$menuStatus && css`
             opacity: 0;
             transform: translateY(-15px);

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { column_center, row_around, row_center } from "../mixin";
+import { opacityShowAnimation } from "../animation";
 
 
 export const TimerModalItem = styled.div`
@@ -14,9 +15,12 @@ export const TimerModalItem = styled.div`
     ${row_center};
     display: none;
     padding: 15px;
+    opacity: 0;
 
     &.active{
         display: flex;
+        
+        animation: ${opacityShowAnimation} 0.2s ease forwards;
         
     }
 
@@ -24,10 +28,15 @@ export const TimerModalItem = styled.div`
         position: absolute;
         top: 20px;
         right: 15px;
-        color: ${props => props.theme.primaryColor};
         font-size: 36px;
         cursor: pointer;
-        
+        width: 60px;
+        height: 60px;
+        ${row_center};
+        background-color: ${props => props.theme.primaryColor};
+        color: ${props => props.theme.background};
+        box-shadow: 0 0 10px  ${props => props.theme.primaryColor};
+        border-radius: 50%; 
     }
     .timer-wrapper{
         width: 100%;
@@ -61,3 +70,4 @@ export const TimerModalItem = styled.div`
     }
 
 `;
+

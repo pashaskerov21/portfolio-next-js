@@ -8,6 +8,11 @@ export const preloaderAnimation = keyframes`
     transform: rotate(360deg)
 }
 `
+export const pulseAnimation = keyframes`
+    0% {box-shadow: 0 0 0 0 #42b883;}
+    80% {box-shadow: 0 0 0 10px rgba(255, 134, 134, 0);}
+    100% {box-shadow: 0 0 0 0 rgba(255, 134, 134, 0);}
+`
 export const fixHeaderAnimation = keyframes`
     0%{
         opacity: 0;

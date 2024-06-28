@@ -12,6 +12,7 @@ import Header from '../partials/Header';
 import Footer from '../partials/Footer';
 import MainSocialMedia from '../components/MainSocialMedia';
 import Preloader from '../components/Preloader';
+import TimerModal from '../components/TimerModal';
 
 type SiteLayoutProps = {
     children: React.ReactNode,
@@ -26,6 +27,8 @@ const SiteLayout: React.FC<SiteLayoutProps> = ({ children, menuData, personalInf
     const activeTheme = isDarkMode ? darkTheme : lightTheme;
     const activeThemeValue = isDarkMode ? themes[0] : themes[1]; 
 
+   
+
     const [loading, setLoading] = React.useState(true);
     React.useEffect(() => {
         setTimeout(() =>{
@@ -39,7 +42,9 @@ const SiteLayout: React.FC<SiteLayoutProps> = ({ children, menuData, personalInf
     },[])
     if(!mounted){
         return null;
-    }
+    };
+
+    
 
 
     return (
@@ -51,6 +56,7 @@ const SiteLayout: React.FC<SiteLayoutProps> = ({ children, menuData, personalInf
                 <ScrollButton onClick={() => window.scrollTo(0, 0)}>
                     <FaArrowUp />
                 </ScrollButton>
+                <TimerModal/>
                 <Header
                     loading={loading}
                     theme={activeThemeValue}

@@ -28,10 +28,10 @@ export const TimerModalItem = styled.div`
         position: absolute;
         top: 20px;
         right: 15px;
-        font-size: 36px;
         cursor: pointer;
-        width: 60px;
-        height: 60px;
+        width: 40px;
+        height: 40px;
+        font-size: 26px;
         ${row_center};
         background-color: ${props => props.theme.primaryColor};
         color: ${props => props.theme.background};

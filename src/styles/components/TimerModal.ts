@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { column_center, row_around, row_center } from "../mixin";
-import { opacityShowAnimation } from "../animation";
+import { opacityShowAnimation, timerModalAnimation } from "../animation";
 
 
 export const TimerModalItem = styled.div`
@@ -49,6 +49,9 @@ export const TimerModalItem = styled.div`
         border-radius: 20px;
         @media (min-width: 576px){
             gap: 20px;
+        }
+        &.difference-0{
+            animation: ${timerModalAnimation} 1s ease infinite;
         }
         .timer-item{
             ${column_center};

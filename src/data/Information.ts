@@ -42,7 +42,7 @@ const PersonalInformationData:PersonalInformationDataType = {
             company: "Proton MMC",
             location: "Nerimanov, Baku",
             start: "12/2022",
-            end: "Current",
+            end: "06/2024",
         },
     ],
     education: [

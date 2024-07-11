@@ -28,7 +28,7 @@ const TimerModal = () => {
     
 
     useEffect(() => {
-        const endDate = moment('2025-07-01T00:00');
+        const endDate = moment('2025-07-12T00:00');
 
         const x = setInterval(() => {
             let now = moment();

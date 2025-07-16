@@ -56,7 +56,7 @@ const SiteLayout: React.FC<SiteLayoutProps> = ({ children, menuData, personalInf
                 <ScrollButton onClick={() => window.scrollTo(0, 0)}>
                     <FaArrowUp />
                 </ScrollButton>
-                <TimerModal/>
+                {/* <TimerModal/> */}
                 <Header
                     loading={loading}
                     theme={activeThemeValue}

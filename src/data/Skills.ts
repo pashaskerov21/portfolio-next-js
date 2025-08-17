@@ -3,132 +3,139 @@ import { SkillDataType } from "@/src/types";
 const SkillData: SkillDataType[] = [
     {
         id: 1,
-        title: 'HTML',
-        logo: '/skills/html.svg',
-        logo_dark: '/skills/html.svg',
-        color: '#fc4503'
-    },
-    {
-        id: 2,
-        title: 'CSS',
-        logo: '/skills/css.svg',
-        logo_dark: '/skills/css.svg',
-        color: '#0328fc'
-    },
-    {
-        id: 3,
-        title: 'SCSS',
-        logo: '/skills/sass.svg',
-        logo_dark: '/skills/sass.svg',
-        color: '#CE679A'
-    },
-    {
-        id: 4,
         title: 'JavaScript',
         logo: '/skills/javascript.svg',
         logo_dark: '/skills/javascript.svg',
         color: '#fefe01'
     },
     {
-        id: 5,
+        id: 2,
         title: 'React JS',
         logo: '/skills/react.svg',
         logo_dark: '/skills/react.svg',
         color: '#61DAFB'
     },
     {
-        id: 6,
+        id: 3,
         title: 'Next JS',
         logo: '/skills/next-js-2.svg',
         logo_dark: '/skills/next-js.svg',
         color: '#fff'
     },
     {
-        id: 7,
-        title: 'TypeScript',
-        logo: '/skills/typescript.svg',
-        logo_dark: '/skills/typescript.svg',
-        color: '#007ACC'
-    },
-    {
-        id: 8,
-        title: 'Laravel',
-        logo: '/skills/laravel.svg',
-        logo_dark: '/skills/laravel.svg',
-        color: '#FF291A'
-    },
-    {
-        id: 9,
-        title: 'Axios',
-        logo: '/skills/axios.png',
-        logo_dark: '/skills/axios.png',
-        color: '#3A6BE2'
-    },
-    {
-        id: 10,
-        title: 'Redux',
-        logo: '/skills/redux.svg',
-        logo_dark: '/skills/redux.svg',
-        color: '#7649BB'
-    },
-    {
-        id: 11,
-        title: 'Formik',
-        logo: '/skills/formik.png',
-        logo_dark: '/skills/formik.png',
-        color: '#0051CD'
-    },
-    {
-        id: 12,
-        title: 'React Router',
-        logo: '/skills/react-router.svg',
-        logo_dark: '/skills/react-router.svg',
-        color: '#D0021B'
-    },
-    {
-        id: 13,
-        title: 'jQuery',
-        logo: '/skills/jquery.png',
-        logo_dark: '/skills/jquery.png',
-        color: '#1169AE'
-    },
-    {
-        id: 14,
+        id: 4,
         title: 'Angular',
         logo: '/skills/angular.png',
         logo_dark: '/skills/angular.png',
         color: '#DE002D'
     },
     {
+        id: 5,
+        title: 'Vue',
+        logo: '/skills/vue.png',
+        logo_dark: '/skills/vue.png',
+        color: '#42b883'
+    },
+    {
+        id: 6,
+        title: 'TypeScript',
+        logo: '/skills/typescript.svg',
+        logo_dark: '/skills/typescript.svg',
+        color: '#007ACC'
+    },
+    {
+        id: 7,
+        title: 'Laravel',
+        logo: '/skills/laravel.svg',
+        logo_dark: '/skills/laravel.svg',
+        color: '#FF291A'
+    },
+    {
+        id: 8,
+        title: 'jQuery',
+        logo: '/skills/jquery.png',
+        logo_dark: '/skills/jquery.png',
+        color: '#1169AE'
+    },
+    {
+        id: 9,
+        title: 'HTML',
+        logo: '/skills/html.svg',
+        logo_dark: '/skills/html.svg',
+        color: '#fc4503'
+    },
+    {
+        id: 10,
+        title: 'CSS',
+        logo: '/skills/css.svg',
+        logo_dark: '/skills/css.svg',
+        color: '#0328fc'
+    },
+    {
+        id: 11,
+        title: 'SCSS',
+        logo: '/skills/sass.svg',
+        logo_dark: '/skills/sass.svg',
+        color: '#CE679A'
+    },
+    {
+        id: 12,
+        title: 'Axios',
+        logo: '/skills/axios.png',
+        logo_dark: '/skills/axios.png',
+        color: '#3A6BE2'
+    },
+    {
+        id: 13,
+        title: 'Redux',
+        logo: '/skills/redux.svg',
+        logo_dark: '/skills/redux.svg',
+        color: '#7649BB'
+    },
+    {
+        id: 14,
+        title: 'Formik',
+        logo: '/skills/formik.png',
+        logo_dark: '/skills/formik.png',
+        color: '#0051CD'
+    },
+    {
         id: 15,
+        title: 'React Router',
+        logo: '/skills/react-router.svg',
+        logo_dark: '/skills/react-router.svg',
+        color: '#D0021B'
+    },
+    {
+        id: 16,
         title: 'Bootstrap',
         logo: '/skills/bootstrap-2.png',
         logo_dark: '/skills/bootstrap-2.png',
         color: '#8512FB'
     },
     {
-        id: 16,
+        id: 17,
         title: 'Tailwind CSS',
         logo: '/skills/tailwindcss.svg',
         logo_dark: '/skills/tailwindcss.svg',
         color: '#38BDF8'
     },
     {
-        id: 17,
+        id: 18,
         title: 'Styled Components',
         logo: '/skills/styled-components.svg',
         logo_dark: '/skills/styled-components.svg',
         color: '#9F70B8'
     },
     {
-        id: 18,
+        id: 19,
         title: 'Material UI',
         logo: '/skills/material-ui.svg',
         logo_dark: '/skills/material-ui.svg',
         color: '#007fff'
     },
     {
-        id: 19,
+        id: 20,
         title: 'GIT',
         logo: '/skills/git.svg',
         logo_dark: '/skills/git.svg',

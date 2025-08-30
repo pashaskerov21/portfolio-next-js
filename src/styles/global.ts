@@ -56,6 +56,9 @@ section{
   margin-bottom: 40px;
   position: relative;
 }
+img{
+  user-select: none;
+}
 
 .code-img-design{
   position: absolute;

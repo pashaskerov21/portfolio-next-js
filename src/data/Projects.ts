@@ -10,7 +10,7 @@ const ProjectData: ProjectDataType[] = [
         home: true,
         category: 1,
         previewLink: "https://alipashaskerov.vercel.app/",
-        githubLink: "https://github.com/pashaskerov21/portfolio-nextjs",
+        githubLink: "https://github.com/pashaskerov21/portfolio-next-js",
         skills: ['React JS', 'Next JS', 'TypeScript', 'Formik', 'Styled Components']
     },
     {
@@ -27,7 +27,7 @@ const ProjectData: ProjectDataType[] = [
     {
         title: "Geo Energy Pro",
         image: "/projects/geoenergypro.webp",
-        previewStatus: true,
+        previewStatus: false,
         githubStatus: true,
         home: true,
         category: 1,
@@ -56,6 +56,17 @@ const ProjectData: ProjectDataType[] = [
         previewLink: "https://bmi-nextjs-app.vercel.app",
         githubLink: "https://github.com/pashaskerov21/bmi-nextjs",
         skills: ['React JS', 'Next JS', 'TypeScript', 'Formik', 'Redux', 'Styled Components']
+    },
+    {
+        title: "Edu Dashboard",
+        image: "/projects/edu-dashboard.png",
+        previewStatus: true,
+        githubStatus: true,
+        home: true,
+        category: 1,
+        previewLink: "https://edu-dashboard-angular.vercel.app/",
+        githubLink: "https://github.com/pashaskerov21/edu-dashboard",
+        skills: ['Angular', 'TypeScript', 'SCSS']
     },
     {
         title: "Lucky",

@@ -17,20 +17,19 @@ import { ThemeButtonStyle } from '../styles/buttons/ThemeButton'
 type HeaderProps = {
   loading: boolean,
   theme: string,
-  disableTheme: () => void,
-  enableTheme: () => void,
+  toggleTheme: () => void,
   menuData: MenuDataType[],
   personalInformationData: PersonalInformationDataType,
 }
 
 
-const Header: React.FC<HeaderProps> = ({ loading, theme, disableTheme, enableTheme, menuData, personalInformationData }) => {
+const Header: React.FC<HeaderProps> = ({ loading, theme,toggleTheme, menuData, personalInformationData }) => {
   const [showMenu, setShowMenu] = useState(false);
   const toggleMenu = () => setShowMenu(!showMenu);
   const [fixedTop, setFixedTop] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 300) {
+      if (window.scrollY > 400) {
         setFixedTop(true);
       } else {
         setFixedTop(false);
@@ -60,11 +59,11 @@ const Header: React.FC<HeaderProps> = ({ loading, theme, disableTheme, enableThe
               }
             </NavLinksWrapper>
             <ButtonsWrapper>
-              <ThemeButtonStyle>
-                <div className={`btn ${theme === 'light' ? 'active' : ''}`} onClick={disableTheme}>
+              <ThemeButtonStyle onClick={toggleTheme}>
+                <div className={`btn ${theme === 'light' ? 'active' : ''}`}>
                   <BsFillSunFill />
                 </div>
-                <div className={`btn ${theme === 'dark' ? 'active' : ''}`} onClick={enableTheme}>
+                <div className={`btn ${theme === 'dark' ? 'active' : ''}`}>
                   <BsMoonStarsFill />
                 </div>
               </ThemeButtonStyle>

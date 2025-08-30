@@ -23,7 +23,7 @@ type SiteLayoutProps = {
 const SiteLayout: React.FC<SiteLayoutProps> = ({ children, menuData, personalInformationData }) => {
 
     const themes = ['dark','light']
-    const { isDarkMode, toggle, disable, enable, } = useDarkMode(false);
+    const { isDarkMode, toggle, } = useDarkMode(false);
     const activeTheme = isDarkMode ? darkTheme : lightTheme;
     const activeThemeValue = isDarkMode ? themes[0] : themes[1]; 
 
@@ -60,8 +60,7 @@ const SiteLayout: React.FC<SiteLayoutProps> = ({ children, menuData, personalInf
                 <Header
                     loading={loading}
                     theme={activeThemeValue}
-                    disableTheme={disable}
-                    enableTheme={enable}
+                    toggleTheme={toggle}
                     menuData={menuData}
                     personalInformationData={personalInformationData}
                 />

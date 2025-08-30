@@ -87,6 +87,5 @@ export const SkillCard = styled.div<SkillProps>`
             animation: ${skillAnimation} 6s linear 0s infinite;
             border-radius: 20px;
         }
-
     }
 `;

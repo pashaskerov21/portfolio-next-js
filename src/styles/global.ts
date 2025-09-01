@@ -59,7 +59,6 @@ section{
 img{
   user-select: none;
 }
-
 .code-img-design{
   position: absolute;
   top: 50%;

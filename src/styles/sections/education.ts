@@ -21,6 +21,7 @@ export const EducationCard = styled.div`
         font-size: 18px;
         font-weight: 600;
         margin-bottom: 30px;
+        font-family: monospace;
         svg{
             color: ${props => props.theme.primaryColor};
             font-size: 24px;
@@ -32,6 +33,7 @@ export const EducationCard = styled.div`
     .content{
         width: 100%;
         ${column_align_start};
+        font-family: monospace;
         .row{
             ${column_align_start};
             flex-wrap: wrap;
@@ -41,6 +43,7 @@ export const EducationCard = styled.div`
             }
             .label{
                 white-space: nowrap;
+               
                 margin-right: 10px;
                 color: ${props => props.theme.primaryColor};
                 font-weight: 600;
@@ -58,7 +61,7 @@ export const EducationCard = styled.div`
                 white-space: nowrap;
                 text-transform: uppercase;
                 letter-spacing: 1px;
-                padding: 12px 15px;
+                padding: 8px 12px;
                 background-color: ${props => props.theme.primaryColor};
                 border-radius: 15px;
                 font-weight: 600;

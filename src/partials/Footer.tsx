@@ -7,8 +7,8 @@ import { Link } from 'react-scroll'
 const Footer = () => {
   return (
     <FooterContainer>
-      <Link to='home'>
-        <Logo firstName='Alipasha' lastName='Askerov' color='#000000' />
+      <Link to='home' aria-label='Alipasha Askerov Logo'>
+        <Logo firstName='Alipasha' lastName='Askerov' color='#fff' />
       </Link>
     </FooterContainer>
   )

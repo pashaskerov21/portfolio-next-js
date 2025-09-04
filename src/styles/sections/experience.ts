@@ -1,20 +1,24 @@
 import styled from "styled-components";
 import { column_align_start, column_between, column_center, row_between, row_center } from "../mixin";
 
-export const ExperienceWrapper = styled.div`
+export const ExperienceWrapper = styled.ul`
     width: 100%;
     ${column_center};
+    gap: 30px;
+    li{
+        width: 100%;
+        max-width: 1000px;
+    }
 `;
 export const ExperienceCard = styled.div`
     width: 100%;
+    max-width: 1200px;
     min-height: 200px;
     ${column_between};
-    max-width: 800px;
-    margin-bottom: 45px;
     box-shadow: 0 0 10px ${props => props.theme.primaryColor};
     border-radius: 20px;
     transition: all 0.3s;
-    padding: 20px;
+    padding: 20px 20px 30px;
     svg{
         color: ${props => props.theme.primaryColor};
         font-size: 20px;
@@ -27,6 +31,7 @@ export const ExperienceCard = styled.div`
     }
     .title{
         width: 100%;
+        font-family: monospace;
         ${column_align_start};
         @media (min-width: 768px){
             ${row_between};
@@ -38,7 +43,7 @@ export const ExperienceCard = styled.div`
             margin-bottom: 15px;
             @media (min-width: 768px){
                 margin-bottom: 0;
-                font-size: 22px;
+                font-size: 26px;
             }
         }
         .date{
@@ -46,24 +51,40 @@ export const ExperienceCard = styled.div`
             
         }
     }
+    article{
+        width: 100%;
+        padding: 35px 0;
+        font-family: monospace;
+        .description{
+            width: 100%;
+            margin-bottom: 10px;   
+        }
+        .responsibilities{
+            padding-left: 30px;
+            li{
+                list-style: '- ';
+                margin-bottom: 5px;
+            }
+        }
+    }
     .company{
         width: 100%;
         ${column_align_start};
+        gap: 6px;
+        font-family: monospace;
         .name{
             font-size: 18px;
             color: ${props => props.theme.primaryColor};
-            margin-bottom: 5px;
-            font-weight: 500;
+            font-weight: 800;
             @media (min-width: 768px){
                 font-size: 22px;
                 margin-bottom: 10px
             }
         }
         .location{
-            ${row_center};
             font-size: 14px;
             @media (min-width: 768px){
-                font-size: 16px;
+                font-size: 18px;
             }
         }
     }

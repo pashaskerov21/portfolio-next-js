@@ -7,12 +7,13 @@ import { MenuDataType, PersonalInformationDataType } from '../types';
 import { darkTheme } from '../styles/theme/dark';
 import { lightTheme } from '../styles/theme/light';
 import { GlobalStyles } from '../styles/global';
-import { ScrollButton } from '../styles/buttons/ScrollButton';
 import Header from '../partials/Header';
 import Footer from '../partials/Footer';
 import MainSocialMedia from '../components/MainSocialMedia';
 import Preloader from '../components/Preloader';
 import TimerModal from '../components/TimerModal';
+import { ScrollButton } from '../styles/buttons/scrollbtn';
+import ScrollTop from '../components/ScrollTop';
 
 type SiteLayoutProps = {
     children: React.ReactNode,
@@ -33,7 +34,7 @@ const SiteLayout: React.FC<SiteLayoutProps> = ({ children, menuData, personalInf
     React.useEffect(() => {
         setTimeout(() =>{
             setLoading(false);
-        },2000);
+        },1000);
     }, []);
 
     const [mounted, setMounted] = React.useState(false);
@@ -44,18 +45,13 @@ const SiteLayout: React.FC<SiteLayoutProps> = ({ children, menuData, personalInf
         return null;
     };
 
-    
-
-
     return (
         <>
             <ThemeProvider theme={activeTheme}>
                 {loading && <Preloader/>}
                 <GlobalStyles />
                 <MainSocialMedia personalInformationData={personalInformationData} />
-                <ScrollButton onClick={() => window.scrollTo(0, 0)}>
-                    <FaArrowUp />
-                </ScrollButton>
+                <ScrollTop/>
                 {/* <TimerModal/> */}
                 <Header
                     loading={loading}

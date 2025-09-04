@@ -24,6 +24,8 @@ export type PersonalInformationDataType = {
         location: string,
         start: string,
         end: string,
+        description: string,
+        responsibilities: string[],
     }[],
     education: {
         id: number,

@@ -2,11 +2,11 @@ import styled from "styled-components";
 import { column_align_start, row_center, row_justify_start } from "../mixin";
 import { projectLinkAnimation, projectSkillAnimation } from "../animation";
 
-export const ProjectsWrapper = styled.div`
+export const ProjectsWrapper = styled.ul`
     width: 100%;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 40px;
+    gap: 30px;
     place-items: center;
     @media (min-width: 768px){
         grid-template-columns: repeat(2, 1fr);
@@ -17,7 +17,7 @@ export const ProjectsWrapper = styled.div`
     `;
 export const ProjectCard = styled.div`
     width: 100%;
-    max-width: 400px;
+    max-width: 450px;
     height: 200px;
     border-radius: 20px;
     position: relative;
@@ -68,22 +68,24 @@ export const ProjectContent = styled.div`
         left: 0;
         padding-left: 15px;
         ${column_align_start};
+        gap: 10px;
         @media (min-width: 768px){
             bottom: 25px;
             padding-left: 25px;
         }
         .title{
             font-size: 25px;
-            margin-bottom: 15px;
             color: ${props => props.theme.primaryColor};
             user-select: none;
+            font-family: monospace;
             @media (min-width: 1200px){
                 font-size: 28px;
             }
         }
     }
     .links{
-        ${row_center}
+        ${row_center};
+        gap: 8px;
         position: absolute;
         top: 20px;
         right: 20px;
@@ -97,9 +99,9 @@ export const ProjectContent = styled.div`
             border-radius: 50%;
             background-color: ${props => props.theme.primaryColor};
             box-shadow: 0 0 10px ${props => props.theme.primaryColor};
+            color: #fff;
             ${row_center};
-            margin-right: 10px;
-            font-size: 16px;
+            font-size: 18px;
             transition: all 0.2s;
             transform: translateY(-100px);
             opacity: 0;
@@ -115,33 +117,32 @@ export const ProjectContent = styled.div`
                 box-shadow: 0 0 20px ${props => props.theme.primaryColor};
             }
             @media (min-width: 992px){
-                font-size: 22px;
-                width: 50px;
-                height: 50px;
-                margin-right: 15px;
+                /* font-size: 22px; */
+                /* width: 50px;
+                height: 50px; */
             }
         }
     }
 `;
-export const ProjectSkillsWrapper = styled.div`
+export const ProjectSkillsWrapper = styled.ul`
     width: 80%;
     ${row_justify_start};
     flex-wrap: wrap;
+    gap: 7px;
     img{
-        width: 25px;
-        height: 25px;
+        width: 15px;
+        height: 15px;
         @media (min-width: 768px){
-            width: 35px; 
-            height: 35px;
+            width: 25px; 
+            height: 25px;
         }
         transform: scale(0);
-        margin-right: 7px;
     }
 `;
 
 export const AllProjectButton = styled.div`
     width: 100%;
-    max-width: 400px;
+    max-width: 300px;
     margin: 40px auto;
     ${row_center};
     padding: 20px 30px;
@@ -156,6 +157,7 @@ export const AllProjectButton = styled.div`
     color: ${props => props.theme.primaryColor} !important;
     transition: all 0.2s;
     cursor: pointer;
+    font-family: monospace;
     &:after{
         content: '';
         position: absolute;
@@ -196,6 +198,7 @@ export const ProjectCategoriesWrapper = styled.div`
         font-weight: 600;
         color: ${props => props.theme.primaryColor};
         box-shadow: 0 0 10px ${props => props.theme.primaryColor};
+        font-family: monospace;
         &.active{
             background-color: ${props => props.theme.primaryColor};
             color: #fff;

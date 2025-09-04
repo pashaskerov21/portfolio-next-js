@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { column_center, row_center } from "../mixin";
 import { skillAnimation } from "../animation";
 
-export const SkillsWrapper = styled.div`
+export const SkillsWrapper = styled.ul`
 
     width: 100%;
     display: grid;

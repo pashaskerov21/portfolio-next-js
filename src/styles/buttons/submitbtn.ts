@@ -8,7 +8,7 @@ type ButtonProps = {
 
 export const SubmitButton = styled.button<ButtonProps>`
     width: 80%;
-    max-width: 250px;
+    max-width: 200px;
     color: ${props => props.theme.text};
     font-size: 22px;
     font-weight: 500;
@@ -21,6 +21,7 @@ export const SubmitButton = styled.button<ButtonProps>`
     transition: all 0.2s;
     min-height: 65px;
     color: #fff;
+    font-family: monospace;
     &::after{
         content: '';
         pointer-events: none;

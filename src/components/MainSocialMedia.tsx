@@ -6,13 +6,21 @@ import { FiGithub } from 'react-icons/fi'
 import { MainSocialMediaWrapper } from '../styles/components/socialicons'
 import { PersonalInformationDataType } from '../types'
 
-const MainSocialMedia: React.FC<{personalInformationData: PersonalInformationDataType}> = ({personalInformationData}) => {
+const MainSocialMedia: React.FC<{ personalInformationData: PersonalInformationDataType }> = ({ personalInformationData }) => {
     return (
         <MainSocialMediaWrapper>
-            <a target="_blank" rel="noreferrer" style={{ animationDelay: '0.3s' }} href={personalInformationData.social.github}><FiGithub /></a>
-            <a target="_blank" rel="noreferrer" style={{ animationDelay: '0.4s' }} href={personalInformationData.social.linkedin}><BiLogoLinkedin /></a>
-            <a target="_blank" rel="noreferrer" style={{ animationDelay: '0.5s' }} href={personalInformationData.social.whatsapp}><BsWhatsapp /></a>
-            <a target="_blank" rel="noreferrer" style={{ animationDelay: '0.6s' }} href={personalInformationData.social.mail}><BiLogoGmail /></a>
+            <li>
+                <a target="_blank" rel="noreferrer" style={{ animationDelay: '0.3s' }} aria-label='Github' href={personalInformationData.social.github}><FiGithub /></a>
+            </li>
+            <li>
+                <a target="_blank" rel="noreferrer" style={{ animationDelay: '0.4s' }} aria-label='Linkedin' href={personalInformationData.social.linkedin}><BiLogoLinkedin /></a>
+            </li>
+            <li>
+                <a target="_blank" rel="noreferrer" style={{ animationDelay: '0.5s' }} aria-label='Whatsapp' href={personalInformationData.social.whatsapp}><BsWhatsapp /></a>
+            </li>
+            <li>
+                <a target="_blank" rel="noreferrer" style={{ animationDelay: '0.6s' }} aria-label='Mail' href={`mailto:${personalInformationData.social.mail}`}><BiLogoGmail /></a>
+            </li>
         </MainSocialMediaWrapper>
     )
 }

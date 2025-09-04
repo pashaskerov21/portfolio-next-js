@@ -25,7 +25,9 @@ const ProjectSkills: React.FC<{ skillNames: string[], skillData: SkillDataType[]
         <ProjectSkillsWrapper>
             {
                 skills.length > 0 && skills.map((skill, index) => (
-                    <Image style={{ animationDelay: `${0.1 + index * 0.1}s` }} key={skill.id} src={skill.logo_dark} width={36} height={36} alt='' />
+                    <li key={skill.id}>
+                        <Image style={{ animationDelay: `${0.1 + index * 0.1}s` }}  src={skill.logo_dark} width={36} height={36} alt={`${skill.title} logo`} />
+                    </li>
                 ))
             }
         </ProjectSkillsWrapper>

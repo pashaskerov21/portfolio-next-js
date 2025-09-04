@@ -19,7 +19,7 @@ const EducationSection: React.FC<{ personalInformationData: PersonalInformationD
                             <EducationCard key={data.id}>
                                 <div className="title">
                                     <FaBuildingColumns />
-                                    <h3>{data.univercity}</h3>
+                                    <h2>{data.univercity}</h2>
                                 </div>
                                 <div className="content">
                                     <div className="row">

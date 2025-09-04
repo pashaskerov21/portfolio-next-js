@@ -36,15 +36,12 @@ export const GeneralNav = styled.nav<HeaderProps>`
     }
 `;
 
-export const NavLinksWrapper = styled.div`
-    min-width: 650px;
+export const NavLinksWrapper = styled.ul`
+    min-width: 750px;
     ${row_between};
     display: none;
     @media (min-width: 1200px){
         display: flex;
-    }
-    @media (min-width: 1400px){
-        min-width: 750px;
     }
     a{
         text-transform: uppercase;
@@ -52,11 +49,7 @@ export const NavLinksWrapper = styled.div`
         cursor: pointer;
         position: relative;
         transition: all 0.3s;
-        /* font-family: 'Kalam', cursive; */
         font-size: 18px;
-        /* @media (min-width: 1400px){
-            font-size: 22px;
-        } */
         &::after,
         &::before {
             content: '';
@@ -92,12 +85,8 @@ export const NavLinksWrapper = styled.div`
 
 
 export const ButtonsWrapper = styled.div`
-    ${column_align_end};
-    flex-direction: column-reverse;
+    ${row_justify_end};
     gap: 15px;
-    @media (min-width: 340px){
-        ${row_justify_end};
-    }
 `;
 
 
@@ -125,13 +114,15 @@ export const HeaderMenu = styled.div<MenuProps>`
     }
 `;
 
-export const LinksWrapper = styled.div<MenuProps>`
+export const LinksWrapper = styled.ul<MenuProps>`
     width: 100%;
-    ${column_center}
+    ${column_center};
+    gap: 20px;
+    margin-bottom: 40px;
     a{
+        display: block;
         text-transform: uppercase;
         font-weight: 600;
-        margin-bottom: 20px;
         font-size: 20px;
         position: relative;
         cursor: pointer;

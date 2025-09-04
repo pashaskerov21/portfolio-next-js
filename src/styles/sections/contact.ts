@@ -60,7 +60,7 @@ export const FormItem = styled.div<FormItemProps>`
                     box-shadow: 0 0 40px #dc3545;
                 `
             }
-            ~span{
+            ~label{
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -80,9 +80,10 @@ export const FormItem = styled.div<FormItemProps>`
             }
         }
     }
-    span{
+    label{
         user-select: none;
         pointer-events: none;
+        font-family: monospace;
         ${
             props => props.$inputFocus ? css`
                 position: absolute;

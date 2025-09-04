@@ -6,7 +6,6 @@ export const AboutWrapper = styled.div`
     ${column_center};
     @media (min-width: 1200px){
         ${row_between};
-        align-items: flex-start;
     }
 `;
 export const AboutImage = styled.div`
@@ -40,18 +39,20 @@ export const AboutContent = styled.div`
         margin-top: 0;
     }
 `;
-export const AboutText = styled.div`
+export const AboutText = styled.article`
     width: 100%;
     max-width: 600px;
     line-height: 30px;
-    font-size: 14px;
+    font-size: 16px;
+    line-height: 26px;
     text-align: center;
     font-weight: 500;
     p{
         margin-bottom: 10px;
     }
     @media (min-width: 992px){
-        font-size: 16px;
+        font-size: 20px;
+        line-height: 30px;
     }
     @media (min-width: 1200px){
         text-align: start; 
@@ -61,6 +62,7 @@ export const AboutText = styled.div`
 export const AboutContact = styled.div`
     width: 100%;
     ${column_center};
+    gap: 40px;
     margin-top: 30px;
     @media (min-width: 1200px){
         ${row_justify_start}
@@ -79,11 +81,7 @@ export const ResumeButton = styled.a`
     text-indent: 99;
     color: ${props => props.theme.primaryColor} !important;
     transition: all 0.2s;
-    margin-bottom: 40px;
-    @media (min-width: 1200px){
-        margin-bottom: 0;
-        margin-right: 40px;
-    }
+    font-family: monospace;
     &:after{
         content: '';
         position: absolute;
@@ -100,14 +98,14 @@ export const ResumeButton = styled.a`
     }
     &:hover{
         box-shadow: 0 0 50px ${props => props.theme.primaryColor};
-        color: ${props => props.theme.text} !important;
+        color: #fff !important;
         &::after{
             opacity: 1;
             width: 100%;
         }
     }
 `;
-export const AboutSocialWrapper = styled.div`
+export const AboutSocialWrapper = styled.ul`
     ${row_center};
     gap: 15px;
     a{
@@ -130,7 +128,7 @@ export const AboutSocialWrapper = styled.div`
             transform: scale(1.3);
             box-shadow: 0 0 20px ${props => props.theme.primaryColor};
             background-color: ${props => props.theme.primaryColor};
-            color: ${props => props.theme.text};
+            color: #fff;
         }
         
     }

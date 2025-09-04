@@ -36,11 +36,11 @@ export const LogoWrapper = styled.div<LogoProps>`
     @media (min-width: 1200px){
         font-size: 40px;
     }
-    &:hover{
+    /* &:hover{
         span{
             animation: ${logoSpanAnimation} 0.4s ease forwards;
         }
-    }
+    } */
     ${
         props => props.$infinite && css`
         span{
@@ -56,6 +56,9 @@ export const LogoWrapper = styled.div<LogoProps>`
         display: inline-block;
         transition: all 0.3s;
         margin-right: 1px;
+        &:hover{
+            transform: translateY(-10px);
+        }
     }
 `;
 

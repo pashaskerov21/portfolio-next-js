@@ -5,7 +5,7 @@ import { SectionTitleWrapper } from '../styles/components/sectiontitle'
 const SectionTitle: React.FC<{ title: string }> = ({ title }) => {
   return (
     <SectionTitleWrapper>
-      <h1>{title}</h1>
+      <h2>{title}</h2>
     </SectionTitleWrapper>
   )
 }

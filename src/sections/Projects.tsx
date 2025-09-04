@@ -17,7 +17,7 @@ const ProjectSection: React.FC<{ projectData: ProjectDataType[], skillData: Skil
         let limitedProjects = [];
         if (category === 0) {
             limitedProjects = projectData;
-            setProjects(limitedProjects.slice(0,6));
+            setProjects(limitedProjects.slice(0, 6));
         } else {
             limitedProjects = projectData.filter((data) => data.category === category);
             setProjects(limitedProjects.slice(0, 6));
@@ -27,9 +27,9 @@ const ProjectSection: React.FC<{ projectData: ProjectDataType[], skillData: Skil
     }, [category, projectData]);
 
     const showAllProjectsHandler = () => {
-        if(category === 0){
+        if (category === 0) {
             setProjects(projectData);
-        }else{
+        } else {
             setProjects(projectData.filter((data) => data.category === category));
         }
         setShowAllProjects(false);
@@ -44,26 +44,28 @@ const ProjectSection: React.FC<{ projectData: ProjectDataType[], skillData: Skil
             <Container>
                 <SectionTitle title='projects' />
                 <ProjectCategoriesWrapper>
-                    <button type="button" className={`${category === 0 ? 'active' : ''}`} onClick={() => changeCategory(0)}>All</button>
-                    <button type="button" className={`${category === 1 ? 'active' : ''}`} onClick={() => changeCategory(1)}>Fullstack</button>
-                    <button type="button" className={`${category === 2 ? 'active' : ''}`} onClick={() => changeCategory(2)}>Frontend</button>
-                    <button type="button" className={`${category === 3 ? 'active' : ''}`} onClick={() => changeCategory(3)}>Backend</button>
+                    <button type="button" className={`${category === 0 ? 'active' : ''}`} onClick={() => changeCategory(0)} aria-pressed={category === 0}>All</button>
+                    <button type="button" className={`${category === 1 ? 'active' : ''}`} onClick={() => changeCategory(1)} aria-pressed={category === 1}>Fullstack</button>
+                    <button type="button" className={`${category === 2 ? 'active' : ''}`} onClick={() => changeCategory(2)} aria-pressed={category === 2}>Frontend</button>
+                    <button type="button" className={`${category === 3 ? 'active' : ''}`} onClick={() => changeCategory(3)} aria-pressed={category === 3}>Backend</button>
                 </ProjectCategoriesWrapper>
                 <ProjectsWrapper>
                     {projects.map((project, index) => (
-                        <ProjectCard key={index}>
-                            <Image className='project-img' src={project.image} width={400} height={200} alt='' />
-                            <ProjectContent>
-                                <div className="inner">
-                                    <h3 className='title'>{project.title}</h3>
-                                    <ProjectSkills skillNames={project.skills} skillData={skillData} />
-                                </div>
-                                <div className="links">
-                                    {project.previewStatus && <a href={project.previewLink} target='_blank' rel="noopener noreferrer"><BsFillEyeFill /></a>}
-                                    {project.githubStatus && <a href={project.githubLink} target='_blank' rel="noopener noreferrer"><FiGithub /></a>}
-                                </div>
-                            </ProjectContent>
-                        </ProjectCard>
+                        <li key={index}>
+                            <ProjectCard>
+                                <Image className='project-img' src={project.image} width={400} height={200} alt={`${project.title} screenshot`} />
+                                <ProjectContent>
+                                    <div className="inner">
+                                        <ProjectSkills skillNames={project.skills} skillData={skillData} />
+                                        <h3 className='title'>{project.title}</h3>
+                                    </div>
+                                    <div className="links">
+                                        {project.previewStatus && <a href={project.previewLink} target='_blank' rel="noopener noreferrer" aria-label={`View ${project.title} live`}><BsFillEyeFill /></a>}
+                                        {project.githubStatus && <a href={project.githubLink} target='_blank' rel="noopener noreferrer" aria-label={`View ${project.title} on Github`}><FiGithub /></a>}
+                                    </div>
+                                </ProjectContent>
+                            </ProjectCard>
+                        </li>
                     ))}
                 </ProjectsWrapper>
                 {showAllProjects && <AllProjectButton onClick={showAllProjectsHandler}>See all projects</AllProjectButton>}

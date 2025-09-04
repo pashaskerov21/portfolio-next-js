@@ -1,6 +1,6 @@
 'use client'
 import React, { useEffect, useState } from 'react'
-import { TimerButton } from '../styles/buttons/TimerButton'
+import { TimerButton } from '../styles/buttons/timerbtn'
 import { FaBell, FaXmark } from 'react-icons/fa6';
 import { TimerModalItem } from '../styles/components/TimerModal';
 import moment from 'moment';

@@ -16,11 +16,13 @@ const SkillSection: React.FC<{ skillData: SkillDataType[] }> = ({ skillData }) =
                 <SkillsWrapper>
                     {
                         skillData.map((skill) => (
-                            <SkillCard key={skill.id} $skillColor={skill.color}>
-                                <Image src={isDarkMode ? skill.logo_dark : skill.logo} width={70} height={70} alt='' />
-                                <span className="title">{skill.title}</span>
-                                <div className="border"></div>
-                            </SkillCard>
+                            <li key={skill.id}>
+                                <SkillCard  $skillColor={skill.color}>
+                                    <Image src={isDarkMode ? skill.logo_dark : skill.logo} width={70} height={70} alt={`${skill.title} logo`} />
+                                    <span className="title">{skill.title}</span>
+                                    <div className="border"></div>
+                                </SkillCard>
+                            </li>
                         ))
                     }
                 </SkillsWrapper>

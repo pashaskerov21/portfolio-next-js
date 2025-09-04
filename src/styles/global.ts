@@ -39,7 +39,9 @@ a, a:hover, a:active, a:visited {
     text-decoration: none;
     color: inherit;
 }
-ul{
+ul,li{
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 button{

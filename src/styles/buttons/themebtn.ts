@@ -2,10 +2,10 @@
 import styled from "styled-components";
 import { row_between } from "../mixin";
 
-export const ThemeButtonStyle = styled.div`
+export const ThemeButton = styled.button`
     ${row_between};
     background-color: ${props => props.theme.backgroundSoft};
-    border-radius: 10px; 
+    border-radius: 16px; 
     padding: 4px;
     box-shadow: 0 0 10px ${props => props.theme.color_1};
     border: 1px solid ${props => props.theme.color_1};
@@ -14,8 +14,10 @@ export const ThemeButtonStyle = styled.div`
     }
     svg{
         display: block;
+        color: ${props => props.theme.text};
     }
-    .btn{
+    .icon{
+        
         padding: 6px;
         border-radius: 10px;
         cursor: pointer;

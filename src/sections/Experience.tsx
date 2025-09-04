@@ -17,22 +17,33 @@ const ExperienceSection: React.FC<{ personalInformationData: PersonalInformation
                 <ExperienceWrapper>
                     {
                         personalInformationData.experience.map((data) => (
-                            <ExperienceCard key={data.id}>
-                                <div className="title">
-                                    <div className="position">{data.position}</div>
-                                    <div className="date">
-                                        <FaCalendarAlt />
-                                        <span>{data.start} - {data.end}</span>
+                            <li key={data.id}>
+                                <ExperienceCard>
+                                    <div className="title">
+                                        <h3 className="position">{data.position}</h3>
+                                        <div className="date">
+                                            <FaCalendarAlt />
+                                            <span>{data.start} - {data.end}</span>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="company">
-                                    <div className='name'>{data.company}</div>
-                                    <div className='location'>
-                                        <FaLocationDot />
-                                        <span>{data.location}</span>
+                                    <article>
+                                        <div className="description">
+                                            <p>{data.description}</p>
+                                        </div>
+                                        <ul className="responsibilities">
+                                            {data.responsibilities.map((r,index) => (
+                                                <li key={index}>{r}</li>
+                                            ))}
+                                        </ul>
+                                    </article>
+                                    <div className="company">
+                                        <h4 className='name'>{data.company}</h4>
+                                        <div className='location'>
+                                            <span>{data.location}</span>
+                                        </div>
                                     </div>
-                                </div>
-                            </ExperienceCard>
+                                </ExperienceCard>
+                            </li>
                         ))
                     }
                 </ExperienceWrapper>

@@ -7,16 +7,16 @@ type HeaderIconProps = {
     $loading: boolean,
 }
 
-export const HeaderSocialIcons = styled.div<HeaderIconProps>`
+export const HeaderSocialIcons = styled.ul<HeaderIconProps>`
     ${row_center}
-    margin-top: 15px;
+    gap: 25px;
     color: #fff;
     @media (min-width: 1200px){
         display: none;
     }
     a{
+        display: block;
         font-size: 24px;
-        margin-right: 25px;
         transition: all 0.2s;
         
         ${props => props.$menuStatus && css`
@@ -33,11 +33,12 @@ export const HeaderSocialIcons = styled.div<HeaderIconProps>`
     }
 `;
 
-export const MainSocialMediaWrapper = styled.div`
+export const MainSocialMediaWrapper = styled.ul`
     position: fixed;
     bottom: 150px;
     left: 20px;
     ${column_center};
+    gap: 30px;
     display: none;
     z-index: 9999;
     @media (min-width: 1400px){
@@ -58,7 +59,6 @@ export const MainSocialMediaWrapper = styled.div`
     }
     a{
         font-size: 24px;
-        margin-bottom: 30px;
         transition: all 0.2s;
         &:hover{
             color: ${props => props.theme.primaryColor};

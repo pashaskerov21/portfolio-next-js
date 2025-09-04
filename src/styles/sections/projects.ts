@@ -14,10 +14,14 @@ export const ProjectsWrapper = styled.ul`
     @media (min-width: 1200px){
         grid-template-columns: repeat(3, 1fr);
     }
+    li{
+        width: 100%;
+        max-width: 380px;
+    }
     `;
 export const ProjectCard = styled.div`
     width: 100%;
-    max-width: 450px;
+    max-width: 380px;
     height: 200px;
     border-radius: 20px;
     position: relative;

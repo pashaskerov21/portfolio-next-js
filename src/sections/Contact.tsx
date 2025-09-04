@@ -30,7 +30,7 @@ const ContactSection: React.FC = () => {
 
   const [formSubmit, setFormSubmit] = React.useState<boolean>(false)
   const onSubmit = (values: FormValueType, actions: FormikHelpers<FormValueType>) => {
-    console.log(values);
+
     actions.resetForm();
     setFormSubmit(true);
     setTimeout(() => {
@@ -44,9 +44,9 @@ const ContactSection: React.FC = () => {
     }
 
     emailjs
-      .send('service_w47i0ze', 'template_ubdp51h', params, 'wbStjN6pVz7MYmF3r')
+      .send('service_5oxskh4', 'template_ubdp51h', params, 'wbStjN6pVz7MYmF3r')
       .then((res) => {
-        console.log('Email sent successfully!');
+        // console.log('Email sent successfully!');
       })
       .catch((err) =>
         console.error('Error sending email:', err)
@@ -74,7 +74,7 @@ const ContactSection: React.FC = () => {
                       <label htmlFor='fullname'>Surname, Firstname</label>
                     </FormItem>
                     <FormItem $inputFocus={formik.values.email.length > 0 ? true : false} $inputError={formik.errors.email ? true : false}>
-                      <Field name='email'  id='email'/>
+                      <Field name='email' id='email' />
                       <label htmlFor='email'>Email</label>
                     </FormItem>
                     <FormItem $inputFocus={formik.values.message.length > 0 ? true : false} $inputError={formik.errors.message ? true : false}>

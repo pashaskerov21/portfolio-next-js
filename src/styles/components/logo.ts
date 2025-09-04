@@ -36,13 +36,14 @@ export const LogoWrapper = styled.div<LogoProps>`
     @media (min-width: 1200px){
         font-size: 40px;
     }
-    /* &:hover{
-        span{
-            animation: ${logoSpanAnimation} 0.4s ease forwards;
+    @media(max-width: 992px){
+        &:hover{
+            span{
+                animation: ${logoSpanAnimation} 0.4s ease forwards;
+            }
         }
-    } */
-    ${
-        props => props.$infinite && css`
+    }
+    ${props => props.$infinite && css`
         span{
             animation: ${logoSpanAnimation} 0.4s ease infinite;
         }
@@ -56,8 +57,10 @@ export const LogoWrapper = styled.div<LogoProps>`
         display: inline-block;
         transition: all 0.3s;
         margin-right: 1px;
-        &:hover{
-            transform: translateY(-10px);
+        @media (min-width: 992px){
+            &:hover{
+                transform: translateY(-10px);
+            }
         }
     }
 `;

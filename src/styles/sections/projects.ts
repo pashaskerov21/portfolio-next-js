@@ -133,6 +133,14 @@ export const ProjectSkillsWrapper = styled.ul`
     ${row_justify_start};
     flex-wrap: wrap;
     gap: 7px;
+    li{
+        width: 20px;
+        height: 20px;
+        @media (min-width: 768px){
+            width: 25px; 
+            height: 25px;
+        }
+    }
     img{
         width: 15px;
         height: 15px;

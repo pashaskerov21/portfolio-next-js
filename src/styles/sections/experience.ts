@@ -12,7 +12,7 @@ export const ExperienceWrapper = styled.ul`
 `;
 export const ExperienceCard = styled.div`
     width: 100%;
-    max-width: 1200px;
+    max-width: 1000px;
     min-height: 200px;
     ${column_between};
     box-shadow: 0 0 10px ${props => props.theme.primaryColor};
@@ -70,7 +70,7 @@ export const ExperienceCard = styled.div`
     .company{
         width: 100%;
         ${column_align_start};
-        gap: 6px;
+        gap: 10px;
         font-family: monospace;
         .name{
             font-size: 18px;
@@ -78,7 +78,6 @@ export const ExperienceCard = styled.div`
             font-weight: 800;
             @media (min-width: 768px){
                 font-size: 22px;
-                margin-bottom: 10px
             }
         }
         .location{
@@ -90,9 +89,6 @@ export const ExperienceCard = styled.div`
     }
     &:hover{
         box-shadow: 0 0 40px ${props => props.theme.primaryColor};
-        @media (min-width: 768px){
-            transform: scale(1.05)
-        }
     }
 
 `;

@@ -85,8 +85,5 @@ export const EducationCard = styled.div`
     }
     &:hover{
         box-shadow: 0 0 40px ${props => props.theme.primaryColor};
-        @media (min-width: 768px){
-            transform: scale(1.05)
-        }
     }
 `;

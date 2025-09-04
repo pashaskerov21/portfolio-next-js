@@ -1,6 +1,6 @@
 import { MenuDataType } from "@/src/types";
 
-const MenuData:MenuDataType[] = [
+const MenuData: MenuDataType[] = [
     {
         id: 1,
         name: 'home',
@@ -11,15 +11,15 @@ const MenuData:MenuDataType[] = [
     },
     {
         id: 3,
-        name: 'skills',
+        name: 'experience',
     },
     {
         id: 4,
-        name: 'projects',
+        name: 'skills',
     },
     {
         id: 5,
-        name: 'experience',
+        name: 'projects',
     },
     {
         id: 6,

@@ -20,9 +20,9 @@ const HomeLayout: React.FC<HomeLayoutProps> = ({ personalInformationData, projec
         <React.Fragment>
             <HomeSection personalInformationData={personalInformationData} />
             <AboutSection personalInformationData={personalInformationData} />
+            <ExperienceSection personalInformationData={personalInformationData} />
             <SkillSection skillData={skillData} />
             <ProjectSection projectData={projectData} skillData={skillData} />
-            <ExperienceSection personalInformationData={personalInformationData} />
             <EducationSection personalInformationData={personalInformationData} />
             <ContactSection />
         </React.Fragment>

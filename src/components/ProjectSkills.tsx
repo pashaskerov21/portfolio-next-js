@@ -3,11 +3,9 @@ import Image from 'next/image';
 import React, { useEffect, useState } from 'react'
 import { ProjectSkillsWrapper } from '../styles/sections/projects';
 import { SkillDataType } from '../types';
-import { useDarkMode } from 'usehooks-ts';
 
 const ProjectSkills: React.FC<{ skillNames: string[], skillData: SkillDataType[] }> = ({ skillNames, skillData }) => {
     const [skills, setSkills] = useState<SkillDataType[]>([]);
-    const { isDarkMode } = useDarkMode(false);
     useEffect(() => {
 
         if (skillNames && skillNames.length > 0 && skillData && skillData.length > 0) {

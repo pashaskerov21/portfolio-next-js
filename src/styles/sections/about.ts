@@ -1,9 +1,10 @@
 import styled from "styled-components";
-import { column_center, column_justify_start, row_between, row_center, row_justify_start } from "../mixin";
+import { column_center, column_justify_start, row_between, row_center, row_justify_end, row_justify_start } from "../mixin";
 
 export const AboutWrapper = styled.div`
     width: 100%;
     ${column_center};
+    gap: 30px;
     @media (min-width: 1200px){
         ${row_between};
     }
@@ -32,7 +33,7 @@ export const AboutImage = styled.div`
 export const AboutContent = styled.div`
     width: 100%;
     ${column_justify_start};
-    margin-top: 25px;
+    gap: 10px;
     @media (min-width: 1200px){
         width: 48%;  
         align-items: flex-start;
@@ -51,8 +52,8 @@ export const AboutText = styled.article`
         margin-bottom: 10px;
     }
     @media (min-width: 992px){
-        font-size: 20px;
-        line-height: 30px;
+        font-size: 18px;
+        line-height: 28px;
     }
     @media (min-width: 1200px){
         text-align: start; 
@@ -63,7 +64,6 @@ export const AboutContact = styled.div`
     width: 100%;
     ${column_center};
     gap: 40px;
-    margin-top: 30px;
     @media (min-width: 1200px){
         ${row_justify_start}
     }
@@ -135,6 +135,40 @@ export const AboutSocialWrapper = styled.ul`
     &:hover{
         a{
             opacity: 0.3;
+        }
+    }
+`;
+
+
+export const CounterWrapper = styled.ul`
+    width: 100%;
+    ${row_center};
+    gap: 25px;
+    margin-bottom: 15px;
+    @media (min-width: 1200px){
+        justify-content: flex-start;
+    }
+    .counter-item{
+        ${column_center};
+        gap: 10px;
+        @media (min-width: 1200px){
+            align-items: flex-start;
+        }
+        .counter-value{
+            font-size: 26px;
+            line-height: 32px;
+            font-weight: 600;
+            color: ${props => props.theme.primaryColor};
+            @media (min-width: 768px){
+                font-size: 30px;
+                line-height: 36px;
+            }
+        }
+        .counter-title{
+            font-size: 18px;
+            line-height: 24px;
+            text-transform: capitalize;
+            font-weight: 500;
         }
     }
 `;

@@ -40,9 +40,9 @@ const ProjectSection: React.FC<{ projectData: ProjectDataType[], skillData: Skil
     };
 
     return (
-        <section id="projects">
+        <section id="projects" role='region' aria-labelledby='projects-title'>
             <Container>
-                <SectionTitle title='projects' />
+                <SectionTitle title='projects' id='projects-title'/>
                 <ProjectCategoriesWrapper>
                     <button type="button" className={`${category === 0 ? 'active' : ''}`} onClick={() => changeCategory(0)} aria-pressed={category === 0}>All</button>
                     <button type="button" className={`${category === 1 ? 'active' : ''}`} onClick={() => changeCategory(1)} aria-pressed={category === 1}>Fullstack</button>

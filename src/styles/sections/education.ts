@@ -1,9 +1,13 @@
 import styled from "styled-components";
 import { column_align_start, column_between, column_center, row_between, row_start } from "../mixin";
 
-export const EducationWrapper = styled.div`
+export const EducationWrapper = styled.ul`
     width: 100%;
     ${column_center};
+    li{
+        width: 100%;
+        max-width: 1000px;
+    }
 `;
 export const EducationCard = styled.div`
     width: 100%;

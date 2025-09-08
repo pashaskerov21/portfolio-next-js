@@ -54,11 +54,11 @@ const ContactSection: React.FC = () => {
   }
 
   return (
-    <section id="contact">
+    <section id="contact" role='region' aria-labelledby='contact-title'>
       <Image src='/vectors/code.svg' className='code-img-design right' width={100} height={100} alt='' />
 
       <Container>
-        <SectionTitle title='contact'></SectionTitle>
+        <SectionTitle title='contact' id='contact-title'/>
         <ContactWrapper>
           <ContactFormWrapper>
             <Formik
@@ -68,7 +68,7 @@ const ContactSection: React.FC = () => {
             >
               {
                 formik => (
-                  <Form>
+                  <Form role='form'>
                     <FormItem $inputFocus={formik.values.fullName.length > 0 ? true : false} $inputError={formik.errors.fullName ? true : false}>
                       <Field name='fullName' id='fullname' />
                       <label htmlFor='fullname'>Surname, Firstname</label>

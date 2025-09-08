@@ -10,14 +10,14 @@ import { ExperienceCard, ExperienceWrapper } from '../styles/sections/experience
 
 const ExperienceSection: React.FC<{ personalInformationData: PersonalInformationDataType }> = ({ personalInformationData }) => {
     return (
-        <section id="experience">
+        <section id="experience" role='region' aria-labelledby='experience-title'>
             <Image src='/vectors/code.svg' className='code-img-design right' width={100} height={100} alt='' />
             <Container>
-                <SectionTitle title='experience' />
-                <ExperienceWrapper>
+                <SectionTitle title='experience' id='experience-title'/>
+                <ExperienceWrapper role='list'>
                     {
                         personalInformationData.experience.map((data) => (
-                            <li key={data.id}>
+                            <li key={data.id} role='listitem' aria-label={`${data.position}:${data.start}-${data.end}`} data-testid="experience-card">
                                 <ExperienceCard>
                                     <div className="title">
                                         <h3 className="position">{data.position}</h3>

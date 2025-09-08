@@ -7,21 +7,23 @@ import { BiLogoGmail, BiLogoLinkedin } from 'react-icons/bi'
 import { BsWhatsapp } from 'react-icons/bs'
 import { PersonalInformationDataType } from '../types'
 import { Container } from '../styles/components/container'
-import { AboutContact, AboutContent, AboutImage, AboutSocialWrapper, AboutText, AboutWrapper, ResumeButton } from '../styles/sections/about'
+import { AboutContact, AboutContent, AboutImage, AboutSocialWrapper, AboutText, AboutWrapper, CounterWrapper, ResumeButton } from '../styles/sections/about'
+import Counter from '../components/Counter'
 
 const AboutSection: React.FC<{ personalInformationData: PersonalInformationDataType }> = ({ personalInformationData }) => {
+
     return (
-        <section id="about">
+        <section id="about" role='region' aria-labelledby='about-title'>
             <Container>
-                <SectionTitle title='about me' />
+                <SectionTitle title='about me' id='about-title' />
                 <AboutWrapper>
                     <AboutImage>
                         <Image src={personalInformationData.image} width={1000} height={1000} priority={true} alt='Alipasha Askerov - Full stack Developer' />
                     </AboutImage>
                     <AboutContent>
-                        <AboutText>
+                        <AboutText role='article' aria-labelledby='about-title'>
                             <p>
-                                I'm a <strong>full-stack developer</strong> with expertise in both <strong> frontend and backend development.</strong> 
+                                I'm a <strong>full-stack developer</strong> with expertise in both <strong> frontend and backend development.</strong>
                                 I create interactive, user-focused web applications using modern technologies like <strong>React JS, Next JS, Angular, TypeScript and Laravel.</strong>
                             </p>
                             <p>
@@ -31,6 +33,14 @@ const AboutSection: React.FC<{ personalInformationData: PersonalInformationDataT
                                 Let's build something great together — feel free to reach out and connect!
                             </p>
                         </AboutText>
+                        <CounterWrapper>
+                            <li>
+                                <Counter value={2} title='experience' speed={700} />
+                            </li>
+                            <li>
+                                <Counter value={25} title='projects' speed={120} />
+                            </li>
+                        </CounterWrapper>
                         <AboutContact>
                             <ResumeButton href={personalInformationData.cv} target='_blank'>
                                 download CV

@@ -10,9 +10,9 @@ import { useDarkMode } from 'usehooks-ts'
 const SkillSection: React.FC<{ skillData: SkillDataType[] }> = ({ skillData }) => {
     const { isDarkMode } = useDarkMode(false);
     return (
-        <section id="skills">
+        <section id="skills" role='region' aria-labelledby='skills-title'>
             <Container>
-                <SectionTitle title='skills' />
+                <SectionTitle title='skills' id='skills-title'/>
                 <SkillsWrapper>
                     {
                         skillData.map((skill) => (

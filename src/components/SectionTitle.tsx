@@ -2,10 +2,10 @@
 import React from 'react'
 import { SectionTitleWrapper } from '../styles/components/sectiontitle'
 
-const SectionTitle: React.FC<{ title: string }> = ({ title }) => {
+const SectionTitle: React.FC<{ title: string,id: string }> = ({ title,id }) => {
   return (
     <SectionTitleWrapper>
-      <h2>{title}</h2>
+      <h2 role='heading' id={id}>{title}</h2>
     </SectionTitleWrapper>
   )
 }

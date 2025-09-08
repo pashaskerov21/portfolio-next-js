@@ -3,15 +3,15 @@ import Image from 'next/image'
 import React from 'react'
 import { Container } from '../styles/components/container'
 import { PersonalInformationDataType } from '../types'
-import { AnimationTitle, HomeContentWrapper, HomeTextWrapper, HomeTitle } from '../styles/sections/home'
+import { AnimationTitle, HomeContentWrapper, HomeTitle } from '../styles/sections/home'
 
 const HomeSection: React.FC<{ personalInformationData: PersonalInformationDataType }> = ({ personalInformationData }) => {
   return (
-    <section id='home'>
+    <section id='home' role='region' aria-labelledby='home-title'>
       <Container>
         <HomeContentWrapper>
           <div className="content">
-            <HomeTitle>{personalInformationData.home.title}</HomeTitle>
+            <HomeTitle id='home-title'>{personalInformationData.home.title}</HomeTitle>
             <AnimationTitle title={personalInformationData.home.animationTitle}>{personalInformationData.home.animationTitle}</AnimationTitle>
           </div>
           <div className="image">

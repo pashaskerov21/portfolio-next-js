@@ -86,6 +86,6 @@ const PersonalInformationData: PersonalInformationDataType = {
             start: "2022",
             end: "2024",
         },
-    ]
+    ],
 }
 export default PersonalInformationData

@@ -5,68 +5,48 @@ import { skillAnimation } from "../animation";
 export const SkillsWrapper = styled.ul`
 
     width: 100%;
-    display: grid;
-    gap: 15px;
-    grid-template-columns: repeat(1,1fr);
-    place-items: center;
-    margin: auto;
-    @media (min-width: 320px){
-        grid-template-columns: repeat(2,1fr);
-    }
-    @media (width >= 576px){
-        gap: 40px;
-    }
-    @media (min-width: 768px){
-        grid-template-columns: repeat(3,1fr);
-    }
-    @media (min-width: 992px){
-        grid-template-columns: repeat(4,1fr);
-    }
-    @media (min-width: 1400px){
-        grid-template-columns: repeat(5,1fr);
-    }
-
-
+    ${row_center};
+    gap: 40px;
+    flex-wrap: wrap;
 `;
 type SkillProps = {
     $skillColor: string,
 }
 export const SkillCard = styled.div<SkillProps>`
-    width: 140px;
-    height: 140px;
+    width: 100px;
+    height: 100px;
     ${column_center}
+    gap: 15px;
     background-color: ${props => props.theme.backgroundMute};
     border-radius: 20px;
     padding: 10px;
     position: relative;
-    margin-bottom: 10px;
-    @media (width >= 576px){
-        width: 200px;
-        height: 150px;
-        padding: 20px;
+    @media(min-width: 1200px){
+        width: 140px;
+        height: 140px;
+        gap: 20px;
     }
     img{
-        width: 50px;
-        height: 50px;
+        width: 30px;
+        height: 30px;
         object-fit: contain;
-        margin-bottom: 20px;
-        @media (width >= 576px){
-            width: 70px;
-            height: 70px;
+        @media(min-width: 1200px){
+            width: 50px;
+            height: 50px;
         }
     }
     .title{
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 600;
         text-align: center;
-        @media (width >= 576px){
-            font-size: 16px;
+        @media(min-width: 1200px){
+            font-size: 14px
         }
     }
     .border{
         position: absolute;
-        width: 150px;
-        height: 150px;
+        width: 105px;
+        height: 105px;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -74,9 +54,9 @@ export const SkillCard = styled.div<SkillProps>`
         overflow: hidden;
         z-index: -1;
         ${row_center}
-        @media (width >= 576px){
-            width: 210px;
-            height: 160px;
+        @media(min-width: 1200px){
+            width: 145px;
+            height: 145px;
         }
         &::after{
             content: '';

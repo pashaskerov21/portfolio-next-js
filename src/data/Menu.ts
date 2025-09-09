@@ -3,11 +3,11 @@ import { MenuDataType } from "@/src/types";
 const MenuData: MenuDataType[] = [
     {
         id: 1,
-        name: 'home',
+        name: 'about',
     },
     {
         id: 2,
-        name: 'about',
+        name: 'services',
     },
     {
         id: 3,

@@ -17,10 +17,10 @@ const AboutSection: React.FC<{ personalInformationData: PersonalInformationDataT
             <Container>
                 <SectionTitle title='about me' id='about-title' />
                 <AboutWrapper>
-                    <AboutImage>
+                    <AboutImage data-aos="fade-right">
                         <Image src={personalInformationData.image} width={1000} height={1000} priority={true} alt='Alipasha Askerov - Full stack Developer' />
                     </AboutImage>
-                    <AboutContent>
+                    <AboutContent data-aos="fade-left">
                         <AboutText role='article' aria-labelledby='about-title'>
                             <p>
                                 I'm a <strong>full-stack developer</strong> with expertise in both <strong> frontend and backend development.</strong>
@@ -38,7 +38,7 @@ const AboutSection: React.FC<{ personalInformationData: PersonalInformationDataT
                                 <Counter value={2} title='experience' speed={700} />
                             </li>
                             <li>
-                                <Counter value={25} title='projects' speed={120} />
+                                <Counter value={25} title='projects' speed={100} />
                             </li>
                         </CounterWrapper>
                         <AboutContact>

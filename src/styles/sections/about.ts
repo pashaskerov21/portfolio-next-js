@@ -1,10 +1,12 @@
 import styled from "styled-components";
-import { column_center, column_justify_start, row_between, row_center, row_justify_end, row_justify_start } from "../mixin";
+import { column_center, column_justify_start, row_between, row_center, row_justify_start } from "../mixin";
 
 export const AboutWrapper = styled.div`
     width: 100%;
     ${column_center};
     gap: 30px;
+    overflow: hidden;
+    padding-bottom: 30px;
     @media (min-width: 1200px){
         ${row_between};
     }

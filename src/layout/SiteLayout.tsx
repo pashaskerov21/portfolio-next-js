@@ -11,9 +11,8 @@ import Header from '../partials/Header';
 import Footer from '../partials/Footer';
 import MainSocialMedia from '../components/MainSocialMedia';
 import Preloader from '../components/Preloader';
-import TimerModal from '../components/TimerModal';
-import { ScrollButton } from '../styles/buttons/scrollbtn';
 import ScrollTop from '../components/ScrollTop';
+import AOS from 'aos';
 
 type SiteLayoutProps = {
     children: React.ReactNode,
@@ -23,35 +22,42 @@ type SiteLayoutProps = {
 
 const SiteLayout: React.FC<SiteLayoutProps> = ({ children, menuData, personalInformationData }) => {
 
-    const themes = ['dark','light']
+    const themes = ['dark', 'light']
     const { isDarkMode, toggle, } = useDarkMode(false);
     const activeTheme = isDarkMode ? darkTheme : lightTheme;
-    const activeThemeValue = isDarkMode ? themes[0] : themes[1]; 
+    const activeThemeValue = isDarkMode ? themes[0] : themes[1];
 
-   
+    React.useEffect(() => {
+        AOS.init({
+            // offset: 80,   
+            duration: 600, 
+            easing: "ease-in-out",
+            once: true,
+        });
+    }, []);
 
     const [loading, setLoading] = React.useState(true);
     React.useEffect(() => {
-        setTimeout(() =>{
+        setTimeout(() => {
             setLoading(false);
-        },1000);
+        }, 1000);
     }, []);
 
     const [mounted, setMounted] = React.useState(false);
     React.useEffect(() => {
         setMounted(true)
-    },[])
-    if(!mounted){
+    }, [])
+    if (!mounted) {
         return null;
     };
 
     return (
         <>
             <ThemeProvider theme={activeTheme}>
-                {loading && <Preloader/>}
+                {loading && <Preloader />}
                 <GlobalStyles />
                 <MainSocialMedia personalInformationData={personalInformationData} />
-                <ScrollTop/>
+                <ScrollTop />
                 {/* <TimerModal/> */}
                 <Header
                     loading={loading}

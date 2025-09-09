@@ -1,30 +1,35 @@
 import styled from "styled-components";
-import { column_align_start, row_center, row_justify_start } from "../mixin";
+import { column_align_start, row_center, row_justify_end, row_justify_start } from "../mixin";
 import { projectLinkAnimation, projectSkillAnimation } from "../animation";
 
-export const ProjectsWrapper = styled.ul`
+export const ProjectsWrapper = styled.div`
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 30px;
-    place-items: center;
-    @media (min-width: 768px){
-        grid-template-columns: repeat(2, 1fr);
-    }
-    @media (min-width: 1200px){
-        grid-template-columns: repeat(3, 1fr);
-    }
-    li{
+    .custom-swiper-buttons{
         width: 100%;
-        max-width: 380px;
+        ${row_justify_end};
+        gap: 10px;
+        margin-top: 15px;
+        .arrow-btn{
+            ${row_center};
+            padding: 10px 15px;
+            border-radius: 10px;
+            border: 3px solid ${props => props.theme.primaryColor};
+            color: #fff;
+            background-color: ${props => props.theme.primaryColor};
+            font-size: 22px;
+            &.swiper-button-disabled{
+                opacity: 0.6;
+            }
+        }
     }
-    `;
+`;
 export const ProjectCard = styled.div`
     width: 100%;
     max-width: 380px;
     height: 200px;
     border-radius: 20px;
     position: relative;
+    margin: 20px 5px;
     @media (min-width: 768px){
         height: 250px;
     }
@@ -34,13 +39,8 @@ export const ProjectCard = styled.div`
         object-fit: cover;
         display: block;
         border-radius: 20px;
-        border: 1px solid ${props => props.theme.primaryColor};
-        box-shadow: 0 0 10px ${props => props.theme.primaryColor};
-    }
-    &:hover{
-        .project-img{
-            box-shadow: 0 0 30px ${props => props.theme.primaryColor}
-        }
+        /* border: 1px solid ${props => props.theme.primaryColor}; */
+        box-shadow: 0 0 5px ${props => props.theme.primaryColor};
     }
 
 `;
@@ -198,9 +198,10 @@ export const ProjectCategoriesWrapper = styled.div`
     width: 100%;
     ${row_center};
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 10px;
     margin-bottom: 60px;
     button{
+        width: 48%;
         cursor: pointer;
         padding: 10px 20px;
         ${row_center};
@@ -218,6 +219,10 @@ export const ProjectCategoriesWrapper = styled.div`
         @media (min-width: 768px){
             font-size: 22px;
             padding: 15px 30px;
+            width: 23%;
+        }
+        @media (min-width: 1200px){
+            width: 24%;
         }
     }
 `;

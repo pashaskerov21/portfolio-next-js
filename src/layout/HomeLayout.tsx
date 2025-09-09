@@ -2,6 +2,7 @@
 import React from 'react'
 import { PersonalInformationDataType, ProjectDataType, SkillDataType } from '../types'
 import { AboutSection, ContactSection, EducationSection, ExperienceSection, HomeSection, ProjectSection, SkillSection } from '../sections'
+import ServiceSection from '../sections/Services'
 
 type HomeLayoutProps = {
     personalInformationData: PersonalInformationDataType,
@@ -20,6 +21,7 @@ const HomeLayout: React.FC<HomeLayoutProps> = ({ personalInformationData, projec
         <React.Fragment>
             <HomeSection personalInformationData={personalInformationData} />
             <AboutSection personalInformationData={personalInformationData} />
+            <ServiceSection/>
             <ExperienceSection personalInformationData={personalInformationData} />
             <SkillSection skillData={skillData} />
             <ProjectSection projectData={projectData} skillData={skillData} />

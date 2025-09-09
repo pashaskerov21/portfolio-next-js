@@ -16,7 +16,7 @@ const EducationSection: React.FC<{ personalInformationData: PersonalInformationD
                 <EducationWrapper role='list'>
                     {
                         personalInformationData.education.map((data) => (
-                            <li key={data.id} role='listitem'>
+                            <li key={data.id} role='listitem' data-aos="zoom-in-up">
                                 <EducationCard>
                                     <div className="title">
                                         <FaBuildingColumns />

@@ -12,12 +12,12 @@ const SkillSection: React.FC<{ skillData: SkillDataType[] }> = ({ skillData }) =
     return (
         <section id="skills" role='region' aria-labelledby='skills-title'>
             <Container>
-                <SectionTitle title='skills' id='skills-title'/>
+                <SectionTitle title='skills' id='skills-title' />
                 <SkillsWrapper>
                     {
                         skillData.map((skill) => (
                             <li key={skill.id}>
-                                <SkillCard  $skillColor={skill.color}>
+                                <SkillCard $skillColor={skill.color}>
                                     <Image src={isDarkMode ? skill.logo_dark : skill.logo} width={70} height={70} alt={`${skill.title} logo`} />
                                     <span className="title">{skill.title}</span>
                                     <div className="border"></div>

@@ -286,7 +286,7 @@ const ProjectData: ProjectDataType[] = [
         category: 2,
         previewLink: "https://ortalama-bal.vercel.app/",
         githubLink: "https://github.com/pashaskerov21/ortalama-bal-kalkulyatoru",
-        skills: ["HTML", "Javascript", "jQuery", "Bootstrap"]
+        skills: ["HTML", "JavaScript", "jQuery", "Bootstrap"]
     },
     {
         title: "Edu Dashboard",

@@ -278,6 +278,17 @@ const ProjectData: ProjectDataType[] = [
         skills: ['Laravel']
     },
     {
+        title: "Ortalama bal",
+        image: "/projects/ortalama-bal.png",
+        previewStatus: true,
+        githubStatus: true,
+        home: true,
+        category: 2,
+        previewLink: "https://ortalama-bal.vercel.app/",
+        githubLink: "https://github.com/pashaskerov21/ortalama-bal-kalkulyatoru",
+        skills: ["HTML", "Javascript", "jQuery", "Bootstrap"]
+    },
+    {
         title: "Edu Dashboard",
         image: "/projects/edu-dashboard.png",
         previewStatus: true,
@@ -386,6 +397,6 @@ const ProjectData: ProjectDataType[] = [
         previewLink: "http://zeferkonfransi.az/",
         githubLink: "",
         skills: ['Laravel', 'HTML', 'SCSS', 'JavaScript', 'jQuery']
-    },  
+    },
 ]
 export default ProjectData;

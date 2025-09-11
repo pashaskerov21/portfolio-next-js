@@ -17,7 +17,7 @@ const ExperienceSection: React.FC<{ personalInformationData: PersonalInformation
                 <ExperienceWrapper role='list'>
                     {
                         personalInformationData.experience.map((data) => (
-                            <li key={data.id} role='listitem' aria-label={`${data.position}:${data.start}-${data.end}`} data-testid="experience-card" data-aos="zoom-in-up">
+                            <li key={data.id} role='listitem' aria-label={`${data.position}:${data.start}-${data.end}`} data-testid="experience-card" data-aos="zoom-in-up" className='listitem'>
                                 <ExperienceCard>
                                     <div className="title">
                                         <h3 className="position">{data.position}</h3>

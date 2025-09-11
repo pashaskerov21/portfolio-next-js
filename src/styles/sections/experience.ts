@@ -5,10 +5,45 @@ export const ExperienceWrapper = styled.ul`
     width: 100%;
     ${column_center};
     gap: 30px;
-    li{
+    position: relative;
+    li.listitem{
         width: 100%;
         max-width: 1000px;
+        position: relative;
     }
+    /* @media (min-width: 1200px){
+     &::after{
+        content: "";
+        width: 3px;
+        height: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+     }   
+    li.listitem{
+        width: calc(50% - 50px);
+        align-self: flex-start;
+        z-index: 10;
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: calc(100% + 37px);
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background-color: #42b883;
+        }
+        &:nth-child(even){
+            align-self: flex-end;
+            &::after{
+                left: -63px;
+            }
+        }
+     }
+    } */
 `;
 export const ExperienceCard = styled.div`
     width: 100%;

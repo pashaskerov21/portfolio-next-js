@@ -28,6 +28,14 @@ export const ServicesWrapper = styled.ul`
         box-shadow: 0 0 10px ${props => props.theme.primaryColor};
         ${column_start};
         gap: 15px;
+        position: relative;
+        .icon{
+            position: absolute;
+            top: 17px;
+            right: 10px;
+            font-size: 20px;
+            color: ${props => props.theme.primaryColor};
+        }
         .service-title{
             color: ${props => props.theme.primaryColor};
             ${row_justify_start};

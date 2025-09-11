@@ -13,7 +13,8 @@ const ServiceSection: React.FC = () => {
                 <ServicesWrapper role='list'>
                     <li role='listitem' data-aos="zoom-in-up">
                         <div className="service-card">
-                            <h3 className="service-title"><FaGlobe /> Web Development</h3>
+                            <div className="icon"><FaGlobe /></div>
+                            <h3 className="service-title">Web Development</h3>
                             <div className="text">
                                 <p>Modern, responsive full-stack websites built with Next.js / Angular frontend and Laravel PHP backend.</p>
                             </div>
@@ -21,7 +22,8 @@ const ServiceSection: React.FC = () => {
                     </li>
                     <li role='listitem' data-aos="zoom-in-up">
                         <div className="service-card">
-                            <h3 className="service-title"><FaPalette /> Frontend Development</h3>
+                            <div className="icon"><FaPalette /></div>
+                            <h3 className="service-title"> Frontend Development</h3>
                             <div className="text">
                                 <p>Interactive and SEO-friendly interfaces developed using Next.js, Angular, and TypeScript.</p>
                             </div>
@@ -29,7 +31,8 @@ const ServiceSection: React.FC = () => {
                     </li>
                     <li role='listitem' data-aos="zoom-in-up">
                         <div className="service-card">
-                            <h3 className="service-title"><FaCog /> Backend Development</h3>
+                            <div className="icon"><FaCog /></div>
+                            <h3 className="service-title">Backend Development</h3>
                             <div className="text">
                                 <p>Secure and efficient server-side applications created with Laravel PHP and optimized MySQL databases.</p>
                             </div>
@@ -37,7 +40,8 @@ const ServiceSection: React.FC = () => {
                     </li>
                     <li role='listitem' data-aos="zoom-in-up">
                         <div className="service-card">
-                            <h3 className="service-title"><FaRocket /> Website Optimization</h3>
+                            <div className="icon"><FaRocket /></div>
+                            <h3 className="service-title">Website Optimization</h3>
                             <div className="text">
                                 <p>Website performance, loading speed, and user experience improved following SEO best practices.</p>
                             </div>
@@ -45,7 +49,8 @@ const ServiceSection: React.FC = () => {
                     </li>
                     <li role='listitem' data-aos="zoom-in-up">
                         <div className="service-card">
-                            <h3 className="service-title"><FaPlug /> API Development & Integration</h3>
+                            <div className="icon"><FaPlug /></div>
+                            <h3 className="service-title">API Development & Integration</h3>
                             <div className="text">
                                 <p>Scalable RESTful APIs developed and integrated seamlessly with frontend applications.</p>
                             </div>
@@ -53,7 +58,8 @@ const ServiceSection: React.FC = () => {
                     </li>
                     <li role='listitem' data-aos="zoom-in-up">
                         <div className="service-card">
-                            <h3 className="service-title"><FaChartBar /> Dashboard & Admin Panels</h3>
+                            <div className="icon"><FaChartBar /></div>
+                            <h3 className="service-title">Dashboard & Admin Panels</h3>
                             <div className="text">
                                 <p>User-friendly dashboards and admin panels designed with real-time data visualization and role-based access control.</p>
                             </div>

@@ -11,12 +11,12 @@ type HomeLayoutProps = {
 }
 
 const HomeLayout: React.FC<HomeLayoutProps> = ({ personalInformationData, projectData, skillData }) => {
-    const [loading, setLoading] = React.useState(true);
-    React.useEffect(() => {
-        setTimeout(() =>{
-            setLoading(false);
-        },2000);
-    }, []);
+    // const [loading, setLoading] = React.useState(true);
+    // React.useEffect(() => {
+    //     setTimeout(() =>{
+    //         setLoading(false);
+    //     },2000);
+    // }, []);
     return (
         <React.Fragment>
             <HomeSection personalInformationData={personalInformationData} />

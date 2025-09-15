@@ -25,10 +25,10 @@ const TimerModal = () => {
         minute: '00',
         second: '00',
     });
-    
+
 
     useEffect(() => {
-        const endDate = moment('2025-07-12T00:00');
+        const endDate = moment('2025-11-22T00:00');
 
         const x = setInterval(() => {
             let now = moment();
@@ -56,8 +56,8 @@ const TimerModal = () => {
                     minute: '00',
                     second: '00',
                 });
-                
-                setTimerDiff(0); 
+
+                setTimerDiff(0);
                 setTimerEnd(true);
             }
 
@@ -76,43 +76,48 @@ const TimerModal = () => {
                         x: Math.random(),
                         y: Math.random()
                     },
-                    zIndex: 999999 
+                    zIndex: 999999
                 });
             }, 1000);
 
-            return () => clearInterval(intervalId); 
+            return () => clearInterval(intervalId);
         }
     }, [timerDiff, timerShow]);
 
 
     return (
         <>
-            <TimerButton onClick={toggleTimerModal}>
+            {/* <TimerButton onClick={toggleTimerModal}>
                 <FaBell />
-            </TimerButton>
-            <TimerModalItem className={`${timerShow ? 'active' : ''}`}>
+            </TimerButton> */}
+            {/* <TimerModalItem className={`${timerShow ? 'active' : ''}`}> */}
+            <TimerModalItem>
                 <div className="close-button" onClick={toggleTimerModal}><FaXmark /></div>
                 <div className={`timer-wrapper ${timerEnd ? 'difference-0' : ''}`}>
                     <div className="timer-item">
                         <span>{timerState.day}</span>
+                        <span className="label">DAY</span>
                     </div>
-                    <div className="timer-item">
+                    <div className="timer-item dot">
                         <span>:</span>
                     </div>
                     <div className="timer-item">
                         <span>{timerState.hour}</span>
+                        <span className="label">HOUR</span>
                     </div>
-                    <div className="timer-item">
+                    <div className="timer-item dot">
                         <span>:</span>
                     </div>
                     <div className="timer-item">
                         <span>{timerState.minute}</span>
+                        <span className="label">MINUTE</span>
                     </div>
-                    <div className="timer-item">
+                    <div className="timer-item dot">
                         <span>:</span>
                     </div>
                     <div className="timer-item">
                         <span>{timerState.second}</span>
+                        <span className="label">SECOND</span>
                     </div>
                 </div>
             </TimerModalItem>

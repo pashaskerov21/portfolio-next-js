@@ -1,6 +1,5 @@
 "use client"
 import React from 'react'
-import { FaArrowUp } from 'react-icons/fa6';
 import { ThemeProvider } from 'styled-components';
 import { useDarkMode } from 'usehooks-ts';
 import { MenuDataType, PersonalInformationDataType } from '../types';

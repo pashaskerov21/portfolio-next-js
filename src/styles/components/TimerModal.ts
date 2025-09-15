@@ -13,16 +13,16 @@ export const TimerModalItem = styled.div`
     backdrop-filter: blur(20px);
     z-index: 99999;
     ${row_center};
-    display: none;
     padding: 15px;
-    opacity: 0;
+    /* display: none; */
+    /* opacity: 0;
 
     &.active{
         display: flex;
         
         animation: ${opacityShowAnimation} 0.2s ease forwards;
         
-    }
+    } */
 
     .close-button{
         position: absolute;
@@ -37,6 +37,7 @@ export const TimerModalItem = styled.div`
         color: ${props => props.theme.background};
         box-shadow: 0 0 10px  ${props => props.theme.primaryColor};
         border-radius: 50%; 
+        display: none;
     }
     .timer-wrapper{
         width: 100%;
@@ -60,14 +61,30 @@ export const TimerModalItem = styled.div`
             font-weight: 700;
             color: ${props => props.theme.primaryColor};
             user-select: none;
+            .label{
+                font-size: 10px;
+                font-weight: 900;
+            }
+            @media (min-width: 380px){
+                font-size: 34px;
+            }
             @media (min-width: 576px){
                 font-size: 50px;
+                .label{
+                    font-size: 16px;
+                }
             }
             @media (min-width: 768px){
                 font-size: 70px;
+                .label{
+                    font-size: 18px;
+                }
             }
             @media (min-width: 1200px){
                 font-size: 90px;
+                .label{
+                    font-size: 22px;
+                }
             }
         }
     }

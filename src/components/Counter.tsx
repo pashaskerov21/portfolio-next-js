@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Counter:React.FC<{value: number, title: string, speed: number}> = ({value, title,speed}) => {
+const Counter: React.FC<{ value: number, title: string, speed: number }> = ({ value, title, speed }) => {
     const [count, setCount] = React.useState<number>(0);
     const [counterStatus, setCounterStatus] = React.useState<boolean>(false)
     let counterItem = React.useRef<HTMLDivElement | null>(null);
@@ -10,23 +10,26 @@ const Counter:React.FC<{value: number, title: string, speed: number}> = ({value,
         let endValue = value;
         let remainder = 0;
         let countSecond = speed;
+        let step = 1;
+
+        if (endValue <= 100) {
+            step = 1;
+        } else if (endValue > 100 && endValue <= 1000) {
+            step = 10;
+            remainder = endValue % 10;
+            endValue = endValue - remainder;
+        } else if (endValue > 1000 && endValue < 5000) {
+            step = 25;
+            remainder = endValue % 25;
+            endValue = endValue - remainder;
+        } else if (endValue >= 5000) {
+            step = 50;
+            remainder = endValue % 50;
+            endValue = endValue - remainder;
+        }
 
         let counter = setInterval(() => {
-            if (endValue <= 100) {
-                startValue += 1;
-            } else if (endValue >= 100 && endValue <= 1000) {
-                startValue += 10;
-                remainder = endValue % 10;
-                endValue = endValue - remainder;
-            } else if (endValue >= 1000) {
-                startValue += 25;
-                remainder = endValue % 25;
-                endValue = endValue - remainder;
-            } else if (endValue >= 5000) {
-                startValue += 50;
-                remainder = endValue % 50;
-                endValue = endValue - remainder;
-            }
+            startValue += step;
 
             if (startValue === endValue) {
                 clearInterval(counter);
@@ -39,15 +42,9 @@ const Counter:React.FC<{value: number, title: string, speed: number}> = ({value,
 
 
     const handleScroll = () => {
-        
-        if (window.innerWidth < 768) {
-            if (window.scrollY > (counterItem.current?.offsetTop || 0) - 150) {
-                setCounterStatus(true);
-            }
-        }else{
-            if (window.scrollY > (counterItem.current?.offsetTop || 0) - 45) {
-                setCounterStatus(true);
-            }
+        const limit = window.innerWidth < 768 ? 150 : 45;
+        if (window.scrollY > (counterItem.current?.offsetTop || 0) - limit) {
+            setCounterStatus(true);
         }
     };
 
@@ -68,7 +65,7 @@ const Counter:React.FC<{value: number, title: string, speed: number}> = ({value,
     }, [counterStatus, countFunction])
     return (
         <div className="counter-item" ref={counterItem}>
-            <span className="counter-value">{count}{title==='experience' && '+'}</span>
+            <span className="counter-value">{count}{title === 'experience' && '+'}</span>
             <span className='counter-title'>{title}</span>
         </div>
     )

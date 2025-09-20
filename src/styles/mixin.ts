@@ -1,4 +1,3 @@
-import { type } from "os";
 import { css } from "styled-components";
 
 // flex row

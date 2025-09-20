@@ -15,7 +15,7 @@ const HomeSection: React.FC<{ personalInformationData: PersonalInformationDataTy
             <AnimationTitle title={personalInformationData.home.animationTitle}>{personalInformationData.home.animationTitle}</AnimationTitle>
           </div>
           <div className="image">
-            <Image src='/design/img-2.svg' width={500} height={500} alt='Banner Hero' loading='eager' fetchPriority='high' />
+            <Image src='/design/img-2.svg' width={500} height={500} alt='Banner Hero' loading='eager' fetchPriority='high' priority={true} />
           </div>
         </HomeContentWrapper>
       </Container>

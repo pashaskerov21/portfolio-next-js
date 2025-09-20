@@ -1,12 +1,11 @@
 import styled, { css } from "styled-components";
-import { column_align_end, column_center, column_justify_start, row_between, row_center, row_justify_end } from "../mixin";
+import { column_center, column_justify_start, row_between, row_center, row_justify_end } from "../mixin";
 import { fixHeaderAnimation, headerLinkAnimation } from "../animation";
 
 
 export const HeaderContainer = styled.header`
     width: 100%;
     background-color: ${props => props.theme.background};
-    
 `;
 
 type HeaderProps = {
@@ -50,6 +49,9 @@ export const NavLinksWrapper = styled.ul`
         position: relative;
         transition: all 0.3s;
         font-size: 18px;
+        animation: ${headerLinkAnimation} 0.5s ease forwards;
+        opacity: 0;
+        transform: translateY(-15px);
         &::after,
         &::before {
             content: '';

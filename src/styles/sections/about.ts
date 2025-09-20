@@ -72,10 +72,10 @@ export const AboutContact = styled.div`
 `;
 export const ResumeButton = styled.a`
     ${row_center};
-    padding: 20px 30px;
+    padding: 15px 30px;
     position: relative;
     font-size: 22px;
-    min-width: 220px;
+    min-width: 160px;
     border-radius: 10px;
     font-weight: 600;
     text-transform: capitalize;
@@ -111,7 +111,7 @@ export const AboutSocialWrapper = styled.ul`
     ${row_center};
     gap: 15px;
     a{
-        font-size: 20px;
+        font-size: 18px;
         width: 45px;
         height: 45px;
         ${row_center};
@@ -119,12 +119,6 @@ export const AboutSocialWrapper = styled.ul`
         border-radius: 50%;
         color: ${props => props.theme.primaryColor};
         transition: all 0.2s;
-        @media (min-width: 768px){
-            width: 60px;
-            height: 60px;
-            font-size: 24px;
-            margin-right: 10px;
-        }
         &:hover{
             opacity: 1 !important;
             transform: scale(1.3);

@@ -87,5 +87,43 @@ const PersonalInformationData: PersonalInformationDataType = {
             end: "2024",
         },
     ],
+    services: [
+        {
+            id: 1,
+            title: 'Web Development',
+            text: 'Modern, responsive full-stack websites built with Next.js / Angular frontend and Laravel PHP backend.',
+            icon: 'globe',
+        },
+        {
+            id: 2,
+            title: 'Frontend Development',
+            text: 'Interactive and SEO-friendly interfaces developed using Next.js, Angular, and TypeScript.',
+            icon: 'palette',
+        },
+        {
+            id: 3,
+            title: 'Backend Development',
+            text: 'Secure and efficient server-side applications created with Laravel PHP and optimized MySQL databases.',
+            icon: 'cog',
+        },
+        {
+            id: 4,
+            title: 'Website Optimization',
+            text: 'Website performance, loading speed, and user experience improved following SEO best practices.',
+            icon: 'rocket',
+        },
+        {
+            id: 5,
+            title: 'API Development & Integration',
+            text: 'Scalable RESTful APIs developed and integrated seamlessly with frontend applications.',
+            icon: 'plug',
+        },
+        {
+            id: 6,
+            title: 'Dashboard & Admin Panels',
+            text: 'User-friendly dashboards and admin panels designed with real-time data visualization and role-based access control.',
+            icon: 'chart-bar',
+        },
+    ]
 }
 export default PersonalInformationData

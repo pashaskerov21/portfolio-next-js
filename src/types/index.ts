@@ -35,6 +35,12 @@ export type PersonalInformationDataType = {
         degree: string,
         start: string,
         end: string,
+    }[],
+    services: {
+        id: number,
+        title: string,
+        text: string,
+        icon: string,
     }[]
 };
 export type MenuDataType = {

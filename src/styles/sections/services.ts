@@ -8,11 +8,6 @@ export const ServicesWrapper = styled.ul`
     place-content: center;
     place-items: center;
     gap: 30px;
-    li{
-        width: 100%;
-        max-width: 400px;
-        height: 100%;
-    }
     @media (min-width: 768px){
         grid-template-columns: repeat(2,1fr);
     }
@@ -36,7 +31,7 @@ export const ServicesWrapper = styled.ul`
             font-size: 20px;
             color: ${props => props.theme.primaryColor};
         }
-        .service-title{
+        .title{
             color: ${props => props.theme.primaryColor};
             ${row_justify_start};
             gap: 10px;

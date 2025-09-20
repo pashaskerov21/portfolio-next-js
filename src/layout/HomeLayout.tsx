@@ -15,7 +15,7 @@ const HomeLayout: React.FC<HomeLayoutProps> = ({ personalInformationData, projec
         <React.Fragment>
             <HomeSection personalInformationData={personalInformationData} />
             <AboutSection personalInformationData={personalInformationData} />
-            <ServiceSection/>
+            <ServiceSection personalInformationData={personalInformationData}/>
             <ExperienceSection personalInformationData={personalInformationData} />
             <SkillSection skillData={skillData} />
             <ProjectSection projectData={projectData} skillData={skillData} />

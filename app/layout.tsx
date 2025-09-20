@@ -100,6 +100,8 @@ const RootLayout = async ({ children }: { children: React.ReactNode }) => {
             <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet"></link>
             <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"></link>
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+            <script src="https://kit.fontawesome.com/3cf65b98ce.js" crossOrigin="anonymous"></script>
+
           </head>
           <body>
             <StyledComponentsRegistry>

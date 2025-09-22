@@ -2,6 +2,7 @@ import { PersonalInformationDataType } from "@/src/types"
 
 const PersonalInformationData: PersonalInformationDataType = {
     title: "Alipasha Askerov | Portfolio",
+    description: "I’m a full-stack developer specializing in frontend and backend web development. I build responsive, user-friendly websites and web applications using modern technologies like TypeScript, Next.js, React.js, and Laravel. With over 2 years of experience, I focus on writing clean, maintainable code and developing scalable solutions that improve user experience. I collaborate closely with clients to deliver high-performance websites, custom admin panels, and optimized SEO-friendly applications on time and within budget. If you’re looking for a dedicated remote full-stack developer, let’s connect and build something great together.",
     keywords: 'Alipasha, Askerov, Alipasha Askerov, Askerov Alipasha, Əlipaşa, Əskərov, Əskərov Əlipaşa, Əlipaşa Əskərov, Developer, Frontend, Frontend Developer, Backend, Backend Developer, Fullstack, Fullstack developer, Web Developer, Web Development, React JS, Javascript, Next JS, PHP, Laravel, Typescript, Responsive Web Design, Next JS Developer, React JS Developer',
     author_name: 'Alipasha Askerov',
     author_url: 'https://alipashaskerov.vercel.app',
@@ -16,7 +17,7 @@ const PersonalInformationData: PersonalInformationDataType = {
         animationTitle: "fullstack developer",
         text: "I am developing myself in the field of programming and Web Development. I have excellent knowledge and professional experience in this field and I continue to learn new technologies"
     },
-    aboutText: "I'm a full-stack developer with expertise in both frontend and backend development. I create interactive, user-focused web applications using modern technologies like TypeScript, Next.js, React.js, and Laravel. I am passionate about writing clean, maintainable code and building scalable systems that prioritize user experience. I enjoy bringing creative solutions to each project and collaborating closely with clients to deliver high-quality results on time and within budget. Let's build something great together — feel free to reach out and connect!",
+    aboutText: "<p> I'm a <strong>full-stack developer</strong> with expertise in both <strong> frontend and backend development.</strong> I create interactive, user-focused web applications using modern technologies like <strong>React JS, Next JS, Angular, TypeScript and Laravel.</strong></p><p> I am passionate about writing clean, maintainable code and building scalable systems that prioritize user experience. I enjoy bringing creative solutions to each project and collaborating closely with clients to deliver high-quality results on time and within budget. </p><p> Let's build something great together — feel free to reach out and connect! </p>",
     cv: "/personal/AlipashaAskerovCV.pdf",
     image: "/personal/image-2.png",
     experience: [

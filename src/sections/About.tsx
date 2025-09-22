@@ -21,18 +21,7 @@ const AboutSection: React.FC<{ personalInformationData: PersonalInformationDataT
                         <Image src={personalInformationData.image} width={1000} height={1000} priority={true} alt='Alipasha Askerov - Full stack Developer' />
                     </AboutImage>
                     <AboutContent data-aos="fade-left">
-                        <AboutText role='article' aria-labelledby='about-title'>
-                            <p>
-                                I'm a <strong>full-stack developer</strong> with expertise in both <strong> frontend and backend development.</strong>
-                                I create interactive, user-focused web applications using modern technologies like <strong>React JS, Next JS, Angular, TypeScript and Laravel.</strong>
-                            </p>
-                            <p>
-                                I am passionate about writing clean, maintainable code and building scalable systems that prioritize user experience. I enjoy bringing creative solutions to each project and collaborating closely with clients to deliver high-quality results on time and within budget.
-                            </p>
-                            <p>
-                                Let's build something great together — feel free to reach out and connect!
-                            </p>
-                        </AboutText>
+                        <AboutText role='article' aria-labelledby='about-title' dangerouslySetInnerHTML={{__html: personalInformationData.aboutText}}></AboutText>
                         <CounterWrapper>
                             <li>
                                 <Counter value={2} title='experience' speed={700} />

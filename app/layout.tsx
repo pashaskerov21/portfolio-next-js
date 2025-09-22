@@ -33,7 +33,7 @@ export async function generateMetadata(): Promise<Metadata> {
     return {
       metadataBase: new URL(`https://alipashaskerov.vercel.app`),
       title: personalInformationData.title,
-      description: personalInformationData.aboutText,
+      description: personalInformationData.description,
       keywords: personalInformationData.keywords,
       authors: {
         name: personalInformationData.author_name,
@@ -46,7 +46,7 @@ export async function generateMetadata(): Promise<Metadata> {
         type: "website",
         title: personalInformationData.title,
         siteName: personalInformationData.title,
-        description: personalInformationData.aboutText,
+        description: personalInformationData.description,
         locale: 'en_GB',
         images: [personalInformationData.image]
       },
@@ -56,7 +56,7 @@ export async function generateMetadata(): Promise<Metadata> {
       twitter: {
         card: "summary_large_image",
         title: personalInformationData.title,
-        description: personalInformationData.aboutText,
+        description: personalInformationData.description,
         images: [personalInformationData.image],
         creator: personalInformationData.author_name,
       }

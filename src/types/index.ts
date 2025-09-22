@@ -1,5 +1,6 @@
 export type PersonalInformationDataType = {
     title: string,
+    description: string,
     keywords: string,
     author_name: string,
     author_url: string,

@@ -63,6 +63,5 @@ export type SkillDataType = {
     id: number,
     title: string,
     logo: string,
-    logo_dark: string,
     color: string,
 };

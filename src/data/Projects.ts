@@ -5,10 +5,7 @@ const ProjectData: ProjectDataType[] = [
     {
         title: "Portfolio",
         image: "/projects/portfolio.webp",
-        previewStatus: true,
-        githubStatus: true,
-        home: true,
-        category: 2,
+        category: 1,
         previewLink: "https://alipashaskerov.vercel.app/",
         githubLink: "https://github.com/pashaskerov21/portfolio-next-js",
         skills: ['React JS', 'Next JS', 'TypeScript', 'Formik', 'Styled Components']
@@ -16,9 +13,6 @@ const ProjectData: ProjectDataType[] = [
     {
         title: "Livementors",
         image: "/projects/livementor.webp",
-        previewStatus: true,
-        githubStatus: true,
-        home: true,
         category: 1,
         previewLink: "https://livementors-nextjs.vercel.app",
         githubLink: "https://github.com/pashaskerov21/livementors-nextjs",
@@ -27,9 +21,6 @@ const ProjectData: ProjectDataType[] = [
     {
         title: "Geo Energy Pro",
         image: "/projects/geoenergypro.webp",
-        previewStatus: true,
-        githubStatus: true,
-        home: true,
         category: 1,
         previewLink: "https://geopro-design.vercel.app/",
         githubLink: "https://github.com/pashaskerov21/geoenergypro",
@@ -38,9 +29,6 @@ const ProjectData: ProjectDataType[] = [
     {
         title: "Sobsan",
         image: "/projects/sobsan-next.webp",
-        previewStatus: true,
-        githubStatus: true,
-        home: true,
         category: 2,
         previewLink: "https://sobsan-nextjs.vercel.app/",
         githubLink: "https://github.com/pashaskerov21/sobsan-nextjs",
@@ -49,9 +37,6 @@ const ProjectData: ProjectDataType[] = [
     {
         title: "BMI",
         image: "/projects/bmi.webp",
-        previewStatus: true,
-        githubStatus: true,
-        home: true,
         category: 2,
         previewLink: "https://bmi-nextjs-app.vercel.app",
         githubLink: "https://github.com/pashaskerov21/bmi-nextjs",
@@ -60,9 +45,6 @@ const ProjectData: ProjectDataType[] = [
     {
         title: "Lucky",
         image: "/projects/lucky.webp",
-        previewStatus: true,
-        githubStatus: true,
-        home: true,
         category: 2,
         previewLink: "https://lucky-office-app.netlify.app/",
         githubLink: "https://github.com/pashaskerov21/lucky-app",
@@ -71,9 +53,6 @@ const ProjectData: ProjectDataType[] = [
     {
         title: "Bashkent",
         image: "/projects/bashkent.webp",
-        previewStatus: true,
-        githubStatus: true,
-        home: false,
         category: 2,
         previewLink: "https://bashkent-app.netlify.app/",
         githubLink: "https://github.com/pashaskerov21/bashkent-app",
@@ -82,9 +61,6 @@ const ProjectData: ProjectDataType[] = [
     {
         title: "Meladora",
         image: "/projects/meladora.webp",
-        previewStatus: true,
-        githubStatus: true,
-        home: false,
         category: 2,
         previewLink: "https://meladora-app.netlify.app/",
         githubLink: "https://github.com/pashaskerov21/meladora-app",
@@ -93,9 +69,6 @@ const ProjectData: ProjectDataType[] = [
     {
         title: "Triablo",
         image: "/projects/triablo.webp",
-        previewStatus: true,
-        githubStatus: true,
-        home: false,
         category: 2,
         previewLink: "https://triablo-app.netlify.app/",
         githubLink: "https://github.com/pashaskerov21/triablo-app",
@@ -104,9 +77,6 @@ const ProjectData: ProjectDataType[] = [
     {
         title: "Dayaq",
         image: "/projects/dayaq.webp",
-        previewStatus: true,
-        githubStatus: true,
-        home: false,
         category: 2,
         previewLink: "https://stom-dayaq-app.netlify.app/",
         githubLink: "https://github.com/pashaskerov21/stom-dayaq-app",
@@ -115,9 +85,6 @@ const ProjectData: ProjectDataType[] = [
     {
         title: "Toba",
         image: "/projects/toba.webp",
-        previewStatus: true,
-        githubStatus: false,
-        home: false,
         category: 2,
         previewLink: "https://tobaa.netlify.app/",
         githubLink: "",
@@ -126,9 +93,6 @@ const ProjectData: ProjectDataType[] = [
     {
         title: "Agrowest",
         image: "/projects/agrowest.webp",
-        previewStatus: true,
-        githubStatus: false,
-        home: false,
         category: 2,
         previewLink: "https://agrowest.vercel.app/",
         githubLink: "",
@@ -137,9 +101,6 @@ const ProjectData: ProjectDataType[] = [
     {
         title: "Mebello",
         image: "/projects/mebello.webp",
-        previewStatus: true,
-        githubStatus: false,
-        home: false,
         category: 2,
         previewLink: "https://mebello.netlify.app/",
         githubLink: "",
@@ -148,9 +109,6 @@ const ProjectData: ProjectDataType[] = [
     {
         title: "Viona",
         image: "/projects/viona.webp",
-        previewStatus: true,
-        githubStatus: false,
-        home: false,
         category: 2,
         previewLink: "https://viona-mebel.netlify.app/",
         githubLink: "",
@@ -159,9 +117,6 @@ const ProjectData: ProjectDataType[] = [
     {
         title: "Aurum",
         image: "/projects/aurum.webp",
-        previewStatus: true,
-        githubStatus: false,
-        home: false,
         category: 2,
         previewLink: "https://aurumm.netlify.app/",
         githubLink: "",
@@ -170,9 +125,6 @@ const ProjectData: ProjectDataType[] = [
     {
         title: "FutureArt",
         image: "/projects/futureart.webp",
-        previewStatus: true,
-        githubStatus: false,
-        home: false,
         category: 2,
         previewLink: "https://futureart.netlify.app/",
         githubLink: "",
@@ -181,9 +133,6 @@ const ProjectData: ProjectDataType[] = [
     {
         title: "Supertoys",
         image: "/projects/supertoys.webp",
-        previewStatus: true,
-        githubStatus: false,
-        home: false,
         category: 2,
         previewLink: "https://supertoyss.netlify.app/",
         githubLink: "",
@@ -192,9 +141,6 @@ const ProjectData: ProjectDataType[] = [
     {
         title: "Inaye",
         image: "/projects/inaye.webp",
-        previewStatus: true,
-        githubStatus: false,
-        home: false,
         category: 2,
         previewLink: "https://inaye-xeyriyye.netlify.app/",
         githubLink: "",
@@ -203,9 +149,6 @@ const ProjectData: ProjectDataType[] = [
     {
         title: "RBE Company",
         image: "/projects/rbecompany.webp",
-        previewStatus: true,
-        githubStatus: false,
-        home: false,
         category: 2,
         previewLink: "https://rbecompany.netlify.app/",
         githubLink: "",
@@ -214,9 +157,6 @@ const ProjectData: ProjectDataType[] = [
     {
         title: "Travel",
         image: "/projects/travel.webp",
-        previewStatus: true,
-        githubStatus: true,
-        home: false,
         category: 2,
         previewLink: "https://travel-template-app.netlify.app/",
         githubLink: "https://github.com/pashaskerov21/travel-website-app",
@@ -225,9 +165,6 @@ const ProjectData: ProjectDataType[] = [
     {
         title: "Gym",
         image: "/projects/gym-app.webp",
-        previewStatus: true,
-        githubStatus: true,
-        home: false,
         category: 2,
         previewLink: "https://gym-website-app.netlify.app/",
         githubLink: "https://github.com/pashaskerov21/gym-website-app",
@@ -236,9 +173,6 @@ const ProjectData: ProjectDataType[] = [
     {
         title: "Game Portal",
         image: "/projects/game-portal.webp",
-        previewStatus: true,
-        githubStatus: false,
-        home: false,
         category: 2,
         previewLink: "https://game-portal-1.netlify.app/",
         githubLink: "",
@@ -247,9 +181,6 @@ const ProjectData: ProjectDataType[] = [
     {
         title: "Geo Enjenerik",
         image: "/projects/geoeng-2.webp",
-        previewStatus: true,
-        githubStatus: false,
-        home: false,
         category: 1,
         previewLink: "https://www.geoenjenerik.com.tr/",
         githubLink: "",
@@ -258,9 +189,6 @@ const ProjectData: ProjectDataType[] = [
     {
         title: "AKC Conference",
         image: "/projects/akc-conference.webp",
-        previewStatus: true,
-        githubStatus: false,
-        home: false,
         category: 1,
         previewLink: "http://conference.akc.az/",
         githubLink: "",
@@ -269,9 +197,6 @@ const ProjectData: ProjectDataType[] = [
     {
         title: "Sevgile",
         image: "/projects/sevgile.webp",
-        previewStatus: true,
-        githubStatus: true,
-        home: false,
         category: 3,
         previewLink: "https://sevgiile.az/",
         githubLink: "https://github.com/pashaskerov21/sevgile",
@@ -280,9 +205,6 @@ const ProjectData: ProjectDataType[] = [
     {
         title: "Ortalama bal",
         image: "/projects/ortalama-bal.png",
-        previewStatus: true,
-        githubStatus: true,
-        home: true,
         category: 2,
         previewLink: "https://ortalama-bal.vercel.app/",
         githubLink: "https://github.com/pashaskerov21/ortalama-bal-kalkulyatoru",
@@ -291,9 +213,6 @@ const ProjectData: ProjectDataType[] = [
     {
         title: "Edu Dashboard",
         image: "/projects/edu-dashboard.png",
-        previewStatus: true,
-        githubStatus: true,
-        home: true,
         category: 2,
         previewLink: "https://edu-dashboard-angular.vercel.app/",
         githubLink: "https://github.com/pashaskerov21/edu-dashboard",
@@ -302,9 +221,6 @@ const ProjectData: ProjectDataType[] = [
     {
         title: "Form Builder",
         image: "/projects/formbuilder.png",
-        previewStatus: true,
-        githubStatus: true,
-        home: true,
         category: 2,
         previewLink: "https://formbuilder-app.vercel.app/",
         githubLink: "https://github.com/pashaskerov21/formbuilder",
@@ -313,9 +229,6 @@ const ProjectData: ProjectDataType[] = [
     {
         title: "BrandColors",
         image: "/projects/brandcolor.webp",
-        previewStatus: true,
-        githubStatus: true,
-        home: false,
         category: 2,
         previewLink: "https://brandcolors-app.netlify.app/",
         githubLink: "https://github.com/pashaskerov21/brandcolors-app",
@@ -324,9 +237,6 @@ const ProjectData: ProjectDataType[] = [
     {
         title: "Quiz app",
         image: "/projects/quiz-app.webp",
-        previewStatus: true,
-        githubStatus: true,
-        home: false,
         category: 2,
         previewLink: "https://ts-quiz-app.netlify.app/",
         githubLink: "https://github.com/pashaskerov21/react-ts-quizz-app",
@@ -335,9 +245,6 @@ const ProjectData: ProjectDataType[] = [
     {
         title: "Pixabay Gallery",
         image: "/projects/pixabay-gallery.webp",
-        previewStatus: true,
-        githubStatus: true,
-        home: false,
         category: 2,
         previewLink: "https://pixabay-image-gallery-app.netlify.app/",
         githubLink: "https://github.com/pashaskerov21/pixabay-image-gallery",
@@ -346,9 +253,6 @@ const ProjectData: ProjectDataType[] = [
     {
         title: "Amal",
         image: "/projects/amal.webp",
-        previewStatus: true,
-        githubStatus: true,
-        home: false,
         category: 3,
         previewLink: "https://amal.az/",
         githubLink: "https://github.com/pashaskerov21/amal",
@@ -357,9 +261,6 @@ const ProjectData: ProjectDataType[] = [
     {
         title: "ML IMPORT GROUP",
         image: "/projects/mlgroup.webp",
-        previewStatus: false,
-        githubStatus: true,
-        home: false,
         category: 1,
         previewLink: "https://ml-import.ru/",
         githubLink: "https://github.com/pashaskerov21/mlgroup",
@@ -368,9 +269,6 @@ const ProjectData: ProjectDataType[] = [
     {
         title: "Geoengineer",
         image: "/projects/geoeng.webp",
-        previewStatus: false,
-        githubStatus: true,
-        home: false,
         category: 1,
         previewLink: "",
         githubLink: "https://github.com/pashaskerov21/geoenginerring",
@@ -379,22 +277,16 @@ const ProjectData: ProjectDataType[] = [
     {
         title: "ICX ID",
         image: "/projects/icx.webp",
-        previewStatus: false,
-        githubStatus: false,
-        home: false,
         category: 1,
-        previewLink: "https://icx-id.com/",
+        previewLink: "",
         githubLink: "",
         skills: ['Laravel', 'HTML', 'SCSS', 'JavaScript', 'jQuery']
     },
     {
         title: "Zəfər konfransı",
         image: "/projects/zefer.webp",
-        previewStatus: false,
-        githubStatus: false,
-        home: false,
         category: 1,
-        previewLink: "http://zeferkonfransi.az/",
+        previewLink: "",
         githubLink: "",
         skills: ['Laravel', 'HTML', 'SCSS', 'JavaScript', 'jQuery']
     },

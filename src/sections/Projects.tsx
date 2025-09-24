@@ -66,8 +66,8 @@ const ProjectSection: React.FC<{ projectData: ProjectDataType[], skillData: Skil
                                             <h3 className='title'>{project.title}</h3>
                                         </div>
                                         <div className="links">
-                                            {project.previewStatus && <a href={project.previewLink} target='_blank' rel="noopener noreferrer" aria-label={`View ${project.title} live`}><BsFillEyeFill /></a>}
-                                            {project.githubStatus && <a href={project.githubLink} target='_blank' rel="noopener noreferrer" aria-label={`View ${project.title} on Github`}><FiGithub /></a>}
+                                            {project.previewLink && <a href={project.previewLink} target='_blank' rel="noopener noreferrer" aria-label={`View ${project.title} live`}><BsFillEyeFill /></a>}
+                                            {project.githubLink && <a href={project.githubLink} target='_blank' rel="noopener noreferrer" aria-label={`View ${project.title} on Github`}><FiGithub /></a>}
                                         </div>
                                     </ProjectContent>
                                 </ProjectCard>

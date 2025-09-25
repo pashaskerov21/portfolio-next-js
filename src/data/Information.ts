@@ -77,6 +77,7 @@ const PersonalInformationData: PersonalInformationDataType = {
             degree: "Bachelor Degree",
             start: "2018",
             end: "2022",
+            score: 545,
         },
         {
             id: 2,
@@ -86,6 +87,7 @@ const PersonalInformationData: PersonalInformationDataType = {
             degree: "Master Degree",
             start: "2022",
             end: "2024",
+            score: 70,
         },
     ],
     services: [

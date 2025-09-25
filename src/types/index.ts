@@ -36,6 +36,7 @@ export type PersonalInformationDataType = {
         degree: string,
         start: string,
         end: string,
+        score: number
     }[],
     services: {
         id: number,

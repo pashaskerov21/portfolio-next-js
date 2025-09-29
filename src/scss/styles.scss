@@ -206,6 +206,7 @@
         transform: translateY(-50%);
         @include flex(column, center, center);
         gap: 8px;
+        z-index: 999;
 
         li {
             opacity: 0;

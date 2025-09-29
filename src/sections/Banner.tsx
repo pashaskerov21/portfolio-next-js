@@ -3,22 +3,20 @@
 import React, { useEffect, useState } from "react";
 import { PersonalInformationDataType } from "../types";
 import { useTheme } from "../hooks/useTheme";
+import Image from "next/image";
 
 type BannerProps = {
     personalData: PersonalInformationDataType;
 };
 
 const Banner: React.FC<BannerProps> = ({ personalData }) => {
-
-    if (!personalData) return null;
-
     const { currentTheme } = useTheme();
     const [heroImg, setHeroImg] = useState<string>('design/next-js-2.svg');
     useEffect(() => {
         setHeroImg(currentTheme === 'dark' ? 'design/next-js.svg' : 'design/next-js-2.svg');
-        console.log(heroImg)
     }, [currentTheme])
-
+    
+    if (!personalData) return null;
     return (
         <section className="banner-section" aria-labelledby="banner-title">
             <div className="container">
@@ -52,10 +50,7 @@ const Banner: React.FC<BannerProps> = ({ personalData }) => {
                         </article>
                     </div>
                     <figure className="content-img">
-                        <img
-                            src={heroImg}
-                            alt="Alipasha Askerov - Portfolio Vue"
-                        />
+                        <Image src={heroImg} width={200} height={200} alt="Alipasha Askerov - Portfolio Vue"/>
                     </figure>
                 </div>
             </div>

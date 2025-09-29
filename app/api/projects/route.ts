@@ -1,8 +1,8 @@
 import { ProjectData } from "@/src/data";
 
-export async function GET(request: Request) {
+export async function GET() {
     try {
-        let data = JSON.stringify(ProjectData);
+        const data = JSON.stringify(ProjectData);
         return new Response(data, {
             headers: {
                 'Content-Type': 'application/json'

@@ -25,6 +25,7 @@ const fetchData = async (): Promise<{
       skillData,
     };
   } catch (error) {
+    console.error('Failed to fetch data:', error);
     throw new Error('Failed to fetch data');
   }
 }

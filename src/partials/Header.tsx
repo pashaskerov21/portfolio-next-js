@@ -7,6 +7,7 @@ import { useScrollTo } from "../hooks/useScrollTo";
 import { useTheme } from "../hooks/useTheme";
 import Logo from "../components/Logo";
 import SocialIcons from "../components/SocialIcons";
+import Image from "next/image";
 
 interface HeaderProps {
   personalData: PersonalInformationDataType;
@@ -51,31 +52,31 @@ export default function Header({ personalData, menuData }: HeaderProps) {
   const menuRef = useRef<HTMLDivElement | null>(null);
   const buttonRef = useRef<HTMLButtonElement | null>(null);
 
-  const onClickOutside = (event: MouseEvent) => {
-    if (
-      menuState !== "closed" &&
-      menuRef.current &&
-      !menuRef.current.contains(event.target as Node) &&
-      buttonRef.current &&
-      !buttonRef.current.contains(event.target as Node)
-    ) {
-      setMenuState("closed");
-    }
-  };
-
   // Fixed header on scroll
   const [fixedTop, setFixedTop] = useState(false);
   const [scrollValue, setScrollValue] = useState(0);
 
-  const onScroll = () => {
-    const pos = document.documentElement.scrollTop;
-    const calcHeight =
-      document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    setScrollValue(Math.round((pos * 100) / calcHeight));
-    setFixedTop(pos > 100);
-  };
+
 
   useEffect(() => {
+    const onClickOutside = (event: MouseEvent) => {
+      if (
+        menuState !== "closed" &&
+        menuRef.current &&
+        !menuRef.current.contains(event.target as Node) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(event.target as Node)
+      ) {
+        setMenuState("closed");
+      }
+    };
+    const onScroll = () => {
+      const pos = document.documentElement.scrollTop;
+      const calcHeight =
+        document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      setScrollValue(Math.round((pos * 100) / calcHeight));
+      setFixedTop(pos > 100);
+    };
     document.addEventListener("pointerdown", onClickOutside);
     window.addEventListener("scroll", onScroll);
     window.addEventListener("load", onScroll);
@@ -127,7 +128,7 @@ export default function Header({ personalData, menuData }: HeaderProps) {
               {/* Version Dropdown */}
               <div className="version-dropdown">
                 <div className="active-version">
-                  <img
+                  <Image
                     src={currentTheme === "dark" ? "/design/next-js-2.svg" : "/design/next-js.svg"}
                     width={16}
                     height={16}
@@ -137,7 +138,7 @@ export default function Header({ personalData, menuData }: HeaderProps) {
                 <ul className="version-menu">
                   <li className="angular">
                     <a href="https://alipashaskerov2.vercel.app/">
-                      <img
+                      <Image
                         src="/design/angular-logo.png"
                         width={16}
                         height={16}
@@ -147,7 +148,7 @@ export default function Header({ personalData, menuData }: HeaderProps) {
                   </li>
                   <li>
                     <a href="https://alipashaskerov3.vercel.app/">
-                      <img
+                      <Image
                         src="/design/vue-logo.png"
                         width={16}
                         height={16}
@@ -196,10 +197,10 @@ export default function Header({ personalData, menuData }: HeaderProps) {
       <div
         ref={menuRef}
         className={`mobile-menu d-lg-none ${menuState === "half"
-            ? "active"
-            : menuState === "full"
-              ? "full-height"
-              : "hide"
+          ? "active"
+          : menuState === "full"
+            ? "full-height"
+            : "hide"
           }`}
         onTouchStart={(e) => onDragStart(e.nativeEvent)}
         onTouchMove={(e) => onDragMove(e.nativeEvent)}
@@ -237,7 +238,7 @@ export default function Header({ personalData, menuData }: HeaderProps) {
           <div className="menu-footer">
             <div className="footer-row">
               <Link href="/">
-                <Logo firstName="ALIPASHA" className="reverse"/>
+                <Logo firstName="ALIPASHA" className="reverse" />
               </Link>
               <div className="right">
                 <a

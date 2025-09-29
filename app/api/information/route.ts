@@ -1,20 +1,19 @@
 import { PersonalInformationData } from "@/src/data";
 
-export async function GET(request: Request) {
+export async function GET() {
     try {
-        let data = JSON.stringify(PersonalInformationData);
+        const data = JSON.stringify(PersonalInformationData);
         return new Response(data, {
             headers: {
-                'Content-Type': 'application/json'
-            }
-        })
+                'Content-Type': 'application/json',
+            },
+        });
     } catch (error) {
-        console.error(error)
+        console.error(error);
         return new Response(JSON.stringify({}), {
             headers: {
-                'Content-Type': 'application/json'
-            }
-        })
+                'Content-Type': 'application/json',
+            },
+        });
     }
-
 }

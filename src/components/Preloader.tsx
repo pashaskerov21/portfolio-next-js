@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import Logo from "./Logo";
 
@@ -14,17 +14,7 @@ export default function Preloader() {
 
   const pathname = usePathname(); // route dəyişməsini izləmək üçün
 
-  const startPreloader = () => {
-    setLoading(true);
-    setPercent(0);
-    setShowLogo(false);
-    startedRef.current = false;
-
-    if (intervalRef.current) clearInterval(intervalRef.current);
-    percentCounter();
-  };
-
-  const percentCounter = () => {
+  const percentCounter = useCallback(() => {
     if (startedRef.current) return;
     startedRef.current = true;
 
@@ -49,7 +39,17 @@ export default function Preloader() {
         }, 300);
       }
     }, 10);
-  };
+  },[]);
+
+  const startPreloader = useCallback(() => {
+    setLoading(true);
+    setPercent(0);
+    setShowLogo(false);
+    startedRef.current = false;
+
+    if (intervalRef.current) clearInterval(intervalRef.current);
+    percentCounter();
+  }, [percentCounter]);
 
   // İlk dəfə mount olunanda preloader başlasın
   useEffect(() => {
@@ -57,12 +57,12 @@ export default function Preloader() {
     return () => {
       if (intervalRef.current) clearInterval(intervalRef.current);
     };
-  }, []);
+  }, [startPreloader]);
 
   // Route dəyişəndə yenidən işə düşsün
   useEffect(() => {
     startPreloader();
-  }, [pathname]);
+  }, [pathname, startPreloader]);
 
   if (!loading) return null;
 
@@ -73,9 +73,8 @@ export default function Preloader() {
       </div>
 
       <div
-        className={`percent ${percent === 100 ? "complete" : ""} ${
-          showLogo ? "hide" : ""
-        }`}
+        className={`percent ${percent === 100 ? "complete" : ""} ${showLogo ? "hide" : ""
+          }`}
         style={{
           background: `conic-gradient(#000 ${percent}%, #fff ${percent}%)`,
         }}

@@ -1,8 +1,8 @@
 import { MenuData } from "@/src/data";
 
-export async function GET(request: Request) {
+export async function GET() {
     try {
-        let data = JSON.stringify(MenuData);
+        const data = JSON.stringify(MenuData);
         return new Response(data, {
             headers: {
                 'Content-Type': 'application/json'

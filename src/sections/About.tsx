@@ -4,6 +4,7 @@ import React from "react";
 import Counter from "../components/Counter";
 import SocialIcons from "../components/SocialIcons";
 import { PersonalInformationDataType } from "../types";
+import Image from "next/image";
 
 type AboutProps = {
   personalData: PersonalInformationDataType;
@@ -20,10 +21,7 @@ const About: React.FC<AboutProps> = ({ personalData }) => {
         </h2>
         <div className="about-wrapper">
           <figure>
-            <img
-              src={personalData.image}
-              alt="Alipasha Askerov - Full stack Developer"
-            />
+            <Image src={personalData.image} width={300} height={300} alt="Alipasha Askerov - Full stack Developer"/>
           </figure>
           <div className="wrapper-right">
             <article

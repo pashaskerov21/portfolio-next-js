@@ -2,6 +2,7 @@
 
 import React from "react";
 import { SkillDataType } from "../types";
+import Image from "next/image";
 
 type SkillsProps = {
   skillData: SkillDataType[];
@@ -19,12 +20,7 @@ const Skills: React.FC<SkillsProps> = ({ skillData }) => {
         <ul className="skills-wrapper">
           {skillData.map((skill, i) => (
             <li key={i} className="skill-card">
-              <img
-                src={skill.logo}
-                width={70}
-                height={70}
-                alt={`${skill.title} logo`}
-              />
+              <Image src={skill.logo} width={70} height={70} alt={`${skill.title} logo`}/>
               <h3 className="title">{skill.title}</h3>
               <div className="border">
                 <span style={{ backgroundColor: skill.color }}></span>

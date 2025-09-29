@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { ProjectDataType, SkillDataType } from "../types";
+import Image from "next/image";
 
 type ProjectsProps = {
   page: string;
@@ -58,12 +59,7 @@ const ProjectsGrid: React.FC<ProjectsProps> = ({ page, projectData, skillData })
           {filteredProjects.map((project, i) => (
             <li key={i} className="project-card">
               <figure className="project-img">
-                <img
-                  src={project.image}
-                  width={400}
-                  height={200}
-                  alt={`${project.title} preview`}
-                />
+                <Image src={project.image} width={400} height={200} alt={`${project.title} preview`}/>
                 <div className="layer">
                   <div className="badge">{getCategoryName(project.category)}</div>
 
@@ -74,12 +70,7 @@ const ProjectsGrid: React.FC<ProjectsProps> = ({ page, projectData, skillData })
                         className="skill-logo"
                         style={{ animationDelay: `${j * 0.1 + 0.1}s` }}
                       >
-                        <img
-                          src={skill.logo}
-                          width={20}
-                          height={20}
-                          alt={`${project.title} ${skill.title} logo`}
-                        />
+                        <Image src={skill.logo} width={20} height={20} alt={`${project.title} ${skill.title} logo`}/>
                       </li>
                     ))}
                   </ul>

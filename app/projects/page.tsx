@@ -2,6 +2,7 @@ import React from 'react';
 import { PersonalInformationDataType, ProjectDataType, SkillDataType } from '@/src/types';
 import { fetchInformationData, fetchProjectData, fetchSkillData } from '@/src/hooks/useApi';
 import ProjectsLayout from '@/src/layout/ProjectsLayout';
+import { Metadata } from 'next';
 
 const fetchData = async (): Promise<{
   personalInformationData: PersonalInformationDataType,
@@ -30,7 +31,9 @@ const fetchData = async (): Promise<{
   }
 }
 
-
+export const metadata: Metadata = {
+  title: 'Alipasha Askerov | Projects',
+}
 
 const ProjectsPage = async () => {
   const { personalInformationData, projectData, skillData } = await fetchData();

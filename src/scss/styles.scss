@@ -87,14 +87,14 @@
     @include flex(row, center, center);
     border-radius: 50%;
     background-color: light-dark($primary-color-dark, $primary-color-light);
-    color: light-dark($primary-color-light, $primary-color-dark);
-    ;
+    color: light-dark($primary-color-light, $primary-color-dark);;
     font-size: 16px;
     transition: all 0.2s;
     opacity: 0;
     transform: translateY(100px);
     transition: all 0.3s;
     border: 1px solid light-dark($bg-color-light, $bg-color-dark);
+    z-index: 999;
 
     &.visible {
         opacity: 1;
@@ -1925,3 +1925,38 @@ section.about-section {
 }
 
 /*contact*/
+
+/*page 404*/
+.page-404-section{
+    padding: 40px 0;
+    .content{
+        width: 100%;
+        @include flex(column,center,center);
+        .error-code{
+            font-size: 140px;
+            font-family: $primary-font;
+            color: light-dark($primary-color-dark, $primary-color-light);;
+            font-weight: 900;
+        }
+        .title{
+            font-family: $primary-font;
+            text-align: center;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        a{
+            @include flex(row,center,center);
+            padding: 15px;
+            background-color: light-dark($primary-color-dark, $primary-color-light);
+            color: light-dark($primary-color-light, $primary-color-dark);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: $primary-font;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 24px;
+        }
+    }
+}
+/*page 404*/

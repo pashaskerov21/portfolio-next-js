@@ -1,4 +1,4 @@
-import Page404Section from '@/src/sections/Page404Section'
+// import Page404Section from '@/src/sections/Page404Section'
 import { Metadata } from 'next'
 import React from 'react'
 
@@ -8,7 +8,9 @@ export const metadata: Metadata = {
 
 const NotFound = () => {
   return (
-    <Page404Section/>
+    <React.Fragment>
+       {/* <Page404Section/> */}
+    </React.Fragment>
   )
 }
 

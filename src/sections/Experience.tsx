@@ -1,55 +1,53 @@
-'use client'
-import React from 'react'
-import SectionTitle from '../components/SectionTitle'
-import { FaCalendarAlt } from 'react-icons/fa'
-import { FaLocationDot } from 'react-icons/fa6'
-import Image from 'next/image'
-import { PersonalInformationDataType } from '../types'
-import { Container } from '../styles/components/container'
-import { ExperienceCard, ExperienceWrapper } from '../styles/sections/experience'
+"use client";
+import React from "react";
+import { PersonalInformationDataType } from "../types";
 
-const ExperienceSection: React.FC<{ personalInformationData: PersonalInformationDataType }> = ({ personalInformationData }) => {
+type ExperienceProps = {
+    personalData: PersonalInformationDataType;
+};
+
+const Experience: React.FC<ExperienceProps> = ({ personalData }) => {
+    if (!personalData?.experience || personalData.experience.length === 0) return null;
+
     return (
-        <section id="experience" role='region' aria-labelledby='experience-title'>
-            <Image src='/vectors/code.svg' className='code-img-design right' width={100} height={100} alt='' />
-            <Container>
-                <SectionTitle title='experience' id='experience-title'/>
-                <ExperienceWrapper role='list'>
-                    {
-                        personalInformationData.experience.map((data) => (
-                            <li key={data.id} role='listitem' aria-label={`${data.position}:${data.start}-${data.end}`} data-testid="experience-card" data-aos="zoom-in-up" className='listitem'>
-                                <ExperienceCard>
-                                    <div className="title">
-                                        <h3 className="position">{data.position}</h3>
-                                        <div className="date">
-                                            <FaCalendarAlt />
-                                            <span>{data.start} - {data.end}</span>
-                                        </div>
-                                    </div>
-                                    <article>
-                                        <div className="description">
-                                            <p>{data.description}</p>
-                                        </div>
-                                        <ul className="responsibilities">
-                                            {data.responsibilities.map((r,index) => (
-                                                <li key={index}>{r}</li>
-                                            ))}
-                                        </ul>
-                                    </article>
-                                    <div className="company">
-                                        <h4 className='name'>{data.company}</h4>
-                                        <div className='location'>
-                                            <span>{data.location}</span>
-                                        </div>
-                                    </div>
-                                </ExperienceCard>
-                            </li>
-                        ))
-                    }
-                </ExperienceWrapper>
-            </Container>
-        </section>
-    )
-}
+        <section className="experience-section" aria-labelledby="experience-title" id="experience">
+            <div className="container">
+                <h2 className="section-title" role="heading" id="experience-title">
+                    Experience
+                </h2>
 
-export default ExperienceSection
+                <ul className="experience-wrapper">
+                    {personalData.experience.map((exp, i) => (
+                        <li key={i} className="experience-card">
+                            <div className="left">
+                                <div className="left-header">
+                                    <h3 className="position">{exp.position}</h3>
+                                    <div className="date">
+                                        {exp.start} - {exp.end}
+                                    </div>
+                                </div>
+                                <div className="left-footer">
+                                    <h4 className="company">{exp.company}</h4>
+                                    <div className="location">{exp.location}</div>
+                                </div>
+                            </div>
+
+                            <article className="card-body">
+                                <p>{exp.description}</p>
+                                {exp.responsibilities && exp.responsibilities.length > 0 && (
+                                    <ul>
+                                        {exp.responsibilities.map((item, j) => (
+                                            <li key={j}>{item}</li>
+                                        ))}
+                                    </ul>
+                                )}
+                            </article>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        </section>
+    );
+};
+
+export default Experience;

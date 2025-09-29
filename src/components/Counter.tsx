@@ -1,74 +1,79 @@
-import React from 'react'
+"use client";
 
-const Counter: React.FC<{ value: number, title: string, speed: number }> = ({ value, title, speed }) => {
-    const [count, setCount] = React.useState<number>(0);
-    const [counterStatus, setCounterStatus] = React.useState<boolean>(false)
-    let counterItem = React.useRef<HTMLDivElement | null>(null);
+import { useEffect, useRef, useState } from "react";
 
-    const countFunction = React.useRef(() => {
+interface CounterProps {
+    value: number;
+    title: string;
+    speed: number;
+}
+
+export default function Counter({ value, title, speed }: CounterProps) {
+    const [count, setCount] = useState(0);
+    const counterItemRef = useRef<HTMLDivElement | null>(null);
+    const startedRef = useRef(false);
+
+    const startCounter = () => {
+        if (startedRef.current) return;
+        startedRef.current = true;
+
         let startValue = 0;
         let endValue = value;
         let remainder = 0;
-        let countSecond = speed;
         let step = 1;
 
         if (endValue <= 100) {
             step = 1;
         } else if (endValue > 100 && endValue <= 1000) {
             step = 10;
-            remainder = endValue % 10;
-            endValue = endValue - remainder;
+            remainder = value % 10;
+            endValue = value - remainder;
         } else if (endValue > 1000 && endValue < 5000) {
             step = 25;
-            remainder = endValue % 25;
-            endValue = endValue - remainder;
+            remainder = value % 25;
+            endValue = value - remainder;
         } else if (endValue >= 5000) {
             step = 50;
-            remainder = endValue % 50;
-            endValue = endValue - remainder;
+            remainder = value % 50;
+            endValue = value - remainder;
         }
 
-        let counter = setInterval(() => {
+        const counter = setInterval(() => {
             startValue += step;
-
-            if (startValue === endValue) {
+            if (startValue >= endValue) {
                 clearInterval(counter);
                 setCount(value);
             } else {
                 setCount(startValue);
             }
-        }, countSecond);
-    });
+        }, speed);
+    };
 
+    const onScroll = () => {
+        if (!counterItemRef.current || startedRef.current) return;
 
-    const handleScroll = () => {
-        const limit = window.innerWidth < 768 ? 150 : 45;
-        if (window.scrollY > (counterItem.current?.offsetTop || 0) - limit) {
-            setCounterStatus(true);
+        const offsetTop = counterItemRef.current.offsetTop;
+        const triggerPoint = offsetTop - window.innerHeight + 200;
+
+        if (window.scrollY > triggerPoint) {
+            startCounter();
         }
     };
 
-    React.useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-
+    useEffect(() => {
+        window.addEventListener("scroll", onScroll);
         return () => {
-            window.removeEventListener('scroll', handleScroll);
-        }
+            window.removeEventListener("scroll", onScroll);
+        };
     }, []);
 
-
-
-    React.useEffect(() => {
-        if (counterStatus === true) {
-            countFunction.current()
-        }
-    }, [counterStatus, countFunction])
     return (
-        <div className="counter-item" ref={counterItem}>
-            <span className="counter-value">{count}{title === 'experience' && '+'}</span>
-            <span className='counter-title'>{title}</span>
+        <div className="counter-item" ref={counterItemRef}>
+            <span className="counter-value">
+                {count}
+                {title === "experience" && <span>+</span>}
+            </span>
+            <span className="counter-title">{title}</span>
         </div>
-    )
+    );
 }
-
-export default Counter

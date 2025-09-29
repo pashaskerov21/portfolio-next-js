@@ -1,17 +1,14 @@
-'use client'
-import React from 'react'
-import Logo from '../components/Logo'
-import { FooterContainer } from '../styles/partials/footer'
-import { Link } from 'react-scroll'
+"use client";
 
-const Footer = () => {
+import Link from "next/link";
+import Logo from "../components/Logo";
+
+export default function Footer() {
   return (
-    <FooterContainer>
-      <Link to='home' aria-label='Alipasha Askerov Logo'>
-        <Logo firstName='Alipasha' lastName='Askerov' color='#fff' />
+    <footer>
+      <Link href="/">
+        <Logo firstName="Alipasha" lastName="Askerov" className="reverse"/>
       </Link>
-    </FooterContainer>
-  )
+    </footer>
+  );
 }
-
-export default Footer

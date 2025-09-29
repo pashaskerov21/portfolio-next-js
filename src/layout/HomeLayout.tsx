@@ -1,8 +1,15 @@
 'use client'
 import React from 'react'
 import { PersonalInformationDataType, ProjectDataType, SkillDataType } from '../types'
-import { AboutSection, ContactSection, EducationSection, ExperienceSection, HomeSection, ProjectSection, SkillSection } from '../sections'
-import ServiceSection from '../sections/Services'
+import Banner from '../sections/Banner'
+import About from '../sections/About'
+import Services from '../sections/Services'
+import Skills from '../sections/Skills'
+import ProjectsGrid from '../sections/ProjectsGrid'
+import Experience from '../sections/Experience'
+import Education from '../sections/Education'
+import Contact from '../sections/Contact'
+
 
 type HomeLayoutProps = {
     personalInformationData: PersonalInformationDataType,
@@ -13,14 +20,14 @@ type HomeLayoutProps = {
 const HomeLayout: React.FC<HomeLayoutProps> = ({ personalInformationData, projectData, skillData }) => {
     return (
         <React.Fragment>
-            <HomeSection personalInformationData={personalInformationData} />
-            <AboutSection personalInformationData={personalInformationData} />
-            <ServiceSection personalInformationData={personalInformationData}/>
-            <ExperienceSection personalInformationData={personalInformationData} />
-            <SkillSection skillData={skillData} />
-            <ProjectSection projectData={projectData} skillData={skillData} />
-            <EducationSection personalInformationData={personalInformationData} />
-            <ContactSection />
+            <Banner personalData={personalInformationData} />
+            <About personalData={personalInformationData} />
+            <Services personalData={personalInformationData} />
+            <Experience personalData={personalInformationData} />
+            <Skills skillData={skillData} />
+            <ProjectsGrid skillData={skillData} projectData={projectData} page='home' />
+            <Education personalData={personalInformationData} />
+            <Contact/>
         </React.Fragment>
     )
 }

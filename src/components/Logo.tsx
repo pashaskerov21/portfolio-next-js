@@ -1,31 +1,66 @@
-'use client'
-import React from 'react'
-import { LogoWrapper } from '../styles/components/logo';
+"use client";
 
+import { useMemo } from "react";
 
-type Props = {
-    firstName: string,
-    lastName: string,
-    color: string,
-    infinite?: boolean,
+interface LogoProps {
+  firstName?: string;
+  lastName?: string;
+  className?: string;
+  infinite?: boolean;
 }
 
-const Logo: React.FC<Props> = ({ firstName, lastName, color, infinite }) => {
-    const animationDelay = 0.08;
-    return (
-        <LogoWrapper $color={color} $infinite={infinite}>
-            <div>
-                {firstName.split('').map((letter, index) => (
-                    <span key={index} style={{animationDelay: `${index*animationDelay}s`}}>{letter}</span>
-                ))}
-            </div>
-            <div>
-                {lastName.split('').map((letter, index) => (
-                    <span key={index} style={{animationDelay: `${firstName.length * animationDelay + index*animationDelay}s`}}>{letter}</span>
-                ))}
-            </div>
-        </LogoWrapper>
-    )
-}
+export default function Logo({
+  firstName,
+  lastName,
+  className,
+  infinite = false,
+}: LogoProps) {
+  const animationDelay = 0.08;
 
-export default Logo
+  const getFirstNameLetters = useMemo(
+    () => (firstName ? firstName.split("") : []),
+    [firstName]
+  );
+
+  const getLastNameLetters = useMemo(
+    () => (lastName ? lastName.split("") : []),
+    [lastName]
+  );
+
+  return (
+    <div
+      className={`logo-wrapper ${infinite ? "infinite" : ""} ${className}`}
+    >
+      {firstName && (
+        <div>
+          {getFirstNameLetters.map((letter, i) => (
+            <span
+              key={`first-${i}`}
+              style={{ animationDelay: `${i * animationDelay}s` }}
+            >
+              {letter}
+            </span>
+          ))}
+        </div>
+      )}
+
+      {lastName && (
+        <div>
+          {getLastNameLetters.map((letter, i) => (
+            <span
+              key={`last-${i}`}
+              style={{
+                animationDelay: `${
+                  getFirstNameLetters.length * animationDelay +
+                  i * animationDelay
+                }s`,
+              }}
+            >
+              {letter}
+            </span>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}

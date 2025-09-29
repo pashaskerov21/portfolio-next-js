@@ -8,7 +8,7 @@ const ProjectData: ProjectDataType[] = [
         category: 1,
         previewLink: "https://alipashaskerov.vercel.app/",
         githubLink: "https://github.com/pashaskerov21/portfolio-next-js",
-        skills: ['React JS', 'Next JS', 'TypeScript', 'Formik', 'Styled Components']
+        skills: ['Next JS', 'Angular', 'Vue', 'TypeScript', 'SCSS']
     },
     {
         title: "Livementors",

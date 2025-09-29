@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
-import StyledComponentsRegistry from '@/lib/registry';
-import SiteLayout from '@/src/layout/SiteLayout';
+import DefaultLayout from '@/src/layout/DefaultLayout';
 import { MenuDataType, PersonalInformationDataType } from '@/src/types';
-import { fetchInformationData, fetchMenuData } from '@/src/utils/fetch';
+import { fetchInformationData, fetchMenuData } from '@/src/hooks/useApi';
 
 const fetchData = async (): Promise<{
   menuData: MenuDataType[],
@@ -95,20 +94,17 @@ const RootLayout = async ({ children }: { children: React.ReactNode }) => {
             }} />
             <link rel="preconnect" href="https://fonts.googleapis.com" />
             <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='anonymous' />
-            <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
-            <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet" />
-            <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet"></link>
-            <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"></link>
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+            <link
+              href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+              rel="stylesheet" />
+            <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet" />
             <script src="https://kit.fontawesome.com/3cf65b98ce.js" crossOrigin="anonymous"></script>
 
           </head>
           <body>
-            <StyledComponentsRegistry>
-              <SiteLayout menuData={menuData} personalInformationData={personalInformationData}>
-                {children}
-              </SiteLayout>
-            </StyledComponentsRegistry>
+            <DefaultLayout menuData={menuData} personalInformationData={personalInformationData}>
+              {children}
+            </DefaultLayout>
           </body>
         </html>
       )

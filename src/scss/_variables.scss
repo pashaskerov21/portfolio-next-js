@@ -1,0 +1,76 @@
+$primary-color-dark: #000;
+$primary-color-light: #fff;
+$bg-color-dark: #0F0F11;
+$bg-color-light: #ffffff;
+$bg-color-mute-dark: #2f2f2f;
+$bg-color-mute-light: #F1F1F1;
+$text-color-dark: #FBFBFB;
+$text-color-dark-mute: #A39FA9;
+$text-color-light: #151417;
+$text-color-light-mute: #746E7C;
+
+$primary-font: "Fira Code", monospace;
+$secondary-font: 'Montserrat', sans-serif;
+
+// black white level
+$black-1: rgba(0, 0, 0, 0.1);
+$black-2: rgba(0, 0, 0, 0.2);
+$black-3: rgba(0, 0, 0, 0.3);
+$black-4: rgba(0, 0, 0, 0.4);
+$black-5: rgba(0, 0, 0, 0.5);
+$black-6: rgba(0, 0, 0, 0.6);
+$black-7: rgba(0, 0, 0, 0.7);
+$black-8: rgba(0, 0, 0, 0.8);
+$black-9: rgba(0, 0, 0, 0.9);
+
+$white-1: rgba(255, 255, 255, 0.1);
+$white-2: rgba(255, 255, 255, 0.2);
+$white-3: rgba(255, 255, 255, 0.3);
+$white-4: rgba(255, 255, 255, 0.4);
+$white-5: rgba(255, 255, 255, 0.5);
+$white-6: rgba(255, 255, 255, 0.6);
+$white-7: rgba(255, 255, 255, 0.7);
+$white-8: rgba(255, 255, 255, 0.8);
+$white-9: rgba(255, 255, 255, 0.9);
+
+@keyframes pulsePrimary {
+    0% {
+        box-shadow: 0 0 0 0  light-dark($primary-color-dark,$primary-color-light);
+    }
+
+    80% {
+        box-shadow: 0 0 0 10px hsla(0, 100%, 76%, 0)
+    }
+
+    to {
+        box-shadow: 0 0 0 0 hsla(0, 100%, 76%, 0)
+    }
+}
+@keyframes pulsePrimaryReverse {
+    0% {
+        box-shadow: 0 0 0 0  light-dark($primary-color-light,$primary-color-dark);
+    }
+
+    80% {
+        box-shadow: 0 0 0 10px hsla(0, 100%, 76%, 0)
+    }
+
+    to {
+        box-shadow: 0 0 0 0 hsla(0, 100%, 76%, 0)
+    }
+}
+
+
+@keyframes pulseWhite {
+    0% {
+        box-shadow: 0 0 0 0 #ffffff;
+    }
+
+    80% {
+        box-shadow: 0 0 0 10px hsla(0, 100%, 76%, 0)
+    }
+
+    to {
+        box-shadow: 0 0 0 0 hsla(0, 100%, 76%, 0)
+    }
+}

@@ -1,29 +1,25 @@
 import React from 'react';
-import { MenuDataType, PersonalInformationDataType, ProjectDataType, SkillDataType } from '@/src/types';
-import { fetchInformationData, fetchMenuData, fetchProjectData, fetchSkillData } from '@/src/hooks/useApi';
-import HomeLayout from '@/src/layout/HomeLayout';
+import { PersonalInformationDataType, ProjectDataType, SkillDataType } from '@/src/types';
+import { fetchInformationData, fetchProjectData, fetchSkillData } from '@/src/hooks/useApi';
+import ProjectsLayout from '@/src/layout/ProjectsLayout';
 
 const fetchData = async (): Promise<{
-  menuData: MenuDataType[],
   personalInformationData: PersonalInformationDataType,
   projectData: ProjectDataType[],
   skillData: SkillDataType[],
 }> => {
   try {
     const [
-      menuData,
       personalInformationData,
       projectData,
       skillData,
     ] = await Promise.all([
-      fetchMenuData(),
       fetchInformationData(),
       fetchProjectData(),
       fetchSkillData(),
     ]);
 
     return {
-      menuData,
       personalInformationData,
       projectData,
       skillData,
@@ -35,14 +31,14 @@ const fetchData = async (): Promise<{
 
 
 
-const PortfolioApp = async () => {
-  const { menuData, personalInformationData, projectData, skillData } = await fetchData();
+const ProjectsPage = async () => {
+  const { personalInformationData, projectData, skillData } = await fetchData();
 
   try {
-    if (menuData && personalInformationData && projectData && skillData) {
+    if (personalInformationData && projectData && skillData) {
       return (
         <React.Fragment>
-          <HomeLayout
+          <ProjectsLayout
             personalInformationData={personalInformationData}
             projectData={projectData}
             skillData={skillData}
@@ -65,4 +61,4 @@ const PortfolioApp = async () => {
 }
 
 
-export default PortfolioApp;
+export default ProjectsPage;

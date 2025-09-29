@@ -1,0 +1,150 @@
+@use 'utils' as *;
+@use 'variables' as *;
+
+
+/*=============GLOBAL=================*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root.light {
+    color-scheme: light;
+}
+
+:root.dark {
+    color-scheme: dark;
+}
+
+html {
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    @include flex(column, space-between, center);
+    font-size: 16px;
+    font-family: $secondary-font;
+    scroll-behavior: smooth;
+    background-color: light-dark($bg-color-light, $bg-color-dark);
+    color: light-dark($text-color-light, $text-color-dark);
+
+    &.locked {
+        overflow: hidden;
+    }
+
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: light-dark($primary-color-dark,$primary-color-light);
+}
+
+::-webkit-scrollbar-track {
+    background-color: $black-3;
+}
+
+::selection {
+    background: light-dark($primary-color-dark,$primary-color-light);
+    color: #ffffff;
+}
+
+a,
+a:hover,
+a:active,
+a:visited {
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+    background-color: transparent;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    user-select: none;
+    display: block;
+}
+
+svg {
+    display: block;
+}
+
+button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+a {
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+input {
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+
+    &::placeholder {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+        display: none;
+    }
+}
+
+main {
+    width: 100%;
+    padding-bottom: 60px;
+}
+
+section {
+    width: 100%;
+}
+
+.section-title {
+    text-transform: capitalize;
+    font-size: 28px;
+    user-select: none;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+    font-family: $primary-font;
+
+    @media (min-width: 768px) {
+        font-size: 32px
+    }
+
+    @media (min-width: 992px) {
+        font-size: 36px
+    }
+
+    @media (min-width: 1200px) {
+        font-size: 40px
+    }
+
+    @media (min-width: 1400px) {
+        font-size: 44px;
+    }
+}

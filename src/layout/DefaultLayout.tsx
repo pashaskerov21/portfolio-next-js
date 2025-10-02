@@ -25,7 +25,6 @@ const DefaultLayout: React.FC<DefaultLayoutProps> = ({ children, menuData, perso
 
     return (
         <>
-            <Cursor/>
             <Preloader />
             <ScrollBtn />
             <SocialIcons personalData={personalInformationData} className='fixed-icons' />

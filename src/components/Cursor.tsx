@@ -4,8 +4,7 @@ import { useEffect, useState } from "react";
 
 const Cursor = () => {
     const [position, setPosition] = useState({ x: 0, y: 0 });
-    const [hidden, setHidden] = useState(false);
-    const [cardStatus, setCardStatus] = useState(false);
+    const [reverse, setReverse] = useState(false);
 
     useEffect(() => {
         const cards = document.querySelectorAll<HTMLElement>(
@@ -18,11 +17,11 @@ const Cursor = () => {
         document.addEventListener("mousemove", moveCursor);
 
         const handleHover = (e: Event) => {
-            setCardStatus(true);
+            setReverse(true);
         };
 
         const handleOut = (e: Event) => {
-            setCardStatus(false);
+            setReverse(false);
         };
 
         cards.forEach((card) => {
@@ -43,13 +42,12 @@ const Cursor = () => {
     const size = 30;
 
     return (
-        <div className={`cursor ${cardStatus ? 'reverse' : ''}`}
+        <div className={`cursor ${reverse ? 'reverse' : ''}`}
             style={{
-                top: position.y - size / 2,
+                top: position.y  - size / 2,
                 left: position.x - size / 2,
                 width: size,
                 height: size,
-                opacity: hidden ? 0 : 1,
             }}
         >
             <span style={{width: size-10,height: size-10,}}>

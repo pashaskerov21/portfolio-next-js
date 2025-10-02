@@ -898,10 +898,17 @@ footer {
             border: 1px solid light-dark($primary-color-dark, $primary-color-light);
             padding: 20px;
             border-radius: 10px;
+            transition: all 0.3s;
 
             @media (min-width: 992px) {
                 text-align: start;
                 align-items: flex-start;
+            }
+
+            &:hover {
+                background-color: light-dark($primary-color-dark, $primary-color-light);
+                color: light-dark($primary-color-light, $primary-color-dark);
+                ;
             }
 
         }
@@ -919,6 +926,11 @@ footer {
             li {
                 width: 100%;
                 max-width: 120px;
+            }
+            &:hover{
+                a{
+                    opacity: 0.4;
+                }
             }
 
             a {
@@ -943,7 +955,10 @@ footer {
                 }
 
                 &:hover {
+                    background-color: light-dark($primary-color-dark, $primary-color-light);
+                    color: light-dark($primary-color-light, $primary-color-dark);
                     animation: pulsePrimary 1s ease infinite;
+                    opacity: 1 !important;
                 }
             }
         }
@@ -1029,6 +1044,7 @@ section.about-section {
         max-width: 600px;
         height: auto;
         border-radius: 10px;
+        position: relative;
 
         @media (min-width: 992px) {
             width: 48%;
@@ -1039,6 +1055,29 @@ section.about-section {
             height: 100%;
             object-fit: contain;
             border-radius: 10px;
+        }
+        .overlay{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, $black-8, $black-3);
+            @include flex(column,flex-end,flex-end);
+            padding: 15px;
+            opacity: 0;
+            transition: all 0.3s;
+            .logo-item{
+                display: none;
+            }
+        }
+        &:hover{
+            .overlay{
+                opacity: 1;
+                .logo-item{
+                    display: block;
+                }
+            }
         }
     }
 
@@ -1983,42 +2022,46 @@ section.about-section {
     }
 }
 
-.cursor {
-    position: fixed;
-    border-radius: 50%;
-    border: 1px solid light-dark($primary-color-dark, $primary-color-light);
-    pointer-events: none;
-    z-index: 999999;
-    @include flex(row, center, center);
-    transition: all 0.1s;
-    border-left-color: transparent;
-    animation: spine 1s linear infinite;
+// .cursor {
+//     position: fixed;
+//     border-radius: 50%;
+//     border: 1px solid light-dark($primary-color-dark, $primary-color-light);
+//     pointer-events: none;
+//     z-index: 999999;
+//     @include flex(row, center, center);
+//     transition: all 0.1s;
+//     border-left-color: transparent;
+//     animation: spine 1s linear infinite;
+//     display: none;
+//     @media (min-width: 992px){
+//         display: flex;
+//     }
 
-    span {
-        @include flex(row, center, center);
-        border: 1px solid light-dark($primary-color-dark, $primary-color-light);
-        border-left-color: transparent;
-        border-radius: 50%;
-        animation: spine 1s linear infinite;
-    }
+//     span {
+//         @include flex(row, center, center);
+//         border: 1px solid light-dark($primary-color-dark, $primary-color-light);
+//         border-left-color: transparent;
+//         border-radius: 50%;
+//         animation: spine 1s linear infinite;
+//     }
 
-    &.reverse {
-        border: 1px solid light-dark($primary-color-light, $primary-color-dark);
-        border-left-color: transparent;
+//     &.reverse {
+//         border: 1px solid light-dark($primary-color-light, $primary-color-dark);
+//         border-left-color: transparent;
 
-        span {
-            border: 1px solid light-dark($primary-color-light, $primary-color-dark);
-            border-left-color: transparent;
-        }
-    }
-}
+//         span {
+//             border: 1px solid light-dark($primary-color-light, $primary-color-dark);
+//             border-left-color: transparent;
+//         }
+//     }
+// }
 
-@keyframes spine {
-    0% {
-        transform: rotate(0);
-    }
+// @keyframes spine {
+//     0% {
+//         transform: rotate(0);
+//     }
 
-    100% {
-        transform: rotate(360deg);
-    }
-}
+//     100% {
+//         transform: rotate(360deg);
+//     }
+// }

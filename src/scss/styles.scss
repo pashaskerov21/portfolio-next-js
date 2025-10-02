@@ -87,7 +87,8 @@
     @include flex(row, center, center);
     border-radius: 50%;
     background-color: light-dark($primary-color-dark, $primary-color-light);
-    color: light-dark($primary-color-light, $primary-color-dark);;
+    color: light-dark($primary-color-light, $primary-color-dark);
+    ;
     font-size: 16px;
     transition: all 0.2s;
     opacity: 0;
@@ -886,21 +887,23 @@ footer {
                 z-index: 999;
             }
         }
-        article{
+
+        article {
             width: 100%;
             margin-top: 10px;
             font-family: $primary-font;
-            @include flex(column,center,center);
+            @include flex(column, center, center);
             gap: 10px;
             text-align: center;
             border: 1px solid light-dark($primary-color-dark, $primary-color-light);
             padding: 20px;
             border-radius: 10px;
-            @media (min-width: 992px){
+
+            @media (min-width: 992px) {
                 text-align: start;
                 align-items: flex-start;
             }
-            
+
         }
 
         .versions {
@@ -1621,6 +1624,7 @@ section.about-section {
         @media (min-width: 576px) {
             transform: scale(1.2);
         }
+
         @media (min-width: 768px) {
             transform: scale(1.5);
         }
@@ -1714,7 +1718,8 @@ section.about-section {
                 border-radius: 10px;
                 font-weight: 600;
                 background-color: light-dark($primary-color-dark, $primary-color-light);
-                color: light-dark($primary-color-light, $primary-color-dark);;
+                color: light-dark($primary-color-light, $primary-color-dark);
+                ;
                 text-transform: uppercase;
                 letter-spacing: 1px;
                 font-size: 10px;
@@ -1928,26 +1933,31 @@ section.about-section {
 /*contact*/
 
 /*page 404*/
-.page-404-section{
+.page-404-section {
     padding: 40px 0;
-    .content{
+
+    .content {
         width: 100%;
-        @include flex(column,center,center);
-        .error-code{
+        @include flex(column, center, center);
+
+        .error-code {
             font-size: 140px;
             font-family: $primary-font;
-            color: light-dark($primary-color-dark, $primary-color-light);;
+            color: light-dark($primary-color-dark, $primary-color-light);
+            ;
             font-weight: 900;
         }
-        .title{
+
+        .title {
             font-family: $primary-font;
             text-align: center;
             margin-bottom: 30px;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-        a{
-            @include flex(row,center,center);
+
+        a {
+            @include flex(row, center, center);
             padding: 15px;
             background-color: light-dark($primary-color-dark, $primary-color-light);
             color: light-dark($primary-color-light, $primary-color-dark);
@@ -1960,4 +1970,55 @@ section.about-section {
         }
     }
 }
+
 /*page 404*/
+
+
+.service-card,
+.experience-card,
+.education-card {
+    ::selection {
+        background: light-dark($primary-color-light, $primary-color-dark);
+        color: light-dark($primary-color-dark, $primary-color-light);
+    }
+}
+
+.cursor {
+    position: fixed;
+    border-radius: 50%;
+    border: 1px solid light-dark($primary-color-dark, $primary-color-light);
+    pointer-events: none;
+    z-index: 999999;
+    @include flex(row, center, center);
+    transition: all 0.1s;
+    border-left-color: transparent;
+    animation: spine 1s linear infinite;
+
+    span {
+        @include flex(row, center, center);
+        border: 1px solid light-dark($primary-color-dark, $primary-color-light);
+        border-left-color: transparent;
+        border-radius: 50%;
+        animation: spine 1s linear infinite;
+    }
+
+    &.reverse {
+        border: 1px solid light-dark($primary-color-light, $primary-color-dark);
+        border-left-color: transparent;
+
+        span {
+            border: 1px solid light-dark($primary-color-light, $primary-color-dark);
+            border-left-color: transparent;
+        }
+    }
+}
+
+@keyframes spine {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -37,7 +37,7 @@ const Experience: React.FC<ExperienceProps> = ({ personalData }) => {
                                 {exp.responsibilities && exp.responsibilities.length > 0 && (
                                     <ul>
                                         {exp.responsibilities.map((item, j) => (
-                                            <li key={j}>{item}</li>
+                                            <li key={j}><p>{item}</p></li>
                                         ))}
                                     </ul>
                                 )}

@@ -637,7 +637,7 @@ header {
         width: 100px;
         height: 3px;
         border-radius: 10px;
-        background-color: #fff;
+        background-color: light-dark($primary-color-light, $primary-color-dark);
     }
 
     .menu-inner {

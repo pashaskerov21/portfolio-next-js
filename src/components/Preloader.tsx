@@ -76,7 +76,7 @@ export default function Preloader() {
         className={`percent ${percent === 100 ? "complete" : ""} ${showLogo ? "hide" : ""
           }`}
         style={{
-          background: `conic-gradient(#000 ${percent}%, #fff ${percent}%)`,
+          background: `conic-gradient(#fff ${percent}%, #000 ${percent}%)`,
         }}
       >
         <span>{percent}%</span>

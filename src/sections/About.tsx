@@ -22,10 +22,11 @@ const About: React.FC<AboutProps> = ({ personalData }) => {
         </h2>
         <div className="about-wrapper">
           <figure>
-            <Image src={personalData.image} width={300} height={300} alt="Alipasha Askerov - Full stack Developer"/>
+            {/* <Image src={personalData.image} width={300} height={300} alt="Alipasha Askerov - Full stack Developer" /> */}
+            <img src={personalData.image} width={300} height={300} alt="Alipasha Askerov - Full stack Developer" />
             <div className="overlay">
               <div className="logo-item">
-                <Logo firstName="Alipasha" lastName="Askerov"/>
+                <Logo firstName="Alipasha" lastName="Askerov" />
               </div>
             </div>
           </figure>
@@ -34,7 +35,6 @@ const About: React.FC<AboutProps> = ({ personalData }) => {
               aria-labelledby="about-title"
               dangerouslySetInnerHTML={{ __html: personalData.aboutText }}
             ></article>
-
             <ul className="reports">
               <li>
                 <Counter value={2} title="experience" speed={700} />

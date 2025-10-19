@@ -14,18 +14,37 @@ const PersonalInformationData: PersonalInformationDataType = {
     },
     home: {
         title: "Hi, I'm Alipasha Askerov",
-        animationTitle: "fullstack developer",
+        animationTitle: "frontend developer",
         text: "I am developing myself in the field of programming and Web Development. I have excellent knowledge and professional experience in this field and I continue to learn new technologies"
     },
-    aboutText: "<p> I'm a <strong>full-stack developer</strong> with expertise in both <strong> frontend and backend development.</strong> I create interactive, user-focused web applications using modern technologies like <strong>React JS, Next JS, Angular, TypeScript and Laravel.</strong></p><p> I am passionate about writing clean, maintainable code and building scalable systems that prioritize user experience. I enjoy bringing creative solutions to each project and collaborating closely with clients to deliver high-quality results on time and within budget. </p><p> Let's build something great together — feel free to reach out and connect! </p>",
+    aboutText: "<p> As a <strong>Frontend Developer</strong>, I build high-performance, SEO-oriented, and responsive web applications and websites using modern web technologies, including <strong>Next.js, Vue.js, React.js, and Angular.js.</strong> I have experience creating interactive user interfaces (UI) with <strong>HTML, CSS, JavaScript, and TypeScript,</strong> coding based on UI/UX designs, and ensuring cross-browser compatibility.</p><p>On the backend side, I have experience with PHP and the <strong>Laravel framework,</strong> developing server-side functionality, integrating APIs, and working with databases. I focus on performance optimization, improving code quality, and writing unit and integration tests. My goal is to deliver optimized, fast, and reliable web solutions for clients and end-users.</p><p>I hold both a Bachelor's and a Master's degree from Azerbaijan State Oil and Industry University and have completed my military service.</p>",
     cv: "/personal/AlipashaAskerovCV.pdf",
     image: "/personal/image-2.png",
     experience: [
         {
             id: 1,
             position: "Frontend Developer",
+            company: "Safaroff Agency",
+            location: "28 May, Baku, Azerbaijan",
+            start: "10/2025",
+            end: "current",
+            description: '',
+            responsibilities: [
+                "Designing and developing user interfaces (UI) for web applications and websites.",
+                "Coding responsive (mobile-friendly) interfaces based on UI/UX designs.",
+                "Creating interactive elements using HTML, CSS, and JavaScript technologies.",
+                "Working with frontend frameworks such as React.js, Vue.js, or others.",
+                "Collaborating with the backend team to implement API integrations.",
+                "Ensuring cross-browser compatibility and optimizing performance.",
+                "Improving existing codebase and implementing new technologies.",
+                "Writing unit and integration tests, identifying and fixing bugs.",
+            ]
+        },
+        {
+            id: 2,
+            position: "Frontend Developer",
             company: "Proton MMC",
-            location: "Nerimanov, Baku",
+            location: "Nerimanov, Baku, Azerbaijan",
             start: "12/2022",
             end: "06/2024",
             description: 'Developed full-stack projects using Laravel, Next.js, HTML, CSS, JS, and jQuery. Built admin panels, integrated APIs, and managed server configuration, hosting, and domains.',
@@ -39,10 +58,10 @@ const PersonalInformationData: PersonalInformationDataType = {
             ]
         },
         {
-            id: 2,
+            id: 3,
             position: "Frontend Developer Intern",
             company: "Proton MMC",
-            location: "Nerimanov, Baku",
+            location: "Nerimanov, Baku, Azerbaijan",
             start: "10/2022",
             end: "12/2022",
             description: "Converted Figma designs into responsive websites using HTML, CSS, SCSS, JavaScript, and jQuery. Collaborated closely with backend developers to integrate functionality and complete full-stack projects.",
@@ -54,10 +73,10 @@ const PersonalInformationData: PersonalInformationDataType = {
             ]
         },
         {
-            id: 3,
+            id: 4,
             position: "Automation Engineer Intern",
             company: "Azersu OSJ",
-            location: "Cheyranbatan, Sumgayit",
+            location: "Cheyranbatan, Sumgayit, Azerbaijan",
             start: "02/2022",
             end: "06/2022",
             description: "Worked with automation systems and gained experience in industrial processes.",

@@ -1035,7 +1035,7 @@ section.about-section {
     overflow: hidden;
     padding-bottom: 30px;
 
-    @media (min-width: 992px) {
+    @media (min-width: 1200px) {
         @include flex(row, space-between, stretch);
     }
 
@@ -1046,14 +1046,14 @@ section.about-section {
         border-radius: 10px;
         position: relative;
 
-        @media (min-width: 992px) {
+        @media (min-width: 1200px) {
             width: 48%;
         }
 
         img {
             width: 100%;
             height: 100%;
-            object-fit: contain;
+            object-fit: cover;
             border-radius: 10px;
         }
         .overlay{
@@ -1083,11 +1083,11 @@ section.about-section {
 
     .wrapper-right {
         width: 100%;
-        max-width: 500px;
+        max-width: 600px;
         @include flex(column, center, flex-start);
         gap: 30px;
 
-        @media (min-width: 992px) {
+        @media (min-width: 1200px) {
             width: 48%;
             justify-content: space-between;
         }

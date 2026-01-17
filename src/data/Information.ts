@@ -19,7 +19,7 @@ const PersonalInformationData: PersonalInformationDataType = {
     },
     aboutText: "<p> As a <strong>Frontend Developer</strong>, I build high-performance, SEO-oriented, and responsive web applications and websites using modern web technologies, including <strong>Next.js, Vue.js, React.js, and Angular.js.</strong> I have experience creating interactive user interfaces (UI) with <strong>HTML, CSS, JavaScript, and TypeScript,</strong> coding based on UI/UX designs, and ensuring cross-browser compatibility.</p><p>On the backend side, I have experience with PHP and the <strong>Laravel framework,</strong> developing server-side functionality, integrating APIs, and working with databases. I focus on performance optimization, improving code quality, and writing unit and integration tests. My goal is to deliver optimized, fast, and reliable web solutions for clients and end-users.</p><p>I hold both a Bachelor's and a Master's degree from Azerbaijan State Oil and Industry University and have completed my military service.</p>",
     cv: "/personal/AlipashaAskerovCV.pdf",
-    image: "/personal/image-2.png",
+    image: "/personal/image.jpeg",
     experience: [
         {
             id: 1,

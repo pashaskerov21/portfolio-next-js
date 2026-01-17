@@ -4,7 +4,6 @@ import React from "react";
 import Counter from "../components/Counter";
 import SocialIcons from "../components/SocialIcons";
 import { PersonalInformationDataType } from "../types";
-import Image from "next/image";
 import Logo from "../components/Logo";
 
 type AboutProps = {

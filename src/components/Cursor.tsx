@@ -16,11 +16,11 @@ const Cursor = () => {
         };
         document.addEventListener("mousemove", moveCursor);
 
-        const handleHover = (e: Event) => {
+        const handleHover = () => {
             setReverse(true);
         };
 
-        const handleOut = (e: Event) => {
+        const handleOut = () => {
             setReverse(false);
         };
 

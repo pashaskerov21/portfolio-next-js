@@ -7,7 +7,6 @@ import ScrollBtn from '../components/ScrollBtn';
 import SocialIcons from '../components/SocialIcons';
 import Header from '../partials/Header';
 import Footer from '../partials/Footer';
-import Cursor from '../components/Cursor';
 
 type DefaultLayoutProps = {
     children: React.ReactNode,

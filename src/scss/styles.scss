@@ -167,6 +167,9 @@
             animation: logoAnimation 0.4s ease infinite;
         }
     }
+    &.white{
+        color: #FFFFFF !important;
+    }
 }
 
 @keyframes spanRenderAnimation {
@@ -1067,6 +1070,7 @@ section.about-section {
             padding: 15px;
             opacity: 0;
             transition: all 0.3s;
+            border-radius: 10px;
             .logo-item{
                 display: none;
             }

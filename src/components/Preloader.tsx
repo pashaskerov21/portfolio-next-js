@@ -11,6 +11,7 @@ export default function Preloader() {
 
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
   const startedRef = useRef(false);
+  const body = document.querySelector("body")
 
   const pathname = usePathname(); // route dəyişməsini izləmək üçün
 
@@ -35,6 +36,7 @@ export default function Preloader() {
           setTimeout(() => {
             setLoading(false);
             startedRef.current = false;
+            body?.classList.remove("locked");
           }, 1500);
         }, 300);
       }
@@ -42,6 +44,7 @@ export default function Preloader() {
   },[]);
 
   const startPreloader = useCallback(() => {
+    body?.classList.add("locked");
     setLoading(true);
     setPercent(0);
     setShowLogo(false);

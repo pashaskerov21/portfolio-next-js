@@ -25,7 +25,7 @@ const About: React.FC<AboutProps> = ({ personalData }) => {
             <img src={personalData.image} width={300} height={300} alt="Alipasha Askerov - Full stack Developer" />
             <div className="overlay">
               <div className="logo-item">
-                <Logo firstName="Alipasha" lastName="Askerov" />
+                <Logo firstName="Alipasha" lastName="Askerov" className="white" />
               </div>
             </div>
           </figure>

@@ -5,6 +5,7 @@ import Counter from "../components/Counter";
 import SocialIcons from "../components/SocialIcons";
 import { PersonalInformationDataType } from "../types";
 import Logo from "../components/Logo";
+import Image from "next/image";
 
 type AboutProps = {
   personalData: PersonalInformationDataType;
@@ -21,8 +22,7 @@ const About: React.FC<AboutProps> = ({ personalData }) => {
         </h2>
         <div className="about-wrapper">
           <figure>
-            {/* <Image src={personalData.image} width={300} height={300} alt="Alipasha Askerov - Full stack Developer" /> */}
-            <img src={personalData.image} width={300} height={300} alt="Alipasha Askerov - Full stack Developer" />
+            <img src={personalData.image} loading="eager" width={300} height={300} alt="Alipasha Askerov - Full stack Developer" />
             <div className="overlay">
               <div className="logo-item">
                 <Logo firstName="Alipasha" lastName="Askerov" className="white" />

@@ -50,7 +50,7 @@ const Banner: React.FC<BannerProps> = ({ personalData }) => {
                         </article>
                     </div>
                     <figure className="content-img">
-                        <Image src={heroImg} width={200} height={200} alt="Alipasha Askerov - Portfolio Vue"/>
+                        <Image src={heroImg} loading="eager" width={200} height={200} alt="Alipasha Askerov - Portfolio Vue"/>
                     </figure>
                 </div>
             </div>

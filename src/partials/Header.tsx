@@ -23,6 +23,17 @@ export default function Header({ personalData, menuData }: HeaderProps) {
   const startY = useRef(0);
   const currentY = useRef(0);
   const dragging = useRef(false);
+  const body = document.querySelector("body");
+
+  useEffect(() => {
+    if(body){
+      if(menuState !== "closed"){
+        body.classList.add("locked");
+      }else{
+        body.classList.remove("locked");
+      }
+    }
+  },[body, menuState])
 
   const toggleMenu = () =>
     setMenuState((prev) => (prev === "closed" ? "half" : "closed"));
@@ -41,7 +52,7 @@ export default function Header({ personalData, menuData }: HeaderProps) {
     const diff = startY.current - currentY.current;
 
     if (diff > 50) setMenuState("full");
-    if (diff < -50) setMenuState("closed");
+    if (diff < -50) setMenuState("half");
   };
 
   const onDragEnd = () => {
@@ -55,8 +66,6 @@ export default function Header({ personalData, menuData }: HeaderProps) {
   // Fixed header on scroll
   const [fixedTop, setFixedTop] = useState(false);
   const [scrollValue, setScrollValue] = useState(0);
-
-
 
   useEffect(() => {
     const onClickOutside = (event: MouseEvent) => {

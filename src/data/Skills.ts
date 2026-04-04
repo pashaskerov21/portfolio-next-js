@@ -16,7 +16,7 @@ const SkillData: SkillDataType[] = [
     {
         id: 3,
         title: 'Next JS',
-        logo: '/skills/nextjs.svg',
+        logo: '/skills/next-js.svg',
         color: '#0010F1'
     },
     {
@@ -93,15 +93,15 @@ const SkillData: SkillDataType[] = [
     },
     {
         id: 16,
-        title: 'Bootstrap',
-        logo: '/skills/bootstrap-2.png',
-        color: '#8512FB'
-    },
-    {
-        id: 17,
         title: 'Tailwind CSS',
         logo: '/skills/tailwindcss.svg',
         color: '#38BDF8'
+    },
+    {
+        id: 17,
+        title: 'Bootstrap',
+        logo: '/skills/bootstrap-2.png',
+        color: '#8512FB'
     },
     {
         id: 18,
@@ -120,6 +120,12 @@ const SkillData: SkillDataType[] = [
         title: 'GIT',
         logo: '/skills/git.svg',
         color: '#de4736'
+    },
+    {
+        id: 20,
+        title: 'CLAUDE',
+        logo: '/skills/claude.svg',
+        color: '#de7356'
     },
 ]
 export default SkillData;

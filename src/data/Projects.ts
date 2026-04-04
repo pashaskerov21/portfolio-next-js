@@ -11,6 +11,30 @@ const ProjectData: ProjectDataType[] = [
         skills: ['Next JS', 'Angular', 'Vue', 'TypeScript', 'SCSS']
     },
     {
+        title: "Safaroff Agency",
+        image: "/projects/safaroff.webp",
+        category: 2,
+        previewLink: "https://safaroff.com/",
+        githubLink: "",
+        skills: ['HTML', 'SCSS', 'JavaScript', 'Laravel',]
+    },
+    {
+        title: "Ekspertiza - CRM System",
+        image: "/projects/ekspertiza.webp",
+        category: 2,
+        previewLink: "",
+        githubLink: "",
+        skills: ['Next JS', 'TypeScript', 'Laravel','Axios', 'Formik',]
+    },
+    {
+        title: "Personal Data Protection",
+        image: "/projects/pdp.webp",
+        category: 2,
+        previewLink: "",
+        githubLink: "",
+        skills: ['HTML', 'SCSS', 'JavaScript', 'Laravel',]
+    },
+    {
         title: "Livementors",
         image: "/projects/livementor.webp",
         category: 1,
@@ -155,6 +179,70 @@ const ProjectData: ProjectDataType[] = [
         skills: ['HTML', 'SCSS', 'JavaScript', 'Bootstrap'],
     },
     {
+        title: "Geo Enjenerik",
+        image: "/projects/geoeng-2.webp",
+        category: 1,
+        previewLink: "https://www.geoenjenerik.com.tr/",
+        githubLink: "",
+        skills: ['Laravel', 'HTML', 'SCSS', 'JavaScript', 'jQuery',]
+    },
+    {
+        title: "AKC Conference",
+        image: "/projects/akc-conference.webp",
+        category: 1,
+        previewLink: "http://conference.akc.az/",
+        githubLink: "",
+        skills: ['Laravel', 'HTML', 'SCSS', 'JavaScript', 'jQuery']
+    },
+    {
+        title: "Sevgile",
+        image: "/projects/sevgile.webp",
+        category: 3,
+        previewLink: "https://sevgiile.az/",
+        githubLink: "https://github.com/pashaskerov21/sevgile",
+        skills: ['Laravel']
+    },
+    {
+        title: "Amal",
+        image: "/projects/amal.webp",
+        category: 3,
+        previewLink: "https://amal.az/",
+        githubLink: "https://github.com/pashaskerov21/amal",
+        skills: ['Laravel']
+    },
+    {
+        title: "ML IMPORT GROUP",
+        image: "/projects/mlgroup.webp",
+        category: 1,
+        previewLink: "https://ml-import.ru/",
+        githubLink: "https://github.com/pashaskerov21/mlgroup",
+        skills: ['Laravel', 'HTML', 'SCSS', 'JavaScript', 'jQuery']
+    },
+    {
+        title: "Geoengineer",
+        image: "/projects/geoeng.webp",
+        category: 1,
+        previewLink: "",
+        githubLink: "https://github.com/pashaskerov21/geoenginerring",
+        skills: ['Laravel', 'HTML', 'SCSS', 'JavaScript', 'jQuery']
+    },
+    {
+        title: "ICX ID",
+        image: "/projects/icx.webp",
+        category: 1,
+        previewLink: "",
+        githubLink: "",
+        skills: ['Laravel', 'HTML', 'SCSS', 'JavaScript', 'jQuery']
+    },
+    {
+        title: "Zəfər konfransı",
+        image: "/projects/zefer.webp",
+        category: 1,
+        previewLink: "",
+        githubLink: "",
+        skills: ['Laravel', 'HTML', 'SCSS', 'JavaScript', 'jQuery']
+    },
+    {
         title: "Travel",
         image: "/projects/travel.webp",
         category: 2,
@@ -179,28 +267,12 @@ const ProjectData: ProjectDataType[] = [
         skills: ['HTML', 'CSS', 'SCSS'],
     },
     {
-        title: "Geo Enjenerik",
-        image: "/projects/geoeng-2.webp",
-        category: 1,
-        previewLink: "https://www.geoenjenerik.com.tr/",
-        githubLink: "",
-        skills: ['Laravel', 'HTML', 'SCSS', 'JavaScript', 'jQuery',]
-    },
-    {
-        title: "AKC Conference",
-        image: "/projects/akc-conference.webp",
-        category: 1,
-        previewLink: "http://conference.akc.az/",
-        githubLink: "",
-        skills: ['Laravel', 'HTML', 'SCSS', 'JavaScript', 'jQuery']
-    },
-    {
-        title: "Sevgile",
-        image: "/projects/sevgile.webp",
-        category: 3,
-        previewLink: "https://sevgiile.az/",
-        githubLink: "https://github.com/pashaskerov21/sevgile",
-        skills: ['Laravel']
+        title: "THREE JS Examples",
+        image: "/projects/threejs.webp",
+        category: 2,
+        previewLink: "https://threejs-tasks-iota.vercel.app/index.html",
+        githubLink: "https://github.com/pashaskerov21/threejs-tasks/tree/main",
+        skills: ["HTML", "JavaScript",]
     },
     {
         title: "Ortalama bal",
@@ -250,45 +322,6 @@ const ProjectData: ProjectDataType[] = [
         githubLink: "https://github.com/pashaskerov21/pixabay-image-gallery",
         skills: ['React JS', 'SCSS', 'Bootstrap'],
     },
-    {
-        title: "Amal",
-        image: "/projects/amal.webp",
-        category: 3,
-        previewLink: "https://amal.az/",
-        githubLink: "https://github.com/pashaskerov21/amal",
-        skills: ['Laravel']
-    },
-    {
-        title: "ML IMPORT GROUP",
-        image: "/projects/mlgroup.webp",
-        category: 1,
-        previewLink: "https://ml-import.ru/",
-        githubLink: "https://github.com/pashaskerov21/mlgroup",
-        skills: ['Laravel', 'HTML', 'SCSS', 'JavaScript', 'jQuery']
-    },
-    {
-        title: "Geoengineer",
-        image: "/projects/geoeng.webp",
-        category: 1,
-        previewLink: "",
-        githubLink: "https://github.com/pashaskerov21/geoenginerring",
-        skills: ['Laravel', 'HTML', 'SCSS', 'JavaScript', 'jQuery']
-    },
-    {
-        title: "ICX ID",
-        image: "/projects/icx.webp",
-        category: 1,
-        previewLink: "",
-        githubLink: "",
-        skills: ['Laravel', 'HTML', 'SCSS', 'JavaScript', 'jQuery']
-    },
-    {
-        title: "Zəfər konfransı",
-        image: "/projects/zefer.webp",
-        category: 1,
-        previewLink: "",
-        githubLink: "",
-        skills: ['Laravel', 'HTML', 'SCSS', 'JavaScript', 'jQuery']
-    },
+    
 ]
 export default ProjectData;

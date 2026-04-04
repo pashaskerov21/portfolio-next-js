@@ -36,10 +36,10 @@ const About: React.FC<AboutProps> = ({ personalData }) => {
             ></article>
             <ul className="reports">
               <li>
-                <Counter value={2} title="experience" speed={700} />
+                <Counter value={3} title="experience" speed={700} />
               </li>
               <li>
-                <Counter value={25} title="projects" speed={100} />
+                <Counter value={30} title="projects" speed={100} />
               </li>
             </ul>
 

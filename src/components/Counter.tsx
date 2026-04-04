@@ -71,8 +71,7 @@ export default function Counter({ value, title, speed }: CounterProps) {
     return (
         <div className="counter-item" ref={counterItemRef}>
             <span className="counter-value">
-                {count}
-                {title === "experience" && <span>+</span>}
+                {count}+
             </span>
             <span className="counter-title">{title}</span>
         </div>

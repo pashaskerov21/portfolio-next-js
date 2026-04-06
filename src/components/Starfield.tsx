@@ -1,8 +1,10 @@
 "use client"
 import React, { useEffect, useRef } from 'react'
+import { useTheme } from '@/src/hooks/useTheme'
 
 const Starfield: React.FC = () => {
     const mountRef = useRef<HTMLDivElement>(null)
+    const { currentTheme } = useTheme()
 
     useEffect(() => {
         const mount = mountRef.current
@@ -166,6 +168,7 @@ const Starfield: React.FC = () => {
                 height: '100%',
                 zIndex: -1,
                 pointerEvents: 'none',
+                display: currentTheme === 'dark' ? 'block' : 'none',
             }}
         />
     )

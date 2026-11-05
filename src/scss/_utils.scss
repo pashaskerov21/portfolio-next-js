@@ -1,0 +1,105 @@
+@use "sass:math";
+@use "sass:map";
+
+$breakpoints: (
+    xs: 480px,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+$displays: none, block, inline, inline-block, flex, grid;
+
+//mediaquery
+@mixin mediaquery($size) {
+    @media(min-width: map.get($breakpoints, $size)) {
+        @content;
+    }
+}
+
+// container
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @each $key, $size in $breakpoints {
+        @media (min-width: $size) {
+            max-width: if($key ==sm, 540px, if($key ==md, 720px, if($key ==lg, 960px, if($key ==xl, 1140px, if($key ==xxl, 1200px, 100%)))));
+        }
+    }
+}
+
+//flex 
+@mixin flex($direction: row, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+// section
+@mixin make-section($padding-x: 0, $padding-y: 0, $mb: 0) {
+    width: 100%;
+    padding: $padding-y $padding-x;
+    margin-bottom: $mb;
+    position: relative;
+}
+
+
+//display
+@each $d in $displays {
+    .d-#{$d} {
+        display: $d !important;
+    }
+
+    @each $bp, $size in $breakpoints {
+        @media (min-width: $size) {
+            .d-#{$bp}-#{$d} {
+                display: $d !important;
+            }
+        }
+    }
+}
+
+
+
+// Row
+.row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+// Column 
+// [class*="col-"] {
+//     padding-left: 15px;
+//     padding-right: 15px;
+// }
+
+// ========== Column Generator ==========
+// $columns: 12;
+
+// @for $i from 1 through $columns {
+//     .col-#{$i} {
+//         flex: 0 0 math.percentage($i / $columns);
+//         max-width: math.percentage($i / $columns);
+//     }
+// }
+
+// // ========== Responsive Column Generator ==========
+// @each $key, $size in $breakpoints {
+//     @media (min-width: $size) {
+//         @for $i from 1 through $columns {
+//             .col-#{$key}-#{$i} {
+//                 flex: 0 0 math.percentage($i / $columns);
+//                 max-width: math.percentage($i / $columns);
+//             }
+//         }
+//     }
+// };

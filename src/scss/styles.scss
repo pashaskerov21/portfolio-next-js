@@ -1199,6 +1199,10 @@ section.about-section {
     @include flex(row, center, center);
     gap: 40px;
     flex-wrap: wrap;
+
+    @media (max-width: 767px) {
+        gap: 20px;
+    }
 }
 
 .skill-card {
@@ -1215,6 +1219,11 @@ section.about-section {
         width: 140px;
         height: 140px;
         gap: 20px;
+    }
+
+    @media (max-width: 767px) {
+        width: 100px;
+        flex: 0 1 100px;
     }
 
     img {
@@ -1308,6 +1317,10 @@ section.about-section {
     box-shadow: 0 0 10px light-dark($black-3, $white-3);
     @include flex(column, center, center);
     gap: 10px;
+
+    @media (max-width: 767px) {
+        max-width: none;
+    }
 
     @media (min-width: 1200px) {
         max-width: 400px;

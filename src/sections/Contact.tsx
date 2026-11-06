@@ -63,7 +63,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section className="contact-section" id="contact" aria-labelledby="contact-title">
+    <section className="contact-section" id="contact" aria-labelledby="contact-title" data-surface="light">
       <div className="container">
         <h2 className="section-title" id="contact-title">Contact</h2>
         <form className="contact-form" onSubmit={formSubmit} noValidate>

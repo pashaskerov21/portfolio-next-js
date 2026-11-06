@@ -11,7 +11,7 @@ const Services: React.FC<ServicesProps> = ({ personalData }) => {
     if (!personalData?.services) return null;
 
     return (
-        <section className="services-section" aria-labelledby="services-title" id="services">
+        <section className="services-section" aria-labelledby="services-title" id="services" data-surface="light">
             <div className="container">
                 <h2 className="section-title" role="heading" id="services-title">
                     Services

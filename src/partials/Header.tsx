@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { MenuDataType, PersonalInformationDataType } from "../types";
 import { useScrollTo } from "../hooks/useScrollTo";
 import { useTheme } from "../hooks/useTheme";
+import { useAdaptiveHeader } from "../hooks/useAdaptiveHeader";
 import Logo from "../components/Logo";
 import SocialIcons from "../components/SocialIcons";
 
@@ -17,6 +18,7 @@ interface HeaderProps {
 export default function Header({ personalData, menuData }: HeaderProps) {
   const { scrollTo } = useScrollTo();
   const { currentTheme, toggleTheme } = useTheme();
+  const adaptiveHeaderRef = useAdaptiveHeader<HTMLElement>();
   const pathname = usePathname();
 
   const [menuOpen, setMenuOpen] = useState(false);
@@ -136,6 +138,7 @@ export default function Header({ personalData, menuData }: HeaderProps) {
 
   return (
     <header
+      ref={adaptiveHeaderRef}
       className={`site-header ${scrolled ? "scrolled" : ""} ${menuOpen ? "menu-active" : ""}`}
     >
       <nav className="container" aria-label="Main navigation">
@@ -144,7 +147,8 @@ export default function Header({ personalData, menuData }: HeaderProps) {
           <div className="nav_layer"></div>
           <Link
             href="/"
-            className="nav-logo"
+            className="nav-logo adaptive-overlay-source"
+            data-adaptive
             aria-label="Home"
             onClick={() => setMenuOpen(false)}
           >
@@ -167,13 +171,14 @@ export default function Header({ personalData, menuData }: HeaderProps) {
                   <a
                     href={`#${menu.name}`}
                     data-id={menu.name}
-                    className={activeId === menu.name ? "active" : ""}
+                    data-adaptive
+                    className={`adaptive-overlay-source ${activeId === menu.name ? "active" : ""}`}
                     aria-current={
                       activeId === menu.name ? "location" : undefined
                     }
                     onClick={(e) => scrollTo(`#${menu.name}`, e)}
                   >
-                    {menu.name}
+                    {menu.name.charAt(0).toUpperCase() + menu.name.slice(1)}
                   </a>
                 </li>
               ))}
@@ -183,6 +188,8 @@ export default function Header({ personalData, menuData }: HeaderProps) {
           <div className="nav-actions">
             <button
               className={`theme-button ${currentTheme === "dark" ? "show-sun" : "show-moon"}`}
+              data-adaptive
+              data-surface="light"
               aria-label={
                 currentTheme === "dark"
                   ? "Switch to light theme"
@@ -193,6 +200,7 @@ export default function Header({ personalData, menuData }: HeaderProps) {
             >
               <svg
                 className="theme-icon"
+                data-adaptive
                 viewBox="0 0 24 24"
                 aria-hidden="true"
               >
@@ -237,23 +245,27 @@ export default function Header({ personalData, menuData }: HeaderProps) {
               target="_blank"
               rel="noopener noreferrer"
               className="cv-link d-none d-sm-flex"
+              data-adaptive
+              data-surface="light"
               aria-label="Alipasha Askerov CV"
             >
               CV
-              <i className="fa-solid fa-arrow-right"></i>
+              <i className="fa-solid fa-arrow-right" data-adaptive></i>
             </a>
 
             {/* Mobile Menu Button */}
             <button
               className={`menu-button d-lg-none ${menuOpen ? "active" : ""}`}
+              data-adaptive
+              data-surface="light"
               aria-label={menuOpen ? "Close menu" : "Open menu"}
               aria-expanded={menuOpen}
               aria-controls="mobile-menu"
               type="button"
               onClick={() => setMenuOpen((prev) => !prev)}
             >
-              <span />
-              <span />
+              <span data-adaptive />
+              <span data-adaptive />
             </button>
           </div>
         </div>
@@ -286,6 +298,7 @@ export default function Header({ personalData, menuData }: HeaderProps) {
       <div
         id="mobile-menu"
         className={`mobile-menu d-lg-none ${menuOpen ? "open" : ""}`}
+        data-surface="light"
         inert={!menuOpen}
       >
         <div className="container mobile-menu-inner">
@@ -299,7 +312,8 @@ export default function Header({ personalData, menuData }: HeaderProps) {
               >
                 <a
                   href={`#${menu.name}`}
-                  className={activeId === menu.name ? "active" : ""}
+                  className={`adaptive-overlay-source ${activeId === menu.name ? "active" : ""}`}
+                  data-adaptive
                   aria-current={activeId === menu.name ? "location" : undefined}
                   onClick={(e) => {
                     setMenuOpen(false);
@@ -309,7 +323,9 @@ export default function Header({ personalData, menuData }: HeaderProps) {
                   <span className="index">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <span className="name">{menu.name}</span>
+                  <span className="name">
+                    {menu.name.charAt(0).toUpperCase() + menu.name.slice(1)}
+                  </span>
                 </a>
               </li>
             ))}

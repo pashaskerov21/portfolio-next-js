@@ -44,7 +44,7 @@ const About: React.FC<AboutProps> = ({ personalData }) => {
   ];
 
   return (
-    <section className="about-section" aria-labelledby="about-title" id="about">
+    <section className="about-section" aria-labelledby="about-title" id="about" data-surface="light">
       <div className="container">
         <div className="about-wrapper">
           <div className="wrapper-left">

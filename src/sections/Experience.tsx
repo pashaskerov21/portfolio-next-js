@@ -10,7 +10,7 @@ const Experience: React.FC<ExperienceProps> = ({ personalData }) => {
     if (!personalData?.experience || personalData.experience.length === 0) return null;
 
     return (
-        <section className="experience-section" aria-labelledby="experience-title" id="experience">
+                                <section className="experience-section" aria-labelledby="experience-title" id="experience" data-surface="light">
             <div className="container">
                 <h2 className="section-title" role="heading" id="experience-title">
                     Experience

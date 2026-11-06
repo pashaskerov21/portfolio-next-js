@@ -12,7 +12,7 @@ const Skills: React.FC<SkillsProps> = ({ skillData }) => {
   if (!skillData || skillData.length === 0) return null;
 
   return (
-    <section className="skills-section" id="skills" aria-labelledby="skills-title">
+    <section className="skills-section" id="skills" aria-labelledby="skills-title" data-surface="light">
       <div className="container">
         <h2 className="section-title" id="skills-title">
           Skills

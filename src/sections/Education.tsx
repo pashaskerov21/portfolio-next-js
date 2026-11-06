@@ -10,6 +10,7 @@ const Education: React.FC<Props> = ({ personalData }) => {
         <section
             className="education-section"
             id="education"
+            data-surface="light"
             aria-labelledby="education-title"
         >
             <div className="container">

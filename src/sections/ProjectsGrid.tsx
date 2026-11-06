@@ -29,7 +29,7 @@ const ProjectsGrid: React.FC<ProjectsProps> = ({ page, projectData, skillData })
   if (!filteredProjects || filteredProjects.length === 0) return null;
 
   return (
-    <section className="projects-section" id="projects" aria-labelledby="projects-title">
+    <section className="projects-section" id="projects" aria-labelledby="projects-title" data-surface="light">
       <div className="container">
         <h2 className="section-title" id="projects-title">
           Projects

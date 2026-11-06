@@ -320,7 +320,7 @@
     padding: 8px 8px 8px 20px;
     border-radius: 999px;
     // background-color: rgba(255, 255, 255, 0.12);
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border: 1px solid light-dark($black-2, $white-2);
     // backdrop-filter: blur(28px);
     // -webkit-backdrop-filter: blur(28px);
     // backdrop-filter: blur(8px);
@@ -374,7 +374,7 @@
         font-size: 13px;
         font-weight: 500;
         text-transform: capitalize;
-        color: #FFF;
+        color: light-dark($text-color-light, $text-color-dark);
         transition: color 0.3s;
 
         @media (min-width: 1200px) {
@@ -516,6 +516,76 @@
         i {
             transform: translateX(3px);
         }
+    }
+}
+
+// Each item switches independently to contrast with the surface sampled behind it.
+.site-header [data-adaptive] {
+    transition: color 0.16s ease, background-color 0.16s ease, border-color 0.16s ease;
+}
+
+.site-header .theme-icon {
+    transition: color 0.16s ease, transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.site-header .menu-button span[data-adaptive] {
+    transition: color 0.16s ease, transform 0.3s ease;
+}
+
+.site-header [data-adaptive][data-tone="light"] {
+    color: $text-color-light;
+}
+
+.site-header [data-adaptive][data-tone="dark"] {
+    color: $text-color-dark;
+}
+
+.site-header button[data-adaptive][data-tone="light"] {
+    color: $primary-color-light;
+    background-color: $primary-color-dark;
+    border-color: $primary-color-dark;
+}
+
+.site-header button[data-adaptive][data-tone="dark"] {
+    color: $primary-color-dark;
+    background-color: $primary-color-light;
+    border-color: $primary-color-light;
+}
+
+.site-header .cv-link[data-tone="light"] {
+    color: $primary-color-light;
+    background-color: $primary-color-dark;
+}
+
+.site-header .cv-link[data-tone="dark"] {
+    color: $primary-color-dark;
+    background-color: $primary-color-light;
+}
+
+// The hook mirrors text-only header items to the body so blending reaches page pixels
+// outside the header's backdrop-filter stacking context.
+.site-header .nav-links a.adaptive-overlay-source,
+.site-header .mobile-links a.adaptive-overlay-source,
+.site-header .nav-logo.adaptive-overlay-source .logo-wrapper {
+    color: transparent;
+}
+
+.adaptive-contrast-overlay {
+    color: #fff;
+    mix-blend-mode: difference;
+    pointer-events: none;
+    user-select: none;
+    text-transform: capitalize;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .site-header [data-adaptive] {
+        transition: none;
+    }
+
+    .site-header .theme-icon,
+    .site-header .menu-button span[data-adaptive] {
+        transition: none;
     }
 }
 
